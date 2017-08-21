@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_app_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_app_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_config_return_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_config_return_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\app_sort_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\app_sort_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degree_ice_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\degree_ice_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\buy_drink_pro.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\buy_drink_pro.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_version_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_version_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degree_hot_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\degree_hot_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\color_cursor.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\color_cursor.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\degree_normal_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\degree_normal_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\buy_all_pro.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\buy_all_pro.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_press.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\point_press.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\payment_alipay_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\payment_alipay_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_ceshi_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_ceshi_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_degree_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_degree_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\payment_wechat_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\payment_wechat_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\buy_snake_pro.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\buy_snake_pro.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_returnmain_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_returnmain_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_degree_sure_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_degree_sure_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_more_app_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_more_app_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_normal.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\point_normal.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_pro_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_pro_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\payment_dianchuang_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\payment_dianchuang_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_buy_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_buy_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_returnmain2_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_returnmain2_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ib_sold_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\ib_sold_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_returnshop_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_returnshop_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\point_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\point_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tv_returnmain2_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\tv_returnmain2_selector.xml"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_more_pro_selector.xml",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable\\btn_more_pro_selector.xml"
+    }
+]

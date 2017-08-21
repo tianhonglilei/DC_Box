@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/des_rlayout_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/des_result_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlayout_result_one"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlayout_result_heng_one"
+            android:layout_width="840dp"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_result_dianchaung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="120dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_result_heng_two"
+            android:layout_width="440dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlayout_result_heng_one" >
+
+            <ImageView
+                android:id="@+id/iv_result_shopping"
+                android:layout_width="400dp"
+                android:layout_height="298dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:layout_marginTop="220dp" />
+
+            <ImageView
+                android:id="@+id/iv_result_stutas"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="196dp" />
+
+            <ImageView
+                android:id="@+id/iv_result_pro"
+                android:layout_width="80dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="196dp" />
+
+            <TextView
+                android:id="@+id/des_result_pro_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="166dp"
+                android:textColor="#ffff00"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlayout_result_two"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rlayout_result_one" >
+
+        <ImageView
+            android:id="@+id/iv_result_kefuhaoma"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="60dp" />
+
+        <ImageView
+            android:id="@+id/iv_worning2"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="140dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/des_btn_result_return"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="66dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/btn_returnmain_selector" />
+
+    <TextView
+        android:id="@+id/des_time_result_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="78dp"
+        android:layout_marginRight="86dp"
+        android:text="10S"
+        android:textColor="#00A7F9"
+        android:textSize="14sp" />
+
+</RelativeLayout>

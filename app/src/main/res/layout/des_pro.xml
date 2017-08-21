@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/des_rlayout_del"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/des_ganlai_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlayout_up_one"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlayout_heng_one"
+            android:layout_width="840dp"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_zhuanpan"
+                android:layout_width="420dp"
+                android:layout_height="420dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/des_tv_nengliang_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="150dp"
+                android:text="能量"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_nengliang_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="180dp"
+                android:text="143KJ"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_nengliang_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="200dp"
+                android:text="2%"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_danbaizhi_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="150dp"
+                android:text="蛋白质"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_danbaizhi_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="298dp"
+                android:layout_marginTop="180dp"
+                android:text="0g"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_danbaizhi_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="318dp"
+                android:layout_marginTop="210dp"
+                android:text="0%"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_na_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="360dp"
+                android:layout_marginTop="300dp"
+                android:text="钠"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_na_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="330dp"
+                android:text="0g"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_na_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="360dp"
+                android:text="0%"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_zhifang_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="300dp"
+                android:text="脂肪"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_zhifang_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="330dp"
+                android:text="0g"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_zhifang_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="360dp"
+                android:text="0%"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_tanshuihuahewu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="184dp"
+                android:layout_marginTop="398dp"
+                android:text="碳水化合物"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_tanshuihuahewu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="208dp"
+                android:layout_marginTop="424dp"
+                android:text="8.4g"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/des_tv_tanshuihuahewu_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="212dp"
+                android:layout_marginTop="450dp"
+                android:text="3%"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ib_des_pro_name"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="160dp"
+                android:layout_toRightOf="@+id/iv_zhuanpan"
+                android:background="@drawable/des_pro_name"
+                android:textColor="#c56c00"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_heng_two"
+            android:layout_width="440dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlayout_heng_one" >
+
+            <RelativeLayout
+                android:id="@+id/rlayout_money_bg"
+                android:layout_width="420dp"
+                android:layout_height="500dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/des_money_bg" >
+
+                <TextView
+                    android:id="@+id/dianchaung_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="50dp"
+                    android:text="点创移动商城"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/iv_des_worn_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="100dp" />
+
+                <TextView
+                    android:id="@+id/tv_des_worn_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_toRightOf="@+id/iv_des_worn_down"
+                    android:text="请选择支付方式并扫描二维码支付"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_codes"
+                    android:layout_width="136dp"
+                    android:layout_height="136dp"
+                    android:layout_below="@+id/iv_des_worn_down"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@android:color/white" />
+
+                <ImageView
+                    android:id="@+id/iv_codes_loading"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@+id/iv_des_worn_down"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_codes_qr"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@+id/iv_des_worn_down"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp" />
+
+                <TextView
+                    android:id="@+id/tv_codes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_des_worn_down"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/iv_codes"
+                    android:text="趣应用免费为你支付"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_codes_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_codes"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/iv_codes"
+                    android:text="数量: "
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/des_iv_num"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_codes"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/tv_codes_num" />
+
+                <TextView
+                    android:id="@+id/tv_codes_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/des_iv_num"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/iv_codes"
+                    android:text="价格: 5元"
+                    android:textColor="#ffff00"
+                    android:textSize="28sp" />
+
+                <LinearLayout
+                    android:id="@+id/des_ll_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:layout_below="@+id/iv_codes"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <RelativeLayout
+                        android:id="@+id/des_ll_dianchang"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone" >
+
+                        <ImageButton
+                            android:id="@+id/des_ib_dianchuang"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/payment_dianchuang_selector" />
+
+                        <TextView
+                            android:id="@+id/des_des_dianchaung"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/des_ib_dianchuang"
+                            android:layout_centerHorizontal="true"
+                            android:text="点创支付"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/des_ll_weichat"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/des_ib_weichat"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/payment_wechat_selector" />
+
+                        <TextView
+                            android:id="@+id/des_des_weixin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/des_ib_weichat"
+                            android:layout_centerHorizontal="true"
+                            android:text="微信支付"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/des_ll_alipay"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/des_ib_alipay"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/payment_alipay_selector" />
+
+                        <TextView
+                            android:id="@+id/des_des_zhifubao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/des_ib_alipay"
+                            android:layout_centerHorizontal="true"
+                            android:text="支付宝支付"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/des_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlayout_up_two"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rlayout_up_one" >
+
+        <ImageView
+            android:id="@+id/iv_kefuhaoma"
+            android:layout_width="350dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp" />
+
+        <ImageView
+            android:id="@+id/iv_worning"
+            android:layout_width="350dp"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="200dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/des_btn_return"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="66dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/btn_returnmain2_selector" />
+
+    <TextView
+        android:id="@+id/des_time_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="78dp"
+        android:layout_marginRight="80dp"
+        android:text="7S"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

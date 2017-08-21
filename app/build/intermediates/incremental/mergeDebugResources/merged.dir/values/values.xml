@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appback">#d6d6d6</color>
+    <color name="appblack">#EEEFEF</color>
+    <color name="appblacked">#36B7F7</color>
+    <color name="bg">#e5e5e5</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#00A7F9</color>
+    <color name="bom">#f4f4f4</color>
+    <color name="che">#959595</color>
+    <color name="comment_edit_text">#FFB1B1B1</color>
+    <color name="comment_text">#FF8F5D33</color>
+    <color name="descolor">#e0000000</color>
+    <color name="descolor2">#80000000</color>
+    <color name="discount_info">#FF9A7858</color>
+    <color name="gray">#FF6F665C</color>
+    <color name="helpbg">#A3A4A8</color>
+    <color name="lfive">#333333</color>
+    <color name="lfour">#ff5102</color>
+    <color name="list1">#434343</color>
+    <color name="list2">#eb6100</color>
+    <color name="list3">#b5b5b5</color>
+    <color name="list4">#F5B812</color>
+    <color name="loadback">#231815</color>
+    <color name="lone">#636772</color>
+    <color name="lsix">#666666</color>
+    <color name="lthree">#999999</color>
+    <color name="ltwo">#ff5001</color>
+    <color name="maing">#727272</color>
+    <color name="mainground">#eeeeee</color>
+    <color name="maint">#009ee8</color>
+    <color name="ming">#19000000</color>
+    <color name="oranger">#FF6737</color>
+    <color name="red">#FFBA2E37</color>
+    <color name="set">#0966a9</color>
+    <color name="setting_text">#FF6E5027</color>
+    <color name="shop_text">#FF844E23</color>
+    <color name="top">#ed6f31</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Box</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pd_updating">正在提交！</string>
+    <style name="translucent">
+        <item name="android:windowBackground">@color/descolor</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+</resources>

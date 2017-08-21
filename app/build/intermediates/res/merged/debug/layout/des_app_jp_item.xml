@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="200dp" >
+
+    <ImageView
+        android:id="@+id/iv_jpdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        android:background="@drawable/gallary_btn" />
+
+    <ImageView
+        android:id="@+id/iv_jplogo"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <TextView
+        android:id="@+id/tv_jp_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="164dp"
+        android:drawableRight="@drawable/coin"
+        android:text="京东  5积分"
+        android:textColor="#FF6737"
+        android:textSize="16sp" />
+
+</RelativeLayout>

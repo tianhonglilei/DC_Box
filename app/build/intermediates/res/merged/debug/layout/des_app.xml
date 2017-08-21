@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFAFA" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rlayout_appdes_top"
+            android:layout_width="match_parent"
+            android:layout_height="530dp"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RelativeLayout
+                android:id="@+id/lrayout_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/lv_appdes_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:cacheColorHint="#00000000"
+                    android:dividerHeight="0dp"
+                    android:footerDividersEnabled="false"
+                    android:listSelector="@android:color/transparent" >
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lrayout_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rrayout_center_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentTop="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_appdes_center_logo"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tv_appdes_center_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_toRightOf="@+id/iv_appdes_center_logo"
+                        android:text="58同城"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_appdes_center_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_appdes_center_name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/iv_appdes_center_logo"
+                        android:text="人人信赖的生活服务平台"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_appdes_center_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_appdes_center_des"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/iv_appdes_center_logo"
+                        android:drawableRight="@drawable/coin"
+                        android:text="5"
+                        android:textColor="@color/oranger"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="180dp"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/rrayout_center_top"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/viewpager"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_point_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llayout_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_appdes_right_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:text="点创应用商城"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rrayout_right_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/tv_appdes_right_market"
+                    android:layout_marginTop="40dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_appdes_right_logo"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tv_appdes_right_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_toRightOf="@+id/iv_appdes_right_logo"
+                        android:text="58同城"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_appdes_right_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_appdes_right_name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/iv_appdes_right_logo"
+                        android:text="人人信赖的生活服务平台"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_appdes_right_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_appdes_right_des"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/iv_appdes_right_logo"
+                        android:drawableRight="@drawable/coin"
+                        android:text="5"
+                        android:textColor="@color/oranger"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_appdes_right_getfen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rrayout_right_top"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="56dp"
+                    android:text="扫描安装应用可免费获取5积分"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_appdes_right_ewm_normal"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_below="@+id/tv_appdes_right_getfen"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+
+                <ImageView
+                    android:id="@+id/iv_appdes_right_ewm_err"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_below="@+id/tv_appdes_right_getfen"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_appdes_right_market_bom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_appdes_right_ewm_normal"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="在点创应用商城下载应用,可免费获取"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_appdes_bom"
+            android:layout_width="match_parent"
+            android:layout_height="220dp" >
+
+            <ImageView
+                android:id="@+id/iv_appdes_bm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gallary_bm" />
+
+            <HorizontalScrollView
+                android:id="@+id/appdes_scrollgrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <GridView
+                        android:id="@+id/appdes_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:stackFromBottom="true"
+                        android:stretchMode="spacingWidthUniform"
+                        android:transcriptMode="alwaysScroll" >
+                    </GridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/desappbtn3"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_returnmain_selector" />
+
+    <TextView
+        android:id="@+id/tv_desapp_backTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="38dp"
+        android:text="89s"
+        android:textColor="#00A7F9"
+        android:textSize="16sp" />
+
+</RelativeLayout>

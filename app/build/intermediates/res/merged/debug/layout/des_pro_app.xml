@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFAFA" >
+
+    <LinearLayout
+        android:id="@+id/rl_pro_app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/rl_desproapp"
+            android:layout_width="match_parent"
+            android:layout_height="530dp"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RelativeLayout
+                android:id="@+id/rlr_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rr_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_title_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/loadgetfen" />
+
+                    <TextView
+                        android:id="@+id/tv_title_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="下载应用换取积分,免费畅喝饮料!"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/pro_app_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rr_left"
+                    android:cacheColorHint="#00000000"
+                    android:dividerHeight="0dp"
+                    android:footerDividersEnabled="false"
+                    android:listSelector="@android:color/transparent" >
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlr_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_tuopan_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/tuopan2" />
+
+                <ImageView
+                    android:id="@+id/iv_drink_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="90dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlr_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv_market_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="点创应用商城"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_pro_name_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_market_right"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="25dp"
+                    android:drawableRight="@drawable/ice_flag"
+                    android:text="康师傅冰红茶"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_pro_price_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pro_name_right"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableRight="@drawable/coin"
+                    android:text="¥3.00 或   3"
+                    android:textColor="@color/oranger"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_pro_zhifutitle_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pro_price_right"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="30dp"
+                    android:text="扫二维码支付"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_qr_right"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tv_pro_zhifutitle_right"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp" />
+
+                <ImageView
+                    android:id="@+id/iv_qrloading_right"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tv_pro_zhifutitle_right"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_pro_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pro_zhifutitle_right"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/iv_qr_right"
+                    android:text="数量"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_pro_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pro_nums"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_qr_right"
+                    android:background="@drawable/pro_nums" />
+
+                <LinearLayout
+                    android:id="@+id/despro_ll_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/iv_qr_right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                        android:id="@+id/despro_ll_dianchang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/despro_ib_dianchuang"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/payment_dianchuang_selector" />
+
+                        <TextView
+                            android:id="@+id/despro_des_dianchaung"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/despro_ib_dianchuang"
+                            android:layout_centerHorizontal="true"
+                            android:text="点创支付"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/despro_ll_weichat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/despro_ib_weichat"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/payment_wechat_selector" />
+
+                        <TextView
+                            android:id="@+id/despro_des_weixin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/despro_ib_weichat"
+                            android:layout_centerHorizontal="true"
+                            android:text="微信支付"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/despro_ll_alipay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/despro_ib_alipay"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/payment_alipay_selector" />
+
+                        <TextView
+                            android:id="@+id/despro_des_zhifubao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/despro_ib_alipay"
+                            android:layout_centerHorizontal="true"
+                            android:text="支付宝支付"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/despro_tv_worning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/despro_ll_bottom"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="15dp"
+                    android:text="若已支付未出货,请耐心等待,勿返回!"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlayout_desproapp_bom"
+            android:layout_width="match_parent"
+            android:layout_height="220dp" >
+
+            <ImageView
+                android:id="@+id/iv_desproapp_bm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gallary_bm" />
+
+            <HorizontalScrollView
+                android:id="@+id/desproapp_scrollgrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <GridView
+                        android:id="@+id/desproapp_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:stackFromBottom="true"
+                        android:stretchMode="spacingWidthUniform"
+                        android:transcriptMode="alwaysScroll" >
+                    </GridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/proappbtn3"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_returnmain_selector" />
+
+    <TextView
+        android:id="@+id/tv_proapp_backTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="90dp"
+        android:layout_marginRight="50dp"
+        android:text="89s"
+        android:textColor="#00A7F9"
+        android:textSize="16sp" />
+
+</RelativeLayout>

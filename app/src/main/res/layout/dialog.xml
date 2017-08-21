@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog"
+    android:layout_width="300dp"
+    android:layout_height="600dp"
+    android:background="@color/black" >
+
+    <TextView
+        android:id="@+id/tv_set_huodao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:text="可设置的温度范围: 10°C ~ 63°C"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <com.zhang.box.utils.LineEditText
+        android:id="@+id/et_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_set_huodao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:hint="输入需要设置范围内的温度"
+        android:inputType="numberSigned"
+        android:singleLine="true"
+        android:textColor="#ff7f00"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="18sp" />
+
+</RelativeLayout>

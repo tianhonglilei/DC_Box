@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/HuoDaoAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/HuoDaoAdapter2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/MyDesProAppAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/proAdapter2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/proAdapter3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/AppItem.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/ConfigInfo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/ProInstance.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/SysData.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/UserInfo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/AppActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/BooksDB.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/CeShiActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/ConfigActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/DegreeActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/DesAppActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/DesProActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/HuodaoActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/ImageLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/MyApplication.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/NetImageLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/ProActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/ProSucessActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/ReadSystemMemory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/WebViewCeshiActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/catchexecpton/LogCollectorUtility.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/constants/Constants.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/GoodsOutBrocastReceiver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/LoadingService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/MachineBrocastReceiver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ActivitySkipUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/BackTime.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/DeviceUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/FileUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ImageLoaderUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ViewHolder.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/HttpUtil.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

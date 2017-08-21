@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/top_view"
+            layout="@layout/top" />
+
+        <LinearLayout
+            android:id="@+id/llayout_pro_drinke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_view"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zhang.box.utils.MyListView
+                android:id="@+id/lv_pro_drinke"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:footerDividersEnabled="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llayout_pro_snake"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llayout_pro_drinke"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zhang.box.utils.MyListView
+                android:id="@+id/lv_pro_snake"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:footerDividersEnabled="false" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_pro_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="400dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/ib_config_return_selector" />
+    </RelativeLayout>
+
+</ScrollView>

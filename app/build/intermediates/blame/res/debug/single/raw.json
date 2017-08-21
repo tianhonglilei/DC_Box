@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\s1.wav",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\s1.wav"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\s0.wav",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\s0.wav"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\tishiapp.wav",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\tishiapp.wav"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\s2.wav",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\s2.wav"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\des_tishi.wav",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\des_tishi.wav"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\tishi.wav",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\tishi.wav"
+    }
+]
