@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemlayout"
+    android:layout_width="160dp"
+    android:layout_height="240dp" >
+
+    <ImageView
+        android:id="@+id/buylistpro"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/itemproductbg" />
+
+    <ImageView
+        android:id="@+id/ItemImage2buy"
+        android:layout_width="80dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/buy_btm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="214dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/down2buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0元"
+            android:textColor="#FF6737"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_flags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+</RelativeLayout>

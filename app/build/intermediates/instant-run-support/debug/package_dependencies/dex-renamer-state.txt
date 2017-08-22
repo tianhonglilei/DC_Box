@@ -1,0 +1,13 @@
+#Sun Aug 20 15:24:02 CST 2017
+renamed.3=classes2.dex
+renamed.2=classes.dex
+renamed.1=classes4.dex
+renamed.0=classes3.dex
+base.3=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\httpmime-4.1.3_bb06436e528a0b4b7e358fe578bea46d87db6d39
+base.2=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_4b5a6ed7e9e22e88e5c55e2e8f15ad0f8f4e50c4
+base.1=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\zxing_93066573a74ebfe53533001af01a4b22a5d9cedc
+base.0=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\Serialport_kefei_409c647892281f99ccff9b4df2ad52c045ac2b11
+file.3=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\httpmime-4.1.3_bb06436e528a0b4b7e358fe578bea46d87db6d39\\classes.dex
+file.2=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_4b5a6ed7e9e22e88e5c55e2e8f15ad0f8f4e50c4\\classes.dex
+file.1=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\zxing_93066573a74ebfe53533001af01a4b22a5d9cedc\\classes.dex
+file.0=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\Serialport_kefei_409c647892281f99ccff9b4df2ad52c045ac2b11\\classes.dex

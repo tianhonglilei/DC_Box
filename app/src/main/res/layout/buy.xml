@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/buy_more_pro_bg" >
+
+    <TextView
+        android:id="@+id/buytv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/buytv_sfm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/buytv_xq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buytv_sfm"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/buytv_nyr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buytv_xq"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/buy_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView
+            android:id="@+id/buyscrollgrid"
+            android:layout_width="1360dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
+
+            <LinearLayout
+                android:id="@+id/llayout_scroll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <GridView
+                    android:id="@+id/buygrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="none"
+                    android:stackFromBottom="true"
+                    android:stretchMode="spacingWidthUniform"
+                    android:transcriptMode="alwaysScroll" >
+                </GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buy_line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buy_line2"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView
+            android:id="@+id/buyscrollgrid2"
+            android:layout_width="1350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
+
+            <LinearLayout
+                android:id="@+id/llayout_scroll2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <GridView
+                    android:id="@+id/buygrid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="none"
+                    android:stackFromBottom="true"
+                    android:stretchMode="spacingWidthUniform"
+                    android:transcriptMode="alwaysScroll" >
+                </GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pro"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RelativeLayout
+            android:id="@+id/ll_pro_one"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/ib_pro_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buy_all_pro" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_pro_two"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/ib_pro_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buy_drink_pro" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_pro_three"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/ib_pro_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buy_snake_pro" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buybtn1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/buy_more_pro_help" />
+
+    <Button
+        android:id="@+id/buybtn3"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/btn_returnmain_selector" />
+
+    <TextView
+        android:id="@+id/tv_buy_backTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="80dp"
+        android:text="89s"
+        android:textColor="#00A7F9"
+        android:textSize="16sp" />
+
+</RelativeLayout>

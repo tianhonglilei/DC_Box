@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Serialport_kefei">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/Serialport_kefei.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

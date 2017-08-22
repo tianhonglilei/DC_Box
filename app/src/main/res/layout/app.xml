@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <FrameLayout
+        android:id="@+id/frayout_top"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="2dp"
+        android:clipChildren="false" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clipChildren="false" >
+        </android.support.v4.view.ViewPager>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rrayout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frayout_top" 
+        android:background="@drawable/appbg">
+
+        <RelativeLayout
+            android:id="@+id/rrrayout_content_left"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true">
+
+            <Button
+                android:id="@+id/rl_btn_soft_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/app_sort_selector"
+                android:clickable="true"
+                android:text="最新推荐"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/rl_btn_shopping_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_btn_soft_one"
+                android:background="@drawable/app_sort_selector"
+                android:clickable="true"
+                android:text="游戏"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Button
+                android:id="@+id/rl_btn_game_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_btn_shopping_three"
+                android:background="@drawable/app_sort_selector"
+                android:clickable="true"
+                android:text="工具"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/rl_btn_environment_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_btn_game_two"
+                android:background="@drawable/app_sort_selector"
+                android:clickable="true"
+                android:text="视频"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rrrayout_content_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/rrrayout_content_left"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" >
+
+            <ListView
+                android:id="@+id/app_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:cacheColorHint="#00000000"
+                android:footerDividersEnabled="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/appbtn3"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/btn_returnmain_selector" />
+
+    <TextView
+        android:id="@+id/tv_app_backTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="80dp"
+        android:text="89s"
+        android:textColor="#00A7F9"
+        android:textSize="16sp" />
+
+</RelativeLayout>

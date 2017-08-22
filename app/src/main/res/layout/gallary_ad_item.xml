@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gallaryitemlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="180dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/gallary_ad_ItemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp" >
+    </ImageView>
+
+</LinearLayout>

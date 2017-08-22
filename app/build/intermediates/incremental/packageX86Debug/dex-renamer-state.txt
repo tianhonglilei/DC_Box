@@ -1,0 +1,7 @@
+#Sun Aug 20 15:24:03 CST 2017
+base.0=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b45ea190c001ff0d76fb4e38f00077810cfab0e7
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1ada4ce8a56427fb8e8ca263790345e648f4d6ca\\classes.dex
+base.1=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1ada4ce8a56427fb8e8ca263790345e648f4d6ca
+file.0=E\:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b45ea190c001ff0d76fb4e38f00077810cfab0e7\\classes.dex

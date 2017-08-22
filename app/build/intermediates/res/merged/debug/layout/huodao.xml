@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/top_view"
+            layout="@layout/top" />
+
+        <LinearLayout
+            android:id="@+id/llayout_huodao_drink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zhang.box.utils.MyListView
+                android:id="@+id/lv_huodao_drink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:footerDividersEnabled="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llayout_huodao_shanke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llayout_huodao_drink"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zhang.box.utils.MyListView
+                android:id="@+id/lv_huodao_shanke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:footerDividersEnabled="false" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_huodao_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="90dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/ib_config_return_selector" />
+
+        <Button
+            android:id="@+id/btn_ceshi"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ib_huodao_return"
+            android:layout_marginRight="30dp"
+            android:background="#00A7F9"
+            android:text="测试网络"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</ScrollView>
