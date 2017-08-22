@@ -51,7 +51,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ViewHolder.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/fontUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/Common.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/HttpGetAndPostNet.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/HttpGetAndPostNet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/HttpUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/ImageLoader.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libserial_port.so" charset="GBK" />

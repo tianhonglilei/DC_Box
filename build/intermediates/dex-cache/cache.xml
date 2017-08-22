@@ -8,7 +8,7 @@
         optimize="true"
         revision="26.0.1"
         sha1="96b67e377ff4637ff1fa3bbe9ad7183773935f39">
-        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\debug\zxing_93066573a74ebfe53533001af01a4b22a5d9cedc.jar" />
+        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\release\zxing_93066573a74ebfe53533001af01a4b22a5d9cedc.jar" />
     </item>
     <item
         is-multidex="false"
@@ -17,7 +17,7 @@
         optimize="true"
         revision="26.0.1"
         sha1="5453feab96acd6ad064bd91836a9682eeff1818a">
-        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\debug\Serialport_kefei_409c647892281f99ccff9b4df2ad52c045ac2b11.jar" />
+        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\release\Serialport_kefei_409c647892281f99ccff9b4df2ad52c045ac2b11.jar" />
     </item>
     <item
         is-multidex="false"
@@ -26,16 +26,7 @@
         optimize="true"
         revision="26.0.1"
         sha1="e70d34d98f7f7f3b2b92105b9f2fe2a7a7184461">
-        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\debug\httpmime-4.1.3_bb06436e528a0b4b7e358fe578bea46d87db6d39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_4b5a6ed7e9e22e88e5c55e2e8f15ad0f8f4e50c4.jar" />
+        <dex dex="E:\Android-DC-Box\DC-Box\app\build\intermediates\pre-dexed\release\httpmime-4.1.3_bb06436e528a0b4b7e358fe578bea46d87db6d39.jar" />
     </item>
 
 </items>

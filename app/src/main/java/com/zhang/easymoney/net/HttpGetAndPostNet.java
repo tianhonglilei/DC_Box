@@ -66,7 +66,7 @@ public class HttpGetAndPostNet {
 		File file = new File(path);
 		if (!file.exists()) {
 			try {
-				// °´ÕÕÖ¸¶¨µÄÂ·¾¶´´½¨ÎÄ¼þ¼Ð
+				// æŒ‰ç…§æŒ‡å®šçš„è·¯å¾„åˆ›å»ºæ–‡ä»¶å¤¹
 				file.mkdirs();
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -75,14 +75,14 @@ public class HttpGetAndPostNet {
 		File dir = new File(name);
 		if (!dir.exists()) {
 			try {
-				// ÔÚÖ¸¶¨µÄÎÄ¼þ¼ÐÖÐ´´½¨ÎÄ¼þ
+				// åœ¨æŒ‡å®šçš„æ–‡ä»¶å¤¹ä¸­åˆ›å»ºæ–‡ä»¶
 				dir.createNewFile();
 			} catch (Exception e) {
 			}
 		} else {
 			dir.delete();
 			try {
-				// ÔÚÖ¸¶¨µÄÎÄ¼þ¼ÐÖÐ´´½¨ÎÄ¼þ
+				// åœ¨æŒ‡å®šçš„æ–‡ä»¶å¤¹ä¸­åˆ›å»ºæ–‡ä»¶
 				dir.createNewFile();
 			} catch (Exception e) {
 			}
@@ -157,7 +157,7 @@ public class HttpGetAndPostNet {
 	public static void Httppostdata(String aUrl, String aKdata, String aTdata,
 			PosetnetMonClick aMonClick, int aNUm) {// t= get_wifi_nearby_lbs& k
 													// =
-													// 129ab7de655ad4aa0f0f9127c82f64fe&p={" latitude":"***"," longitude":ï¿½ï¿½***ï¿½ï¿½
+													// 129ab7de655ad4aa0f0f9127c82f64fe&p={" latitude":"***"," longitude":é”Ÿæ–¤æ‹·***é”Ÿæ–¤æ‹·
 													// , " distance":*** }
 		mObject = aMonClick;
 		mTdata = aTdata;
@@ -170,8 +170,8 @@ public class HttpGetAndPostNet {
 					HttpPost httpRequest = new HttpPost(murl);
 					List<NameValuePair> paramslist = new ArrayList<NameValuePair>();
 
-					paramslist.add(new BasicNameValuePair("log1", mKdata)); // postï¿½ï¿½ï¿½ï¿½ï¿½Ó??
-					paramslist.add(new BasicNameValuePair("log2", mTdata)); // postï¿½ï¿½ï¿½ï¿½ï¿½Ó??
+					paramslist.add(new BasicNameValuePair("log1", mKdata)); // posté”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”ŸæŽ¥??
+					paramslist.add(new BasicNameValuePair("log2", mTdata)); // posté”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”ŸæŽ¥??
 
 					HttpEntity httpentity = new UrlEncodedFormEntity(
 							paramslist, "UTF_8");
