@@ -7,26 +7,26 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
 /**
- * ¶¯»­¹¤¾ßÀà
+ * åŠ¨ç”»å·¥å…·ç±»
  * 
  * @author wang
  * 
  */
 public class AnimationUtils {
 
-	/** °´ÖĞĞÄµãĞı×ª¶¯»­ */
+	/** æŒ‰ä¸­å¿ƒç‚¹æ—‹è½¬åŠ¨ç”» */
 	public static void rotateAnimations(ImageView imageView) {
 
 		RotateAnimation rotateAnimation = new RotateAnimation(0f, 360f,
 				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
 				0.5f);
 		rotateAnimation.setDuration(1000);
-		rotateAnimation.setInterpolator(new LinearInterpolator());// ²»Í£¶Ù
+		rotateAnimation.setInterpolator(new LinearInterpolator());// ä¸åœé¡¿
 		rotateAnimation.setRepeatCount(-1);
 		imageView.startAnimation(rotateAnimation);
 	}
 
-	/** ´¹Ö±ÏÂÂä¶¯»­ */
+	/** å‚ç›´ä¸‹è½åŠ¨ç”» */
 	public static void translateAnimations(ImageView imageView) {
 		TranslateAnimation mAnimation = new TranslateAnimation(0, 0, -600, 0);
 		mAnimation.setDuration(800);

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 17
     buildToolsVersion "26.0.1"
     aaptOptions {
                 cruncherEnabled = false
@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId "com.zhang.box"
         minSdkVersion 11
-        targetSdkVersion 19
+        targetSdkVersion 17
     }
 
     buildTypes {
@@ -24,8 +24,13 @@ android {
         abi {
             enable true
             reset()
-            include 'x86', 'armeabi-v7a','x86_64'
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
             universalApk true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
         }
     }
 

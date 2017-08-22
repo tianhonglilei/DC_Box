@@ -1,13 +1,13 @@
 package com.zhang.box.utils;
 
 /***
- * ·ÀÖ¹°´Å¥ÖØ¸´µã»÷ÊÂ¼ş
+ * é˜²æ­¢æŒ‰é’®é‡å¤ç‚¹å‡»äº‹ä»¶
  * 
  * @author wang
  * 
  */
 public class OnclickToMuch {
-	// Á½´Îµã»÷°´Å¥Ö®¼äµÄµã»÷¼ä¸ô²»ÄÜÉÙÓÚ1000ºÁÃë
+	// ä¸¤æ¬¡ç‚¹å‡»æŒ‰é’®ä¹‹é—´çš„ç‚¹å‡»é—´éš”ä¸èƒ½å°‘äº1000æ¯«ç§’
 	private static final int MIN_CLICK_DELAY_TIME = 1000;
 	private static long lastClickTime;
 

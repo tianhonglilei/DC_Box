@@ -30,8 +30,8 @@ public class Common {
 	public static String    type_url ="";
 	public static int       new_num = 0;
 	public static String    mykey = "3ea45abd1dd451d587770cf4c2dd8752";
-	public static  String gid = null;//��Ϸ id ��
-	public static  String gname = null;//��Ϸ id ��
+	public static  String gid = null;//??? id ??
+	public static  String gname = null;//??? id ??
 	
 	public static boolean  mfirst = false;
 	public static boolean  mdetilfirst = false;
@@ -41,14 +41,14 @@ public class Common {
 	public static int mordertye = 0;
 	public static boolean mdianji = false;
 
-	//�ж��ֻ���ʽ�Ƿ���ȷ
+	//?ж?????????????
 		public static boolean isMobileNO(String mobiles) {
 			Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
 			Matcher m = p.matcher(mobiles);
 			return m.matches();
 			}
 			
-		//�ж�email��ʽ�Ƿ���ȷ
+		//?ж?email?????????
 			public static boolean isEmail(String email) {
 			String str = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$";
 			Pattern p = Pattern.compile(str);
@@ -94,7 +94,7 @@ public class Common {
 		 	}
 			
 /**
- * ���sd��
+ * ???sd??
  * @return
  */
 	public static boolean sdCardCheck() {
@@ -137,7 +137,7 @@ public class Common {
 	    try {  
 	    xmString = new String(sb.toString().getBytes("UTF-8"));  
 	    xmlUTF8 = URLEncoder.encode(xmString, "UTF-8");  
-	    System.out.println("utf-8 ���룺" + xmlUTF8) ;  
+	    System.out.println("utf-8 ????" + xmlUTF8) ;  
 	    } catch (UnsupportedEncodingException e) {  
 	    // TODO Auto-generated catch block  
 	   

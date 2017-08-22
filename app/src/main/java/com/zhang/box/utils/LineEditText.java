@@ -14,10 +14,10 @@ public class LineEditText extends EditText {
 	public LineEditText(Context context, AttributeSet attrs) {
 		super(context, attrs);
 
-		// ÉèÖÃ»­±ÊµÄÊôĞÔ
+		// è®¾ç½®ç”»ç¬”çš„å±æ€§
 		paint = new Paint();
 		paint.setStyle(Paint.Style.STROKE);
-		// ¿ÉÒÔ×Ô¶¨Òå»­±ÊµÄÑÕÉ«£¬ÎÒÕâÀïÉèÖÃ³ÉºÚÉ«
+		// å¯ä»¥è‡ªå®šä¹‰ç”»ç¬”çš„é¢œè‰²ï¼Œæˆ‘è¿™é‡Œè®¾ç½®æˆé»‘è‰²
 		paint.setColor(Color.rgb(255, 127, 0)); 
 	}
 
@@ -25,8 +25,8 @@ public class LineEditText extends EditText {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		/**
-		 * canvas»­Ö±Ïß£¬´Ó×óÏÂ½Çµ½ÓÒÏÂ½Ç£¬this.getHeight()-2ÊÇ»ñµÃ¸¸edittextµÄ¸ß¶È£¬µ«ÊÇ±ØĞëÒª-2ÕâÑù²ÅÄÜ±£Ö¤
-		 * »­µÄºáÏßÔÚedittextÉÏÃæ£¬ÄÇÑù²Å¿´µÃ¼û£¬Èç¹û²»-2£¬Äã¿ÉÒÔÊÔÒ»ÊÔ¿´Ò»ÏÂÊÇ·ñÄÜ¿´µÃ¼û¡£
+		 * canvasç”»ç›´çº¿ï¼Œä»å·¦ä¸‹è§’åˆ°å³ä¸‹è§’ï¼Œthis.getHeight()-2æ˜¯è·å¾—çˆ¶edittextçš„é«˜åº¦ï¼Œä½†æ˜¯å¿…é¡»è¦-2è¿™æ ·æ‰èƒ½ä¿è¯
+		 * ç”»çš„æ¨ªçº¿åœ¨edittextä¸Šé¢ï¼Œé‚£æ ·æ‰çœ‹å¾—è§ï¼Œå¦‚æœä¸-2ï¼Œä½ å¯ä»¥è¯•ä¸€è¯•çœ‹ä¸€ä¸‹æ˜¯å¦èƒ½çœ‹å¾—è§ã€‚
 		 */
 		canvas.drawLine(0, this.getHeight() - 2, this.getWidth() - 2,
 				this.getHeight() - 2, paint);

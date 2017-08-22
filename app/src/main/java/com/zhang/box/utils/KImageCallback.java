@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 /**
- * 回调 处理图片
+ * 鍥炶皟 澶勭悊鍥剧墖
  * 
  * @author wang
  * 

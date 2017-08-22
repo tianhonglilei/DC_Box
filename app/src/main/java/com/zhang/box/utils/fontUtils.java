@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * ×ÖÌåĞŞ¸Ä ¹¤¾ßÀà
+ * å­—ä½“ä¿®æ”¹ å·¥å…·ç±»
  * 
  * @author wang
  * 
@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class fontUtils {
 
 	public fontUtils() {
-		throw new UnsupportedOperationException("×ÖÌå´óĞ¡ºÍÑÕÉ«ĞŞ¸Ä¹¤¾ßÀà²»ÄÜÊµÀı»¯");
+		throw new UnsupportedOperationException("å­—ä½“å¤§å°å’Œé¢œè‰²ä¿®æ”¹å·¥å…·ç±»ä¸èƒ½å®ä¾‹åŒ–");
 	}
 
 	public static void setFontColor(Context context, TextView textView,
@@ -31,7 +31,7 @@ public class fontUtils {
 	public static void setFontSize(TextView textView, float size) {
 	}
 
-	/** ÉèÖÃ×ÖÌåµÄÑÕÉ«ºÍ ´óĞ¡ */
+	/** è®¾ç½®å­—ä½“çš„é¢œè‰²å’Œ å¤§å° */
 	public static void setFontColorAndSize(Context context, Button btn,
 			int color, float size) {
 
@@ -44,7 +44,7 @@ public class fontUtils {
 		btn.setTextSize(size);
 	}
 
-	/** ÉèÖÃ×ÖÌåµÄÑÕÉ«ºÍ ´óĞ¡ ¶àÖÖ°´Å¥µÄÉèÖÃ */
+	/** è®¾ç½®å­—ä½“çš„é¢œè‰²å’Œ å¤§å° å¤šç§æŒ‰é’®çš„è®¾ç½® */
 	public static void setFontColorAndSize(Context context, Button btn1,
 			Button btn2, Button btn3, int color, float size) {
 

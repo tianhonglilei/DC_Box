@@ -23,14 +23,14 @@ import com.zhang.box.DesProActivity;
 import com.zhang.box.ImageLoader;
 
 /**
- * ÖØ¸´´úÂëÌá³ÉÀà
+ * é‡å¤ä»£ç ææˆç±»
  * 
  * @author wang
  * 
  */
 public class MulDataUtils {
 
-	/** ÍøÂç»ñÈ¡Í¼Æ¬Â·¾¶×ª³ÉÍ¼Æ¬²¢½øĞĞ»º´æ */
+	/** ç½‘ç»œè·å–å›¾ç‰‡è·¯å¾„è½¬æˆå›¾ç‰‡å¹¶è¿›è¡Œç¼“å­˜ */
 	public static void dealPicture(Context context, String picPath,
 			ImageView imageView) {
 		ImageLoader mLogoImage = ImageLoader.GetObject(context);
@@ -44,7 +44,7 @@ public class MulDataUtils {
 		}
 	}
 
-	/** Ó¦ÓÃAPPÖ®item */
+	/** åº”ç”¨APPä¹‹item */
 	public static void appItemData(Context context, UserInfo userInfo) {
 		/*
 		UserInfo.fromActivity = 0;
@@ -61,7 +61,7 @@ public class MulDataUtils {
 
 		// Intent intent = new Intent(context, DesActivity.class);
 		// intent.putExtra("flag", 1);
-		// // ´«µİData¶ÔÏó
+		// // ä¼ é€’Dataå¯¹è±¡
 		// context.startActivity(intent);
 
 		HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
@@ -78,7 +78,7 @@ public class MulDataUtils {
 		context.startActivity(intent);
 	}
 
-	/** GridViewÉèÖÃÊôĞÔÌáÈ¡Àà */
+	/** GridViewè®¾ç½®å±æ€§æå–ç±» */
 	public static void setGrideViews(Activity activity, GridView gridView,
 			int size, int length, int space) {
 		int sizes = size;
@@ -90,21 +90,21 @@ public class MulDataUtils {
 		int itemWidth = (int) (lengths * density);
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
 				gridviewWidth, LinearLayout.LayoutParams.MATCH_PARENT);
-		gridView.setLayoutParams(params); // ÉèÖÃGirdView²¼¾Ö²ÎÊı,ºáÏò²¼¾ÖµÄ¹Ø¼ü
-		gridView.setColumnWidth(itemWidth); // ÉèÖÃÁĞ±íÏî¿í
-		gridView.setHorizontalSpacing(space); // ÉèÖÃÁĞ±íÏîË®Æ½¼ä¾à
+		gridView.setLayoutParams(params); // è®¾ç½®GirdViewå¸ƒå±€å‚æ•°,æ¨ªå‘å¸ƒå±€çš„å…³é”®
+		gridView.setColumnWidth(itemWidth); // è®¾ç½®åˆ—è¡¨é¡¹å®½
+		gridView.setHorizontalSpacing(space); // è®¾ç½®åˆ—è¡¨é¡¹æ°´å¹³é—´è·
 		gridView.setStretchMode(GridView.NO_STRETCH);
-		gridView.setNumColumns(sizes); // ÉèÖÃÁĞÊıÁ¿=ÁĞ±í¼¯ºÏÊı
+		gridView.setNumColumns(sizes); // è®¾ç½®åˆ—æ•°é‡=åˆ—è¡¨é›†åˆæ•°
 		gridView.setSelector(new ColorDrawable(Color.TRANSPARENT));
 	}
 
-	public static void getVideoFile(final List<UserInfo> list, File file) {// »ñµÃÊÓÆµÎÄ¼ş
+	public static void getVideoFile(final List<UserInfo> list, File file) {// è·å¾—è§†é¢‘æ–‡ä»¶
 
 		file.listFiles(new FileFilter() {
 
 			@Override
 			public boolean accept(File file) {
-				// sdCardÕÒµ½ÊÓÆµÃû³Æ
+				// sdCardæ‰¾åˆ°è§†é¢‘åç§°
 				String name = file.getName();
 
 				int i = name.indexOf('.');

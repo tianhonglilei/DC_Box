@@ -84,19 +84,19 @@ public class proAdapter2 extends BaseAdapter {
 			MulDataUtils.dealPicture(context, infos.getLogo(),
 					viewHolder.iv_pro_logo_one);
 			viewHolder.iv_pro_name_one.setText(infos.getName());
-			String pro_pro_num = "ĞèÒª²¹²Ö" + infos.getMfinish()+ "Æ¿";
+			String pro_pro_num = "éœ€è¦è¡¥ä»“" + infos.getMfinish()+ "ç“¶";
 			viewHolder.iv_pro_num_one.setText(pro_pro_num);
 			StringUtils.setFont(viewHolder.iv_pro_num_one, pro_pro_num, 4,
 					pro_pro_num.length() - 1);
 
-			String iv_pro_hid = "»õµÀ" + infos.getHid();
+			String iv_pro_hid = "è´§é“" + infos.getHid();
 			viewHolder.iv_pro_hid_one.setText(iv_pro_hid);
 			StringUtils.setFont(viewHolder.iv_pro_hid_one, iv_pro_hid, 2,
 					iv_pro_hid.length());
 
-			// °Ñinfo ÓëÊäÈë¿ò½øĞĞ°ó¶¨
+			// æŠŠinfo ä¸è¾“å…¥æ¡†è¿›è¡Œç»‘å®š
 			viewHolder.et_pro_num_one.setTag(infos);
-			// Çå³ı½¹µã
+			// æ¸…é™¤ç„¦ç‚¹
 			viewHolder.et_pro_num_one.clearFocus();
 			viewHolder.et_pro_num_one.addTextChangedListener(new TextWatcher() {
 				@Override
@@ -107,7 +107,7 @@ public class proAdapter2 extends BaseAdapter {
 				@Override
 				public void onTextChanged(CharSequence s, int start,
 						int before, int count) {
-					// »ñµÃEdittextËùÔÚpositionÀïÃæµÄBean£¬²¢ÉèÖÃÊı¾İ
+					// è·å¾—Edittextæ‰€åœ¨positioné‡Œé¢çš„Beanï¼Œå¹¶è®¾ç½®æ•°æ®
 					ConfigInfo info = (ConfigInfo) viewHolder.et_pro_num_one
 							.getTag();
 					info.setHaveNum(s + "");
@@ -118,7 +118,7 @@ public class proAdapter2 extends BaseAdapter {
 				}
 			});
 
-			// ´ó²¿·ÖÇé¿öÏÂ£¬AdapterÀïÃæÓĞif±ØĞëÓĞelse
+			// å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼ŒAdapteré‡Œé¢æœ‰ifå¿…é¡»æœ‰else
 			if (!TextUtils.isEmpty(infos.getHaveNum())) {
 				viewHolder.et_pro_num_one.setText(infos.getHaveNum());
 			} else {
@@ -129,7 +129,7 @@ public class proAdapter2 extends BaseAdapter {
 			if (infos.getMfinish() > 0) {
 				viewHolder.ib_pro_finish_one
 						.setBackgroundResource(R.drawable.buhuobtn2);
-				// ²¹²Ö
+				// è¡¥ä»“
 				final int pos = position;
 				viewHolder.ib_pro_finish_one
 						.setOnClickListener(new OnClickListener() {
@@ -137,7 +137,7 @@ public class proAdapter2 extends BaseAdapter {
 							@Override
 							public void onClick(View v) {
 								String pro_num_info = infos.getHaveNum();
-								Log.e("whwh", "»ñÈ¡µÄÊı¾İ--->pro_num_info==="
+								Log.e("whwh", "è·å–çš„æ•°æ®--->pro_num_info==="
 										+ pro_num_info);
 								if (!pro_num_info.isEmpty()) {
 									pronum = Integer.parseInt(pro_num_info);
@@ -146,11 +146,11 @@ public class proAdapter2 extends BaseAdapter {
 										updataSucess(pos);
 									} else {
 										ToastTools.showShort(context,
-												"×î´óÖ»ÄÜ²¹²ÖÊıÎª"+ infos.getMfinish()
-														+ "Æ¿");
+												"æœ€å¤§åªèƒ½è¡¥ä»“æ•°ä¸º"+ infos.getMfinish()
+														+ "ç“¶");
 									}
 								} else {
-									ToastTools.showShort(context, "¿ÕÖµ,ÇëÖØĞÂ³öÈë!");
+									ToastTools.showShort(context, "ç©ºå€¼,è¯·é‡æ–°å‡ºå…¥!");
 								}
 								notifyDataSetChanged();
 							}
@@ -171,19 +171,19 @@ public class proAdapter2 extends BaseAdapter {
 			MulDataUtils.dealPicture(context, info.getLogo(),
 					viewHolder.iv_pro_logo_two);
 			viewHolder.iv_pro_name_two.setText(info.getName());
-			String pro_pro_num = "ĞèÒª²¹²Ö" + (info.getMfinish())
-					+ "Æ¿";
+			String pro_pro_num = "éœ€è¦è¡¥ä»“" + (info.getMfinish())
+					+ "ç“¶";
 			viewHolder.iv_pro_num_two.setText(pro_pro_num);
 			StringUtils.setFont(viewHolder.iv_pro_num_two, pro_pro_num, 4,
 					pro_pro_num.length() - 1);
 
-			String iv_pro_hid = "»õµÀ" + info.getHid();
+			String iv_pro_hid = "è´§é“" + info.getHid();
 			viewHolder.iv_pro_hid_two.setText(iv_pro_hid);
 			StringUtils.setFont(viewHolder.iv_pro_hid_two, iv_pro_hid, 2,
 					iv_pro_hid.length());
-			// °Ñinfo ÓëÊäÈë¿ò½øĞĞ°ó¶¨
+			// æŠŠinfo ä¸è¾“å…¥æ¡†è¿›è¡Œç»‘å®š
 			viewHolder.et_pro_num_two.setTag(info);
-			// Çå³ı½¹µã
+			// æ¸…é™¤ç„¦ç‚¹
 			viewHolder.et_pro_num_two.clearFocus();
 
 			viewHolder.et_pro_num_two.addTextChangedListener(new TextWatcher() {
@@ -195,7 +195,7 @@ public class proAdapter2 extends BaseAdapter {
 				@Override
 				public void onTextChanged(CharSequence s, int start,
 						int before, int count) {
-					// »ñµÃEdittextËùÔÚpositionÀïÃæµÄBean£¬²¢ÉèÖÃÊı¾İ
+					// è·å¾—Edittextæ‰€åœ¨positioné‡Œé¢çš„Beanï¼Œå¹¶è®¾ç½®æ•°æ®
 					ConfigInfo info = (ConfigInfo) viewHolder.et_pro_num_two
 							.getTag();
 					info.setHaveNum(s + "");
@@ -207,7 +207,7 @@ public class proAdapter2 extends BaseAdapter {
 				}
 			});
 
-			// ´ó²¿·ÖÇé¿öÏÂ£¬AdapterÀïÃæÓĞif±ØĞëÓĞelse
+			// å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼ŒAdapteré‡Œé¢æœ‰ifå¿…é¡»æœ‰else
 			if (!TextUtils.isEmpty(info.getHaveNum())) {
 				viewHolder.et_pro_num_two.setText(info.getHaveNum());
 			} else {
@@ -219,7 +219,7 @@ public class proAdapter2 extends BaseAdapter {
 
 				viewHolder.ib_pro_finish_two
 						.setBackgroundResource(R.drawable.buhuobtn2);
-				// ²¹²Ö
+				// è¡¥ä»“
 				final int pos = position;
 				viewHolder.ib_pro_finish_two
 						.setOnClickListener(new OnClickListener() {
@@ -227,7 +227,7 @@ public class proAdapter2 extends BaseAdapter {
 							@Override
 							public void onClick(View v) {
 								String pro_num_info = info.getHaveNum();
-								Log.e("whwh", "»ñÈ¡µÄÊı¾İ--->pro_num_info==="
+								Log.e("whwh", "è·å–çš„æ•°æ®--->pro_num_info==="
 										+ pro_num_info);
 								if (!pro_num_info.isEmpty()) {
 									pronum = Integer.parseInt(pro_num_info);
@@ -237,11 +237,11 @@ public class proAdapter2 extends BaseAdapter {
 									} else {
 										ToastTools.showShort(
 												context,
-												"×î´óÖ»ÄÜ²¹²ÖÊıÎª"+info.getMfinish()
-														+ "Æ¿");
+												"æœ€å¤§åªèƒ½è¡¥ä»“æ•°ä¸º"+info.getMfinish()
+														+ "ç“¶");
 									}
 								} else {
-									ToastTools.showShort(context, "¿ÕÖµ,ÇëÖØĞÂ³öÈë!");
+									ToastTools.showShort(context, "ç©ºå€¼,è¯·é‡æ–°å‡ºå…¥!");
 								}
 								notifyDataSetChanged();
 							}
@@ -263,20 +263,20 @@ public class proAdapter2 extends BaseAdapter {
 					viewHolder.iv_pro_logo_three);
 			viewHolder.iv_pro_name_three.setText(info.getName());
 
-			String pro_pro_num = "ĞèÒª²¹²Ö" + (info.getMfinish())
-					+ "Æ¿";
+			String pro_pro_num = "éœ€è¦è¡¥ä»“" + (info.getMfinish())
+					+ "ç“¶";
 			viewHolder.iv_pro_num_three.setText(pro_pro_num);
 			StringUtils.setFont(viewHolder.iv_pro_num_three, pro_pro_num, 4,
 					pro_pro_num.length() - 1);
 
-			String iv_pro_hid = "»õµÀ" + info.getHid();
+			String iv_pro_hid = "è´§é“" + info.getHid();
 			viewHolder.iv_pro_hid_three.setText(iv_pro_hid);
 			StringUtils.setFont(viewHolder.iv_pro_hid_three, iv_pro_hid, 2,
 					iv_pro_hid.length());
 
-			// °Ñinfo ÓëÊäÈë¿ò½øĞĞ°ó¶¨
+			// æŠŠinfo ä¸è¾“å…¥æ¡†è¿›è¡Œç»‘å®š
 			viewHolder.et_pro_num_three.setTag(info);
-			// Çå³ı½¹µã
+			// æ¸…é™¤ç„¦ç‚¹
 			viewHolder.et_pro_num_three.clearFocus();
 
 			viewHolder.et_pro_num_three
@@ -289,7 +289,7 @@ public class proAdapter2 extends BaseAdapter {
 						@Override
 						public void onTextChanged(CharSequence s, int start,
 								int before, int count) {
-							// »ñµÃEdittextËùÔÚpositionÀïÃæµÄBean£¬²¢ÉèÖÃÊı¾İ
+							// è·å¾—Edittextæ‰€åœ¨positioné‡Œé¢çš„Beanï¼Œå¹¶è®¾ç½®æ•°æ®
 							ConfigInfo info = (ConfigInfo) viewHolder.et_pro_num_three
 									.getTag();
 							info.setHaveNum(s + "");
@@ -300,7 +300,7 @@ public class proAdapter2 extends BaseAdapter {
 						}
 					});
 
-			// ´ó²¿·ÖÇé¿öÏÂ£¬AdapterÀïÃæÓĞif±ØĞëÓĞelse
+			// å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼ŒAdapteré‡Œé¢æœ‰ifå¿…é¡»æœ‰else
 			if (!TextUtils.isEmpty(info.getHaveNum())) {
 				viewHolder.et_pro_num_three.setText(info.getHaveNum());
 			} else {
@@ -311,7 +311,7 @@ public class proAdapter2 extends BaseAdapter {
 			if ((info.getMfinish()) > 0) {
 				viewHolder.ib_pro_finish_three
 						.setBackgroundResource(R.drawable.buhuobtn2);
-				// ²¹²Ö
+				// è¡¥ä»“
 				final int pos = position;
 				viewHolder.ib_pro_finish_three
 						.setOnClickListener(new OnClickListener() {
@@ -319,7 +319,7 @@ public class proAdapter2 extends BaseAdapter {
 							@Override
 							public void onClick(View v) {
 								String pro_num_info = info.getHaveNum();
-								Log.e("whwh", "»ñÈ¡µÄÊı¾İ--->pro_num_info==="
+								Log.e("whwh", "è·å–çš„æ•°æ®--->pro_num_info==="
 										+ pro_num_info);
 								if (!pro_num_info.isEmpty()) {
 									pronum = Integer.parseInt(pro_num_info);
@@ -329,10 +329,10 @@ public class proAdapter2 extends BaseAdapter {
 									} else {
 										ToastTools.showShort(
 												context,
-												"×î´óÖ»ÄÜ²¹²ÖÊıÎª"+  info.getMfinish()+ "Æ¿");
+												"æœ€å¤§åªèƒ½è¡¥ä»“æ•°ä¸º"+  info.getMfinish()+ "ç“¶");
 									}
 								} else {
-									ToastTools.showShort(context, "¿ÕÖµ,ÇëÖØĞÂ³öÈë!");
+									ToastTools.showShort(context, "ç©ºå€¼,è¯·é‡æ–°å‡ºå…¥!");
 								}
 								notifyDataSetChanged();
 							}
@@ -354,20 +354,20 @@ public class proAdapter2 extends BaseAdapter {
 					viewHolder.iv_pro_logo_four);
 			viewHolder.iv_pro_name_four.setText(info.getName());
 
-			String pro_pro_num = "ĞèÒª²¹²Ö" + (info.getMfinish())
-					+ "Æ¿";
+			String pro_pro_num = "éœ€è¦è¡¥ä»“" + (info.getMfinish())
+					+ "ç“¶";
 			viewHolder.iv_pro_num_four.setText(pro_pro_num);
 			StringUtils.setFont(viewHolder.iv_pro_num_four, pro_pro_num, 4,
 					pro_pro_num.length() - 1);
 
-			String iv_pro_hid = "»õµÀ" + info.getHid();
+			String iv_pro_hid = "è´§é“" + info.getHid();
 			viewHolder.iv_pro_hid_four.setText(iv_pro_hid);
 			StringUtils.setFont(viewHolder.iv_pro_hid_four, iv_pro_hid, 2,
 					iv_pro_hid.length());
 
-			// °Ñinfo ÓëÊäÈë¿ò½øĞĞ°ó¶¨
+			// æŠŠinfo ä¸è¾“å…¥æ¡†è¿›è¡Œç»‘å®š
 			viewHolder.et_pro_num_four.setTag(info);
-			// Çå³ı½¹µã
+			// æ¸…é™¤ç„¦ç‚¹
 			viewHolder.et_pro_num_four.clearFocus();
 
 			viewHolder.et_pro_num_four
@@ -380,7 +380,7 @@ public class proAdapter2 extends BaseAdapter {
 						@Override
 						public void onTextChanged(CharSequence s, int start,
 								int before, int count) {
-							// »ñµÃEdittextËùÔÚpositionÀïÃæµÄBean£¬²¢ÉèÖÃÊı¾İ
+							// è·å¾—Edittextæ‰€åœ¨positioné‡Œé¢çš„Beanï¼Œå¹¶è®¾ç½®æ•°æ®
 							ConfigInfo info = (ConfigInfo) viewHolder.et_pro_num_four
 									.getTag();
 							info.setHaveNum(s + "");
@@ -391,7 +391,7 @@ public class proAdapter2 extends BaseAdapter {
 						}
 					});
 
-			// ´ó²¿·ÖÇé¿öÏÂ£¬AdapterÀïÃæÓĞif±ØĞëÓĞelse
+			// å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼ŒAdapteré‡Œé¢æœ‰ifå¿…é¡»æœ‰else
 			if (!TextUtils.isEmpty(info.getHaveNum())) {
 				viewHolder.et_pro_num_four.setText(info.getHaveNum());
 			} else {
@@ -402,7 +402,7 @@ public class proAdapter2 extends BaseAdapter {
 			if ((info.getMfinish()) > 0) {
 				viewHolder.ib_pro_finish_four
 						.setBackgroundResource(R.drawable.buhuobtn2);
-				// ²¹²Ö
+				// è¡¥ä»“
 				final int pos = position;
 				viewHolder.ib_pro_finish_four
 						.setOnClickListener(new OnClickListener() {
@@ -410,7 +410,7 @@ public class proAdapter2 extends BaseAdapter {
 							@Override
 							public void onClick(View v) {
 								String pro_num_info = info.getHaveNum();
-								Log.e("whwh", "»ñÈ¡µÄÊı¾İ--->pro_num_info==="
+								Log.e("whwh", "è·å–çš„æ•°æ®--->pro_num_info==="
 										+ pro_num_info);
 								if (!pro_num_info.isEmpty()) {
 									pronum = Integer.parseInt(pro_num_info);
@@ -420,11 +420,11 @@ public class proAdapter2 extends BaseAdapter {
 									} else {
 										ToastTools.showShort(
 												context,
-												"×î´óÖ»ÄÜ²¹²ÖÊıÎª"+ info.getMfinish()
-														+ "Æ¿");
+												"æœ€å¤§åªèƒ½è¡¥ä»“æ•°ä¸º"+ info.getMfinish()
+														+ "ç“¶");
 									}
 								} else {
-									ToastTools.showShort(context, "¿ÕÖµ,ÇëÖØĞÂ³öÈë!");
+									ToastTools.showShort(context, "ç©ºå€¼,è¯·é‡æ–°å‡ºå…¥!");
 								}
 								notifyDataSetChanged();
 							}
@@ -444,20 +444,20 @@ public class proAdapter2 extends BaseAdapter {
 					viewHolder.iv_pro_logo_five);
 			viewHolder.iv_pro_name_five.setText(info.getName());
 
-			String pro_pro_num = "ĞèÒª²¹²Ö" + (info.getMfinish())
-					+ "Æ¿";
+			String pro_pro_num = "éœ€è¦è¡¥ä»“" + (info.getMfinish())
+					+ "ç“¶";
 			viewHolder.iv_pro_num_five.setText(pro_pro_num);
 			StringUtils.setFont(viewHolder.iv_pro_num_five, pro_pro_num, 4,
 					pro_pro_num.length() - 1);
 
-			String iv_pro_hid = "»õµÀ" + info.getHid();
+			String iv_pro_hid = "è´§é“" + info.getHid();
 			viewHolder.iv_pro_hid_five.setText(iv_pro_hid);
 			StringUtils.setFont(viewHolder.iv_pro_hid_five, iv_pro_hid, 2,
 					iv_pro_hid.length());
 
-			// °Ñinfo ÓëÊäÈë¿ò½øĞĞ°ó¶¨
+			// æŠŠinfo ä¸è¾“å…¥æ¡†è¿›è¡Œç»‘å®š
 			viewHolder.et_pro_num_five.setTag(info);
-			// Çå³ı½¹µã
+			// æ¸…é™¤ç„¦ç‚¹
 			viewHolder.et_pro_num_five.clearFocus();
 
 			viewHolder.et_pro_num_five
@@ -470,7 +470,7 @@ public class proAdapter2 extends BaseAdapter {
 						@Override
 						public void onTextChanged(CharSequence s, int start,
 								int before, int count) {
-							// »ñµÃEdittextËùÔÚpositionÀïÃæµÄBean£¬²¢ÉèÖÃÊı¾İ
+							// è·å¾—Edittextæ‰€åœ¨positioné‡Œé¢çš„Beanï¼Œå¹¶è®¾ç½®æ•°æ®
 							ConfigInfo info = (ConfigInfo) viewHolder.et_pro_num_five
 									.getTag();
 							info.setHaveNum(s + "");
@@ -481,7 +481,7 @@ public class proAdapter2 extends BaseAdapter {
 						}
 					});
 
-			// ´ó²¿·ÖÇé¿öÏÂ£¬AdapterÀïÃæÓĞif±ØĞëÓĞelse
+			// å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼ŒAdapteré‡Œé¢æœ‰ifå¿…é¡»æœ‰else
 			if (!TextUtils.isEmpty(info.getHaveNum())) {
 				viewHolder.et_pro_num_five.setText(info.getHaveNum());
 			} else {
@@ -491,7 +491,7 @@ public class proAdapter2 extends BaseAdapter {
 			if ((info.getMfinish()) > 0) {
 				viewHolder.ib_pro_finish_five
 						.setBackgroundResource(R.drawable.buhuobtn2);
-				// ²¹²Ö
+				// è¡¥ä»“
 				final int pos = position;
 				viewHolder.ib_pro_finish_five
 						.setOnClickListener(new OnClickListener() {
@@ -499,7 +499,7 @@ public class proAdapter2 extends BaseAdapter {
 							@Override
 							public void onClick(View v) {
 								String pro_num_info = info.getHaveNum();
-								Log.e("whwh", "»ñÈ¡µÄÊı¾İ--->pro_num_info==="
+								Log.e("whwh", "è·å–çš„æ•°æ®--->pro_num_info==="
 										+ pro_num_info);
 								if (!pro_num_info.isEmpty()) {
 									pronum = Integer.parseInt(pro_num_info);
@@ -509,12 +509,12 @@ public class proAdapter2 extends BaseAdapter {
 									} else {
 										ToastTools.showShort(
 												context,
-												"×î´óÖ»ÄÜ²¹²ÖÊıÎª"
+												"æœ€å¤§åªèƒ½è¡¥ä»“æ•°ä¸º"
 														+ (info.getMfinish())
-														+ "Æ¿");
+														+ "ç“¶");
 									}
 								} else {
-									ToastTools.showShort(context, "¿ÕÖµ,ÇëÖØĞÂ³öÈë!");
+									ToastTools.showShort(context, "ç©ºå€¼,è¯·é‡æ–°å‡ºå…¥!");
 								}
 								notifyDataSetChanged();
 							}
@@ -535,20 +535,20 @@ public class proAdapter2 extends BaseAdapter {
 					viewHolder.iv_pro_logo_six);
 			viewHolder.iv_pro_name_six.setText(info.getName());
 
-			String pro_pro_num = "ĞèÒª²¹²Ö" + (info.getMfinish())
-					+ "Æ¿";
+			String pro_pro_num = "éœ€è¦è¡¥ä»“" + (info.getMfinish())
+					+ "ç“¶";
 			viewHolder.iv_pro_num_six.setText(pro_pro_num);
 			StringUtils.setFont(viewHolder.iv_pro_num_six, pro_pro_num, 4,
 					pro_pro_num.length() - 1);
 
-			String iv_pro_hid = "»õµÀ" + info.getHid();
+			String iv_pro_hid = "è´§é“" + info.getHid();
 			viewHolder.iv_pro_hid_six.setText(iv_pro_hid);
 			StringUtils.setFont(viewHolder.iv_pro_hid_six, iv_pro_hid, 2,
 					iv_pro_hid.length());
 
-			// °Ñinfo ÓëÊäÈë¿ò½øĞĞ°ó¶¨
+			// æŠŠinfo ä¸è¾“å…¥æ¡†è¿›è¡Œç»‘å®š
 			viewHolder.et_pro_num_six.setTag(info);
-			// Çå³ı½¹µã
+			// æ¸…é™¤ç„¦ç‚¹
 			viewHolder.et_pro_num_six.clearFocus();
 
 			viewHolder.et_pro_num_six.addTextChangedListener(new TextWatcher() {
@@ -560,7 +560,7 @@ public class proAdapter2 extends BaseAdapter {
 				@Override
 				public void onTextChanged(CharSequence s, int start,
 						int before, int count) {
-					// »ñµÃEdittextËùÔÚpositionÀïÃæµÄBean£¬²¢ÉèÖÃÊı¾İ
+					// è·å¾—Edittextæ‰€åœ¨positioné‡Œé¢çš„Beanï¼Œå¹¶è®¾ç½®æ•°æ®
 					ConfigInfo info = (ConfigInfo) viewHolder.et_pro_num_six
 							.getTag();
 					info.setHaveNum(s + "");
@@ -571,7 +571,7 @@ public class proAdapter2 extends BaseAdapter {
 				}
 			});
 
-			// ´ó²¿·ÖÇé¿öÏÂ£¬AdapterÀïÃæÓĞif±ØĞëÓĞelse
+			// å¤§éƒ¨åˆ†æƒ…å†µä¸‹ï¼ŒAdapteré‡Œé¢æœ‰ifå¿…é¡»æœ‰else
 			if (!TextUtils.isEmpty(info.getHaveNum())) {
 				viewHolder.et_pro_num_six.setText(info.getHaveNum());
 			} else {
@@ -580,7 +580,7 @@ public class proAdapter2 extends BaseAdapter {
 			if ((info.getMfinish()) > 0) {
 				viewHolder.ib_pro_finish_six
 						.setBackgroundResource(R.drawable.buhuobtn2);
-				// ²¹²Ö
+				// è¡¥ä»“
 				final int pos = position;
 				viewHolder.ib_pro_finish_six
 						.setOnClickListener(new OnClickListener() {
@@ -588,7 +588,7 @@ public class proAdapter2 extends BaseAdapter {
 							@Override
 							public void onClick(View v) {
 								String pro_num_info = info.getHaveNum();
-								Log.e("whwh", "»ñÈ¡µÄÊı¾İ--->pro_num_info==="
+								Log.e("whwh", "è·å–çš„æ•°æ®--->pro_num_info==="
 										+ pro_num_info);
 								if (!pro_num_info.isEmpty()) {
 									pronum = Integer.parseInt(pro_num_info);
@@ -598,12 +598,12 @@ public class proAdapter2 extends BaseAdapter {
 									} else {
 										ToastTools.showShort(
 												context,
-												"×î´óÖ»ÄÜ²¹²ÖÊıÎª"
+												"æœ€å¤§åªèƒ½è¡¥ä»“æ•°ä¸º"
 														+ ( info.getMfinish())
-														+ "Æ¿");
+														+ "ç“¶");
 									}
 								} else {
-									ToastTools.showShort(context, "¿ÕÖµ,ÇëÖØĞÂ³öÈë!");
+									ToastTools.showShort(context, "ç©ºå€¼,è¯·é‡æ–°å‡ºå…¥!");
 								}
 								notifyDataSetChanged();
 							}
@@ -659,17 +659,17 @@ public class proAdapter2 extends BaseAdapter {
 		@Override
 		protected void onPostExecute(String result) {
 			if (result == null) {
-				ToastTools.showLong(context, "ÍøÂçÒì³£,Çë¼ì²âÍøÂçÇé¿ö!");
+				ToastTools.showLong(context, "ç½‘ç»œå¼‚å¸¸,è¯·æ£€æµ‹ç½‘ç»œæƒ…å†µ!");
 			} else {
 				try {
 					JSONObject jsonObject = new JSONObject(result);
 					int stutes = jsonObject.getInt("err");
 					Log.e("whwh", "stutes=" + stutes);
 					if (stutes == 0) {
-						ToastTools.showShort(context, "ÉÌÆ·²¹²Ö³É¹¦!");
+						ToastTools.showShort(context, "å•†å“è¡¥ä»“æˆåŠŸ!");
 
 					} else {
-						ToastTools.showShort(context, "ÉÌÆ·²¹²ÖÊ§°Ü,ÇëÖØĞÂµã»÷!");
+						ToastTools.showShort(context, "å•†å“è¡¥ä»“å¤±è´¥,è¯·é‡æ–°ç‚¹å‡»!");
 					}
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -680,144 +680,144 @@ public class proAdapter2 extends BaseAdapter {
 
 	public static class ViewHolder {
 		RelativeLayout rlayout_one;
-		TextView iv_pro_name_one;// ÉÌÆ·Ãû³Æ
-		ImageView iv_pro_logo_one;// ÉÌÆ·LOGO
-		ImageButton ib_pro_finish_one;// ÉÌÆ·LOGO
-		TextView iv_pro_num_one; // ÉÌÆ·ĞèÒª²¹³äµÄÊıÁ¿
-		EditText et_pro_num_one;// ÊäÈëÖ»²¹³äµÄÊıÁ¿
-		TextView iv_pro_hid_one;// ÉÌÆ·µÄ»õµÀ
+		TextView iv_pro_name_one;// å•†å“åç§°
+		ImageView iv_pro_logo_one;// å•†å“LOGO
+		ImageButton ib_pro_finish_one;// å•†å“LOGO
+		TextView iv_pro_num_one; // å•†å“éœ€è¦è¡¥å……çš„æ•°é‡
+		EditText et_pro_num_one;// è¾“å…¥åªè¡¥å……çš„æ•°é‡
+		TextView iv_pro_hid_one;// å•†å“çš„è´§é“
 
 		RelativeLayout rlayout_two;
-		TextView iv_pro_name_two;// ÉÌÆ·Ãû³Æ
-		ImageView iv_pro_logo_two;// ÉÌÆ·LOGO
-		ImageButton ib_pro_finish_two;// ÉÌÆ·LOGO
-		TextView iv_pro_num_two; // ÉÌÆ·ĞèÒª²¹³äµÄÊıÁ¿
-		EditText et_pro_num_two;// ÊäÈëÖ»²¹³äµÄÊıÁ¿
-		TextView iv_pro_hid_two;// ÉÌÆ·µÄ»õµÀ
+		TextView iv_pro_name_two;// å•†å“åç§°
+		ImageView iv_pro_logo_two;// å•†å“LOGO
+		ImageButton ib_pro_finish_two;// å•†å“LOGO
+		TextView iv_pro_num_two; // å•†å“éœ€è¦è¡¥å……çš„æ•°é‡
+		EditText et_pro_num_two;// è¾“å…¥åªè¡¥å……çš„æ•°é‡
+		TextView iv_pro_hid_two;// å•†å“çš„è´§é“
 
 		RelativeLayout rlayout_three;
-		TextView iv_pro_name_three;// ÉÌÆ·Ãû³Æ
-		ImageView iv_pro_logo_three;// ÉÌÆ·LOGO
-		ImageButton ib_pro_finish_three;// ÉÌÆ·LOGO
-		TextView iv_pro_num_three; // ÉÌÆ·ĞèÒª²¹³äµÄÊıÁ¿
-		EditText et_pro_num_three;// ÊäÈëÖ»²¹³äµÄÊıÁ¿
-		TextView iv_pro_hid_three;// ÉÌÆ·µÄ»õµÀ
+		TextView iv_pro_name_three;// å•†å“åç§°
+		ImageView iv_pro_logo_three;// å•†å“LOGO
+		ImageButton ib_pro_finish_three;// å•†å“LOGO
+		TextView iv_pro_num_three; // å•†å“éœ€è¦è¡¥å……çš„æ•°é‡
+		EditText et_pro_num_three;// è¾“å…¥åªè¡¥å……çš„æ•°é‡
+		TextView iv_pro_hid_three;// å•†å“çš„è´§é“
 
 		RelativeLayout rlayout_four;
-		TextView iv_pro_name_four;// ÉÌÆ·Ãû³Æ
-		ImageView iv_pro_logo_four;// ÉÌÆ·LOGO
-		ImageButton ib_pro_finish_four;// ÉÌÆ·LOGO
-		TextView iv_pro_num_four; // ÉÌÆ·ĞèÒª²¹³äµÄÊıÁ¿
-		EditText et_pro_num_four;// ÊäÈëÖ»²¹³äµÄÊıÁ¿
-		TextView iv_pro_hid_four;// ÉÌÆ·µÄ»õµÀ
+		TextView iv_pro_name_four;// å•†å“åç§°
+		ImageView iv_pro_logo_four;// å•†å“LOGO
+		ImageButton ib_pro_finish_four;// å•†å“LOGO
+		TextView iv_pro_num_four; // å•†å“éœ€è¦è¡¥å……çš„æ•°é‡
+		EditText et_pro_num_four;// è¾“å…¥åªè¡¥å……çš„æ•°é‡
+		TextView iv_pro_hid_four;// å•†å“çš„è´§é“
 
 		RelativeLayout rlayout_five;
-		TextView iv_pro_name_five;// ÉÌÆ·Ãû³Æ
-		ImageView iv_pro_logo_five;// ÉÌÆ·LOGO
-		ImageButton ib_pro_finish_five;// ÉÌÆ·LOGO
-		TextView iv_pro_num_five; // ÉÌÆ·ĞèÒª²¹³äµÄÊıÁ¿
-		EditText et_pro_num_five;// ÊäÈëÖ»²¹³äµÄÊıÁ¿
-		TextView iv_pro_hid_five;// ÉÌÆ·µÄ»õµÀ
+		TextView iv_pro_name_five;// å•†å“åç§°
+		ImageView iv_pro_logo_five;// å•†å“LOGO
+		ImageButton ib_pro_finish_five;// å•†å“LOGO
+		TextView iv_pro_num_five; // å•†å“éœ€è¦è¡¥å……çš„æ•°é‡
+		EditText et_pro_num_five;// è¾“å…¥åªè¡¥å……çš„æ•°é‡
+		TextView iv_pro_hid_five;// å•†å“çš„è´§é“
 
 		RelativeLayout rlayout_six;
-		TextView iv_pro_name_six;// ÉÌÆ·Ãû³Æ
-		ImageView iv_pro_logo_six;// ÉÌÆ·LOGO
-		ImageButton ib_pro_finish_six;// ÉÌÆ·LOGO
-		TextView iv_pro_num_six; // ÉÌÆ·ĞèÒª²¹³äµÄÊıÁ¿
-		EditText et_pro_num_six;// ÊäÈëÖ»²¹³äµÄÊıÁ¿
-		TextView iv_pro_hid_six;// ÉÌÆ·µÄ»õµÀ
+		TextView iv_pro_name_six;// å•†å“åç§°
+		ImageView iv_pro_logo_six;// å•†å“LOGO
+		ImageButton ib_pro_finish_six;// å•†å“LOGO
+		TextView iv_pro_num_six; // å•†å“éœ€è¦è¡¥å……çš„æ•°é‡
+		EditText et_pro_num_six;// è¾“å…¥åªè¡¥å……çš„æ•°é‡
+		TextView iv_pro_hid_six;// å•†å“çš„è´§é“
 
 		public ViewHolder(View convertView) {
 
 			rlayout_one = (RelativeLayout) convertView
-					.findViewById(R.id.rlayout_one); // µ¥¸ö²¼¾Ö
+					.findViewById(R.id.rlayout_one); // å•ä¸ªå¸ƒå±€
 			iv_pro_name_one = (TextView) convertView
-					.findViewById(R.id.tv_pro_name_one); // ÉÌÆ·Ãû×Ö
+					.findViewById(R.id.tv_pro_name_one); // å•†å“åå­—
 			iv_pro_logo_one = (ImageView) convertView
-					.findViewById(R.id.iv_pro_logo_one); // ÉÌÆ·Í¼Æ¬
+					.findViewById(R.id.iv_pro_logo_one); // å•†å“å›¾ç‰‡
 			ib_pro_finish_one = (ImageButton) convertView
-					.findViewById(R.id.ib_pro_finish_one); // ÉÌÆ·ÊÇ·ñ²¹²Ö
+					.findViewById(R.id.ib_pro_finish_one); // å•†å“æ˜¯å¦è¡¥ä»“
 			iv_pro_num_one = (TextView) convertView
-					.findViewById(R.id.iv_pro_num_one); // ĞèÒª²¹²ÖµÄÊı
+					.findViewById(R.id.iv_pro_num_one); // éœ€è¦è¡¥ä»“çš„æ•°
 			et_pro_num_one = (EditText) convertView
-					.findViewById(R.id.et_pro_num_one); // ÏÖ²¹»õ¶àÉÙ
+					.findViewById(R.id.et_pro_num_one); // ç°è¡¥è´§å¤šå°‘
 			iv_pro_hid_one = (TextView) convertView
-					.findViewById(R.id.iv_pro_hid_one); // »õµÀ
+					.findViewById(R.id.iv_pro_hid_one); // è´§é“
 
 			rlayout_two = (RelativeLayout) convertView
-					.findViewById(R.id.rlayout_two); // µ¥¸ö²¼¾Ö
+					.findViewById(R.id.rlayout_two); // å•ä¸ªå¸ƒå±€
 			iv_pro_name_two = (TextView) convertView
-					.findViewById(R.id.tv_pro_name_two); // ÉÌÆ·Ãû×Ö
+					.findViewById(R.id.tv_pro_name_two); // å•†å“åå­—
 			iv_pro_logo_two = (ImageView) convertView
-					.findViewById(R.id.iv_pro_logo_two); // ÉÌÆ·Í¼Æ¬
+					.findViewById(R.id.iv_pro_logo_two); // å•†å“å›¾ç‰‡
 			ib_pro_finish_two = (ImageButton) convertView
-					.findViewById(R.id.ib_pro_finish_two); // ÉÌÆ·ÊÇ·ñ²¹²Ö
+					.findViewById(R.id.ib_pro_finish_two); // å•†å“æ˜¯å¦è¡¥ä»“
 			iv_pro_num_two = (TextView) convertView
-					.findViewById(R.id.iv_pro_num_two); // ĞèÒª²¹²ÖµÄÊı
+					.findViewById(R.id.iv_pro_num_two); // éœ€è¦è¡¥ä»“çš„æ•°
 			et_pro_num_two = (EditText) convertView
-					.findViewById(R.id.et_pro_num_two); // ÏÖ²¹»õ¶àÉÙ
+					.findViewById(R.id.et_pro_num_two); // ç°è¡¥è´§å¤šå°‘
 			iv_pro_hid_two = (TextView) convertView
-					.findViewById(R.id.iv_pro_hid_two); // »õµÀ
+					.findViewById(R.id.iv_pro_hid_two); // è´§é“
 
 			rlayout_three = (RelativeLayout) convertView
-					.findViewById(R.id.rlayout_three); // µ¥¸ö²¼¾Ö
+					.findViewById(R.id.rlayout_three); // å•ä¸ªå¸ƒå±€
 			iv_pro_name_three = (TextView) convertView
-					.findViewById(R.id.tv_pro_name_three); // ÉÌÆ·Ãû×Ö
+					.findViewById(R.id.tv_pro_name_three); // å•†å“åå­—
 			iv_pro_logo_three = (ImageView) convertView
-					.findViewById(R.id.iv_pro_logo_three); // ÉÌÆ·Í¼Æ¬
+					.findViewById(R.id.iv_pro_logo_three); // å•†å“å›¾ç‰‡
 			ib_pro_finish_three = (ImageButton) convertView
-					.findViewById(R.id.ib_pro_finish_three); // ÉÌÆ·ÊÇ·ñ²¹²Ö
+					.findViewById(R.id.ib_pro_finish_three); // å•†å“æ˜¯å¦è¡¥ä»“
 			iv_pro_num_three = (TextView) convertView
-					.findViewById(R.id.iv_pro_num_three); // ĞèÒª²¹²ÖµÄÊı
+					.findViewById(R.id.iv_pro_num_three); // éœ€è¦è¡¥ä»“çš„æ•°
 			et_pro_num_three = (EditText) convertView
-					.findViewById(R.id.et_pro_num_three); // ÏÖ²¹»õ¶àÉÙ
+					.findViewById(R.id.et_pro_num_three); // ç°è¡¥è´§å¤šå°‘
 			iv_pro_hid_three = (TextView) convertView
-					.findViewById(R.id.iv_pro_hid_three); // »õµÀ
+					.findViewById(R.id.iv_pro_hid_three); // è´§é“
 
 			rlayout_four = (RelativeLayout) convertView
-					.findViewById(R.id.rlayout_four); // µ¥¸ö²¼¾Ö
+					.findViewById(R.id.rlayout_four); // å•ä¸ªå¸ƒå±€
 			iv_pro_name_four = (TextView) convertView
-					.findViewById(R.id.tv_pro_name_four); // ÉÌÆ·Ãû×Ö
+					.findViewById(R.id.tv_pro_name_four); // å•†å“åå­—
 			iv_pro_logo_four = (ImageView) convertView
-					.findViewById(R.id.iv_pro_logo_four); // ÉÌÆ·Í¼Æ¬
+					.findViewById(R.id.iv_pro_logo_four); // å•†å“å›¾ç‰‡
 			ib_pro_finish_four = (ImageButton) convertView
-					.findViewById(R.id.ib_pro_finish_four); // ÉÌÆ·ÊÇ·ñ²¹²Ö
+					.findViewById(R.id.ib_pro_finish_four); // å•†å“æ˜¯å¦è¡¥ä»“
 			iv_pro_num_four = (TextView) convertView
-					.findViewById(R.id.iv_pro_num_four); // ĞèÒª²¹²ÖµÄÊı
+					.findViewById(R.id.iv_pro_num_four); // éœ€è¦è¡¥ä»“çš„æ•°
 			et_pro_num_four = (EditText) convertView
-					.findViewById(R.id.et_pro_num_four); // ÏÖ²¹»õ¶àÉÙ
+					.findViewById(R.id.et_pro_num_four); // ç°è¡¥è´§å¤šå°‘
 			iv_pro_hid_four = (TextView) convertView
-					.findViewById(R.id.iv_pro_hid_four); // »õµÀ
+					.findViewById(R.id.iv_pro_hid_four); // è´§é“
 
 			rlayout_five = (RelativeLayout) convertView
-					.findViewById(R.id.rlayout_five); // µ¥¸ö²¼¾Ö
+					.findViewById(R.id.rlayout_five); // å•ä¸ªå¸ƒå±€
 			iv_pro_name_five = (TextView) convertView
-					.findViewById(R.id.tv_pro_name_five); // ÉÌÆ·Ãû×Ö
+					.findViewById(R.id.tv_pro_name_five); // å•†å“åå­—
 			iv_pro_logo_five = (ImageView) convertView
-					.findViewById(R.id.iv_pro_logo_five); // ÉÌÆ·Í¼Æ¬
+					.findViewById(R.id.iv_pro_logo_five); // å•†å“å›¾ç‰‡
 			ib_pro_finish_five = (ImageButton) convertView
-					.findViewById(R.id.ib_pro_finish_five); // ÉÌÆ·ÊÇ·ñ²¹²Ö
+					.findViewById(R.id.ib_pro_finish_five); // å•†å“æ˜¯å¦è¡¥ä»“
 			iv_pro_num_five = (TextView) convertView
-					.findViewById(R.id.iv_pro_num_five); // ĞèÒª²¹²ÖµÄÊı
+					.findViewById(R.id.iv_pro_num_five); // éœ€è¦è¡¥ä»“çš„æ•°
 			et_pro_num_five = (EditText) convertView
-					.findViewById(R.id.et_pro_num_five); // ÏÖ²¹»õ¶àÉÙ
+					.findViewById(R.id.et_pro_num_five); // ç°è¡¥è´§å¤šå°‘
 			iv_pro_hid_five = (TextView) convertView
-					.findViewById(R.id.iv_pro_hid_five); // »õµÀ
+					.findViewById(R.id.iv_pro_hid_five); // è´§é“
 
 			rlayout_six = (RelativeLayout) convertView
-					.findViewById(R.id.rlayout_six); // µ¥¸ö²¼¾Ö
+					.findViewById(R.id.rlayout_six); // å•ä¸ªå¸ƒå±€
 			iv_pro_name_six = (TextView) convertView
-					.findViewById(R.id.tv_pro_name_six); // ÉÌÆ·Ãû×Ö
+					.findViewById(R.id.tv_pro_name_six); // å•†å“åå­—
 			iv_pro_logo_six = (ImageView) convertView
-					.findViewById(R.id.iv_pro_logo_six); // ÉÌÆ·Í¼Æ¬
+					.findViewById(R.id.iv_pro_logo_six); // å•†å“å›¾ç‰‡
 			ib_pro_finish_six = (ImageButton) convertView
-					.findViewById(R.id.ib_pro_finish_six); // ÉÌÆ·ÊÇ·ñ²¹²Ö
+					.findViewById(R.id.ib_pro_finish_six); // å•†å“æ˜¯å¦è¡¥ä»“
 			iv_pro_num_six = (TextView) convertView
-					.findViewById(R.id.iv_pro_num_six); // ĞèÒª²¹²ÖµÄÊı
+					.findViewById(R.id.iv_pro_num_six); // éœ€è¦è¡¥ä»“çš„æ•°
 			et_pro_num_six = (EditText) convertView
-					.findViewById(R.id.et_pro_num_six); // ÏÖ²¹»õ¶àÉÙ
+					.findViewById(R.id.et_pro_num_six); // ç°è¡¥è´§å¤šå°‘
 			iv_pro_hid_six = (TextView) convertView
-					.findViewById(R.id.iv_pro_hid_six); // »õµÀ
+					.findViewById(R.id.iv_pro_hid_six); // è´§é“
 		}
 	}
 }

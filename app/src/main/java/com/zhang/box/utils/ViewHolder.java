@@ -23,7 +23,7 @@ public class ViewHolder {
 	}
 
 	/**
-	 * 拿到一个ViewHolder对象
+	 * 鎷垮埌涓�涓猇iewHolder瀵硅薄
 	 * 
 	 * @param context
 	 * @param convertView
@@ -46,7 +46,7 @@ public class ViewHolder {
 	}
 
 	/**
-	 * 通过控件的Id获取对于的控件，如果没有则加入views
+	 * 閫氳繃鎺т欢鐨処d鑾峰彇瀵逛簬鐨勬帶浠讹紝濡傛灉娌℃湁鍒欏姞鍏iews
 	 * 
 	 * @param viewId
 	 * @return

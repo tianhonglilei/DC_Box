@@ -586,8 +586,8 @@ public class DesProActivity extends Activity {
 					+ SysData.imei + "," + desInfos.hdid + ","
 					+ desInfos.prohuogui;
 			nameValuePairs.add(new BasicNameValuePair("tradeno", uptradeno));
-			// String zhiprice = ((float) desInfos.zhifubaoprice / 100) + "";
-			String zhiprice = 0.01 + "";
+			 String zhiprice = ((float) desInfos.zhifubaoprice / 100) + "";
+//			String zhiprice = 0.01 + "";
 			nameValuePairs.add(new BasicNameValuePair("price", zhiprice));
 			nameValuePairs.add(new BasicNameValuePair("title", desInfos.des));
 			nameValuePairs.add(new BasicNameValuePair("des", desInfos.des));

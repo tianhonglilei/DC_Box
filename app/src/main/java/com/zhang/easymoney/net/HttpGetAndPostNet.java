@@ -49,7 +49,7 @@ public class HttpGetAndPostNet {
 	private static boolean mlog = false;
 
 	/**
-	 * ç½???¨å?
+	 *
 	 * 
 	 * @author zhouxl
 	 */
@@ -122,7 +122,6 @@ public class HttpGetAndPostNet {
 
 								fos.write(buf, 0, ch);
 
-								// ï¿½ì²½ï¿½ï¿½ï¿?? ï¿½Í½ï¿½ï¿??
 								mData = new String(buf);
 								//mObject.HandHttpEndnum((int) ((count * 100) / length));
 								if (mlog) {
@@ -170,11 +169,10 @@ public class HttpGetAndPostNet {
 				try {
 					HttpPost httpRequest = new HttpPost(murl);
 					List<NameValuePair> paramslist = new ArrayList<NameValuePair>();
-					// ï¿½ï¿½ï¿½Ò?¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿??
+
 					paramslist.add(new BasicNameValuePair("log1", mKdata)); // postï¿½ï¿½ï¿½ï¿½ï¿½Ó??
 					paramslist.add(new BasicNameValuePair("log2", mTdata)); // postï¿½ï¿½ï¿½ï¿½ï¿½Ó??
 
-					// ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
 					HttpEntity httpentity = new UrlEncodedFormEntity(
 							paramslist, "UTF_8");
 					httpRequest.setEntity(httpentity);
@@ -194,12 +192,7 @@ public class HttpGetAndPostNet {
 								baos.write(buf, 0, ch);
 								count += ch;
 
-								// ï¿½ï¿½ï¿½Ö?¿½ï¿½Ïµï¿½Ç¸ï¿½ï¿½ÐµÄ³ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿?ublishprogressï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿??
 								mData = new String(buf);
-								// publishProgress((int)((count/(float)100)*100));
-								// ï¿½ï¿½Ó½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ý´ï¿½ï¿½ï¿??
-
-								// ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½100ms
 								Thread.sleep(100);
 							}
 							s = new String(baos.toByteArray());

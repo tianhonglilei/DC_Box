@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.BaseAdapter;
 
-/** Í¨ÓÃµÄÊÊÅäÆ÷ */
+/** é€šç”¨çš„é€‚é…å™¨ */
 public abstract class CommonAdapter<T> extends BaseAdapter {
 	protected LayoutInflater mInflater;
 	protected Context mContext;
@@ -15,16 +15,16 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
 	
 	
 	/**
-	 * @param context ÉÏÏÂÎÄ
+	 * @param context ä¸Šä¸‹æ–‡
 	 */
 	public CommonAdapter(Context context){
 		mInflater = LayoutInflater.from(context);
 	}
 
 	/**
-	 * context ÉÏÏÂÎÄ
+	 * context ä¸Šä¸‹æ–‡
 	 * 
-	 * mDatas Êı¾İÔ´
+	 * mDatas æ•°æ®æº
 	 */
 	public CommonAdapter(Context context, List<T> mDatas) {
 		mInflater = LayoutInflater.from(context);
@@ -33,11 +33,11 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
 	}
 
 	/**
-	 * context ÉÏÏÂÎÄ
+	 * context ä¸Šä¸‹æ–‡
 	 * 
-	 * flag ±ê¼Ç
+	 * flag æ ‡è®°
 	 * 
-	 * mDatas Êı¾İÔ´
+	 * mDatas æ•°æ®æº
 	 */
 	public CommonAdapter(Context context, int flag, List<T> mDatas) {
 		mInflater = LayoutInflater.from(context);
