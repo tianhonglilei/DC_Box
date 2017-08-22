@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhang.box"
-    android:versionCode="14"
+    android:versionCode="13"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="11"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="17" />
 
     <application
         android:name="com.zhang.box.MyApplication"

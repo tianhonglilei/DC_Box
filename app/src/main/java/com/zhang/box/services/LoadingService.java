@@ -382,7 +382,7 @@ public class LoadingService extends Service {
 						String downurl = info.downApkUrl = tempJson
 								.getString("apk");
 
-						Log.e("Li-VersionCode",serverVersion+"");
+//						Log.e("Li-VersionCode",serverVersion+"");
 						// 如果服务器的版本大于机器现有的版本则自动更新
 						if (serverVersion > getVersionCode()) {
 							SetPressdialog(downurl);
