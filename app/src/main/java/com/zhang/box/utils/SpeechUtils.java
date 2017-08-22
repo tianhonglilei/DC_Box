@@ -7,7 +7,7 @@ import android.media.MediaPlayer;
 import com.zhang.box.R;
 
 /**
- * ÓïÒôÌáÊ¾ ¹¤¾ßÀà
+ * è¯­éŸ³æç¤º å·¥å…·ç±»
  * 
  * @author wang
  * 
@@ -17,17 +17,17 @@ public class SpeechUtils {
 	private static int[] ids = { R.raw.s0, R.raw.s1, R.raw.s2 };
 
 	public SpeechUtils() {
-		throw new UnsupportedOperationException("SpeechUtilsÓïÒôÌáÊ¾¹¤¾ßÀà²»ÄÜÊµÀı»¯");
+		throw new UnsupportedOperationException("SpeechUtilsè¯­éŸ³æç¤ºå·¥å…·ç±»ä¸èƒ½å®ä¾‹åŒ–");
 	}
 
-	/** µ¥Ò»µÄÓïÒôÌáÊ¾·½·¨ */
+	/** å•ä¸€çš„è¯­éŸ³æç¤ºæ–¹æ³• */
 	public static void setSpeechSingle(Context context, int rawPath) {
 		MediaPlayer mp = MediaPlayer.create(context, rawPath);
 		mp.setLooping(false);
 		mp.start();
 	}
 
-	/** Ëæ»úµÄ¶ÁÈ¡ÓïÒôÌáÊ¾·½·¨ */
+	/** éšæœºçš„è¯»å–è¯­éŸ³æç¤ºæ–¹æ³• */
 	public static void setSpeechRandom(Context context) {
 		Random random = new Random();
 		int a = random.nextInt(2);

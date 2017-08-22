@@ -7,17 +7,17 @@ public class SpUtil {
 	private static SharedPreferences sp;
 
 	/**
-	 * Ğ´Èëboolean±äÁ¿ÖÁspÖĞ
+	 * å†™å…¥booleanå˜é‡è‡³spä¸­
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ´æ´¢½ÚµãÃû³Æ
+	 *            å­˜å‚¨èŠ‚ç‚¹åç§°
 	 * @param value
-	 *            ´æ´¢½ÚµãµÄÖµ boolean
+	 *            å­˜å‚¨èŠ‚ç‚¹çš„å€¼ boolean
 	 */
 	public static void putBoolean(Context ctx, String key, boolean value) {
-		// (´æ´¢½ÚµãÎÄ¼şÃû³Æ,¶ÁĞ´·½Ê½)
+		// (å­˜å‚¨èŠ‚ç‚¹æ–‡ä»¶åç§°,è¯»å†™æ–¹å¼)
 		if (sp == null) {
 			sp = ctx.getSharedPreferences("activecode", Context.MODE_PRIVATE);
 		}
@@ -25,18 +25,18 @@ public class SpUtil {
 	}
 
 	/**
-	 * ¶ÁÈ¡boolean±êÊ¾´ÓspÖĞ
+	 * è¯»å–booleanæ ‡ç¤ºä»spä¸­
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ´æ´¢½ÚµãÃû³Æ
+	 *            å­˜å‚¨èŠ‚ç‚¹åç§°
 	 * @param defValue
-	 *            Ã»ÓĞ´Ë½ÚµãÄ¬ÈÏÖµ
-	 * @return Ä¬ÈÏÖµ»òÕß´Ë½Úµã¶ÁÈ¡µ½µÄ½á¹û
+	 *            æ²¡æœ‰æ­¤èŠ‚ç‚¹é»˜è®¤å€¼
+	 * @return é»˜è®¤å€¼æˆ–è€…æ­¤èŠ‚ç‚¹è¯»å–åˆ°çš„ç»“æœ
 	 */
 	public static boolean getBoolean(Context ctx, String key, boolean defValue) {
-		// (´æ´¢½ÚµãÎÄ¼şÃû³Æ,¶ÁĞ´·½Ê½)
+		// (å­˜å‚¨èŠ‚ç‚¹æ–‡ä»¶åç§°,è¯»å†™æ–¹å¼)
 		if (sp == null) {
 			sp = ctx.getSharedPreferences("activecode", Context.MODE_PRIVATE);
 		}
@@ -44,17 +44,17 @@ public class SpUtil {
 	}
 
 	/**
-	 * Ğ´ÈëString±äÁ¿ÖÁspÖĞ
+	 * å†™å…¥Stringå˜é‡è‡³spä¸­
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ´æ´¢½ÚµãÃû³Æ
+	 *            å­˜å‚¨èŠ‚ç‚¹åç§°
 	 * @param value
-	 *            ´æ´¢½ÚµãµÄÖµstring
+	 *            å­˜å‚¨èŠ‚ç‚¹çš„å€¼string
 	 */
 	public static void putString(Context ctx, String key, String value) {
-		// (´æ´¢½ÚµãÎÄ¼şÃû³Æ,¶ÁĞ´·½Ê½)
+		// (å­˜å‚¨èŠ‚ç‚¹æ–‡ä»¶åç§°,è¯»å†™æ–¹å¼)
 		if (sp == null) {
 			sp = ctx.getSharedPreferences("activecode", Context.MODE_PRIVATE);
 		}
@@ -62,18 +62,18 @@ public class SpUtil {
 	}
 
 	/**
-	 * ¶ÁÈ¡String±êÊ¾´ÓspÖĞ
+	 * è¯»å–Stringæ ‡ç¤ºä»spä¸­
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ´æ´¢½ÚµãÃû³Æ
+	 *            å­˜å‚¨èŠ‚ç‚¹åç§°
 	 * @param defValue
-	 *            Ã»ÓĞ´Ë½ÚµãÄ¬ÈÏÖµ
-	 * @return Ä¬ÈÏÖµ»òÕß´Ë½Úµã¶ÁÈ¡µ½µÄ½á¹û
+	 *            æ²¡æœ‰æ­¤èŠ‚ç‚¹é»˜è®¤å€¼
+	 * @return é»˜è®¤å€¼æˆ–è€…æ­¤èŠ‚ç‚¹è¯»å–åˆ°çš„ç»“æœ
 	 */
 	public static String getString(Context ctx, String key, String defValue) {
-		// (´æ´¢½ÚµãÎÄ¼şÃû³Æ,¶ÁĞ´·½Ê½)
+		// (å­˜å‚¨èŠ‚ç‚¹æ–‡ä»¶åç§°,è¯»å†™æ–¹å¼)
 		if (sp == null) {
 			sp = ctx.getSharedPreferences("activecode", Context.MODE_PRIVATE);
 		}
@@ -81,17 +81,17 @@ public class SpUtil {
 	}
 
 	/**
-	 * Ğ´Èëint±äÁ¿ÖÁspÖĞ
+	 * å†™å…¥intå˜é‡è‡³spä¸­
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ´æ´¢½ÚµãÃû³Æ
+	 *            å­˜å‚¨èŠ‚ç‚¹åç§°
 	 * @param value
-	 *            ´æ´¢½ÚµãµÄÖµstring
+	 *            å­˜å‚¨èŠ‚ç‚¹çš„å€¼string
 	 */
 	public static void putInt(Context ctx, String key, int value) {
-		// (´æ´¢½ÚµãÎÄ¼şÃû³Æ,¶ÁĞ´·½Ê½)
+		// (å­˜å‚¨èŠ‚ç‚¹æ–‡ä»¶åç§°,è¯»å†™æ–¹å¼)
 		if (sp == null) {
 			sp = ctx.getSharedPreferences("activecode", Context.MODE_PRIVATE);
 		}
@@ -99,18 +99,18 @@ public class SpUtil {
 	}
 
 	/**
-	 * ¶ÁÈ¡int±êÊ¾´ÓspÖĞ
+	 * è¯»å–intæ ‡ç¤ºä»spä¸­
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ´æ´¢½ÚµãÃû³Æ
+	 *            å­˜å‚¨èŠ‚ç‚¹åç§°
 	 * @param defValue
-	 *            Ã»ÓĞ´Ë½ÚµãÄ¬ÈÏÖµ
-	 * @return Ä¬ÈÏÖµ»òÕß´Ë½Úµã¶ÁÈ¡µ½µÄ½á¹û
+	 *            æ²¡æœ‰æ­¤èŠ‚ç‚¹é»˜è®¤å€¼
+	 * @return é»˜è®¤å€¼æˆ–è€…æ­¤èŠ‚ç‚¹è¯»å–åˆ°çš„ç»“æœ
 	 */
 	public static int getInt(Context ctx, String key, int defValue) {
-		// (´æ´¢½ÚµãÎÄ¼şÃû³Æ,¶ÁĞ´·½Ê½)
+		// (å­˜å‚¨èŠ‚ç‚¹æ–‡ä»¶åç§°,è¯»å†™æ–¹å¼)
 		if (sp == null) {
 			sp = ctx.getSharedPreferences("activecode", Context.MODE_PRIVATE);
 		}
@@ -118,12 +118,12 @@ public class SpUtil {
 	}
 
 	/**
-	 * ´ÓspÖĞÒÆ³ıÖ¸¶¨½Úµã
+	 * ä»spä¸­ç§»é™¤æŒ‡å®šèŠ‚ç‚¹
 	 * 
 	 * @param ctx
-	 *            ÉÏÏÂÎÄ»·¾³
+	 *            ä¸Šä¸‹æ–‡ç¯å¢ƒ
 	 * @param key
-	 *            ĞèÒªÒÆ³ı½ÚµãµÄÃû³Æ
+	 *            éœ€è¦ç§»é™¤èŠ‚ç‚¹çš„åç§°
 	 */
 	public static void remove(Context ctx, String key) {
 		if (sp == null) {

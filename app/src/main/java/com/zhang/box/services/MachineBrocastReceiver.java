@@ -15,18 +15,18 @@ public class MachineBrocastReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 		String action = intent.getAction();
 
-		/** ÃÅ¿ª¹ØĞÅÏ¢ */
+		/** é—¨å¼€å…³ä¿¡æ¯ */
 		if (action.equals("com.avm.serialport.door_state")) {
 
-			boolean isOpen = MainHandler.isDoorOpen();//»ñÈ¡»úÆ÷¿ªÃÅĞÅÏ¢
+			boolean isOpen = MainHandler.isDoorOpen();//è·å–æœºå™¨å¼€é—¨ä¿¡æ¯
 			if (isOpen) {
-				Log.e("whwh", "ÃÅÒÑ´ò¿ª");
+				Log.e("whwh", "é—¨å·²æ‰“å¼€");
 				Intent intentActivity = new Intent(context,
 						ConfigActivity.class);
 				intentActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				context.startActivity(intentActivity);
 			} else {
-				Log.e("whwh", "ÃÅÒÑ¹Ø±Õ");
+				Log.e("whwh", "é—¨å·²å…³é—­");
 				Intent intentActivity = new Intent(context,
 						GallaryActivity.class);
 				intentActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

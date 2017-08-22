@@ -14,46 +14,46 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * ½«LogÈÕÖ¾Ğ´ÈëÎÄ¼şÖĞ
+ * å°†Logæ—¥å¿—å†™å…¥æ–‡ä»¶ä¸­
  * 
- * Ê¹ÓÃµ¥ÀıÄ£Ê½ÊÇÒòÎªÒª³õÊ¼»¯ÎÄ¼ş´æ·ÅÎ»ÖÃ
+ * ä½¿ç”¨å•ä¾‹æ¨¡å¼æ˜¯å› ä¸ºè¦åˆå§‹åŒ–æ–‡ä»¶å­˜æ”¾ä½ç½®
  * 
  */
 public class LogToFile {
 
 	private static String TAG = "LogToFile";
 
-	private static String logPath = null;// logÈÕÖ¾´æ·ÅÂ·¾¶
+	private static String logPath = null;// logæ—¥å¿—å­˜æ”¾è·¯å¾„
 
 	private static SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"yyyy-MM-dd_HH-mm-ss", Locale.US);// ÈÕÆÚ¸ñÊ½;
+			"yyyy-MM-dd_HH-mm-ss", Locale.US);// æ—¥æœŸæ ¼å¼;
 
-	private static Date date = new Date();// ÒòÎªlogÈÕÖ¾ÊÇÊ¹ÓÃÈÕÆÚÃüÃûµÄ£¬Ê¹ÓÃ¾²Ì¬³ÉÔ±±äÁ¿Ö÷ÒªÊÇÎªÁËÔÚÕû¸ö³ÌĞòÔËĞĞÆÚ¼äÖ»´æÔÚÒ»¸ö.logÎÄ¼şÖĞ;
+	private static Date date = new Date();// å› ä¸ºlogæ—¥å¿—æ˜¯ä½¿ç”¨æ—¥æœŸå‘½åçš„ï¼Œä½¿ç”¨é™æ€æˆå‘˜å˜é‡ä¸»è¦æ˜¯ä¸ºäº†åœ¨æ•´ä¸ªç¨‹åºè¿è¡ŒæœŸé—´åªå­˜åœ¨ä¸€ä¸ª.logæ–‡ä»¶ä¸­;
 
 	/**
-	 * ³õÊ¼»¯£¬ĞëÔÚÊ¹ÓÃÖ®Ç°ÉèÖÃ£¬×îºÃÔÚApplication´´½¨Ê±µ÷ÓÃ
+	 * åˆå§‹åŒ–ï¼Œé¡»åœ¨ä½¿ç”¨ä¹‹å‰è®¾ç½®ï¼Œæœ€å¥½åœ¨Applicationåˆ›å»ºæ—¶è°ƒç”¨
 	 * 
 	 * @param context
 	 */
 	public static void init(Context context) {
-		logPath = getFilePath(context) + "/Logs";// »ñµÃÎÄ¼ş´¢´æÂ·¾¶,ÔÚºóÃæ¼Ó"/Logs"½¨Á¢×ÓÎÄ¼ş¼Ğ
+		logPath = getFilePath(context) + "/Logs";// è·å¾—æ–‡ä»¶å‚¨å­˜è·¯å¾„,åœ¨åé¢åŠ "/Logs"å»ºç«‹å­æ–‡ä»¶å¤¹
 	}
 
 	/**
-	 * »ñµÃÎÄ¼ş´æ´¢Â·¾¶
+	 * è·å¾—æ–‡ä»¶å­˜å‚¨è·¯å¾„
 	 * 
 	 * @return
 	 */
 	private static String getFilePath(Context context) {
 
 		if (Environment.MEDIA_MOUNTED.equals(Environment.MEDIA_MOUNTED)
-				|| !Environment.isExternalStorageRemovable()) {// Èç¹ûÍâ²¿´¢´æ¿ÉÓÃ
+				|| !Environment.isExternalStorageRemovable()) {// å¦‚æœå¤–éƒ¨å‚¨å­˜å¯ç”¨
 
-			return context.getExternalFilesDir(null).getPath();// »ñµÃÍâ²¿´æ´¢Â·¾¶,Ä¬ÈÏÂ·¾¶Îª
+			return context.getExternalFilesDir(null).getPath();// è·å¾—å¤–éƒ¨å­˜å‚¨è·¯å¾„,é»˜è®¤è·¯å¾„ä¸º
 																// /storage/emulated/0/Android/data/com.waka.workspace.logtofile/files/Logs/log_2016-03-14_16-15-09.log
 		} else {
 
-			return context.getFilesDir().getPath();// Ö±½Ó´æÔÚ/data/dataÀï£¬·ÇrootÊÖ»úÊÇ¿´²»µ½µÄ
+			return context.getFilesDir().getPath();// ç›´æ¥å­˜åœ¨/data/dataé‡Œï¼Œérootæ‰‹æœºæ˜¯çœ‹ä¸åˆ°çš„
 		}
 	}
 
@@ -88,7 +88,7 @@ public class LogToFile {
 	}
 
 	/**
-	 * ½«logĞÅÏ¢Ğ´ÈëÎÄ¼şÖĞ
+	 * å°†logä¿¡æ¯å†™å…¥æ–‡ä»¶ä¸­
 	 * 
 	 * @param type
 	 * @param tag
@@ -97,25 +97,25 @@ public class LogToFile {
 	private static void writeToFile(char type, String tag, String msg) {
 
 		if (null == logPath) {
-			Log.e(TAG, "logPath == null £¬Î´³õÊ¼»¯LogToFile");
+			Log.e(TAG, "logPath == null ï¼Œæœªåˆå§‹åŒ–LogToFile");
 			return;
 		}
 
-		String fileName = logPath + "/log_" + ".log";// logÈÕÖ¾Ãû£¬Ê¹ÓÃÊ±¼äÃüÃû£¬±£Ö¤²»ÖØ¸´
+		String fileName = logPath + "/log_" + ".log";// logæ—¥å¿—åï¼Œä½¿ç”¨æ—¶é—´å‘½åï¼Œä¿è¯ä¸é‡å¤
 		String log = dateFormat.format(date) + " " + type + " " + tag + " "
-				+ msg + "\n";// logÈÕÖ¾ÄÚÈİ£¬¿ÉÒÔ×ÔĞĞ¶¨ÖÆ
+				+ msg + "\n";// logæ—¥å¿—å†…å®¹ï¼Œå¯ä»¥è‡ªè¡Œå®šåˆ¶
 
-		// Èç¹û¸¸Â·¾¶²»´æÔÚ
+		// å¦‚æœçˆ¶è·¯å¾„ä¸å­˜åœ¨
 		File file = new File(logPath);
 		if (!file.exists()) {
-			file.mkdirs();// ´´½¨¸¸Â·¾¶
+			file.mkdirs();// åˆ›å»ºçˆ¶è·¯å¾„
 		}
 
-		FileOutputStream fos = null;// FileOutputStream»á×Ô¶¯µ÷ÓÃµ×²ãµÄclose()·½·¨£¬²»ÓÃ¹Ø±Õ
+		FileOutputStream fos = null;// FileOutputStreamä¼šè‡ªåŠ¨è°ƒç”¨åº•å±‚çš„close()æ–¹æ³•ï¼Œä¸ç”¨å…³é—­
 		BufferedWriter bw = null;
 		try {
 
-			fos = new FileOutputStream(fileName, true);// ÕâÀïµÄµÚ¶ş¸ö²ÎÊı´ú±í×·¼Ó»¹ÊÇ¸²¸Ç£¬trueÎª×·¼Ó£¬flaseÎª¸²¸Ç
+			fos = new FileOutputStream(fileName, true);// è¿™é‡Œçš„ç¬¬äºŒä¸ªå‚æ•°ä»£è¡¨è¿½åŠ è¿˜æ˜¯è¦†ç›–ï¼Œtrueä¸ºè¿½åŠ ï¼Œflaseä¸ºè¦†ç›–
 			bw = new BufferedWriter(new OutputStreamWriter(fos));
 			bw.write(log);
 
@@ -126,7 +126,7 @@ public class LogToFile {
 		} finally {
 			try {
 				if (bw != null) {
-					bw.close();// ¹Ø±Õ»º³åÁ÷
+					bw.close();// å…³é—­ç¼“å†²æµ
 				}
 			} catch (IOException e) {
 				e.printStackTrace();

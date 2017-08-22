@@ -22,7 +22,7 @@ public class GoodsOutBrocastReceiver extends BroadcastReceiver {
 			String code = getGoodsTalk.substring(17, 18);
 			Log.e("whwhwh", "code===" + code);
 			if ("0".equals(code)) {
-				Log.e("whwhwh", "÷ß∏∂≥…π¶¡À!");
+				Log.e("whwhwh", "ÊîØ‰ªòÊàêÂäü‰∫Ü!");
 				ActivitySkipUtil.skipAnotherActivity(context,
 						ProSucessActivity.class, true);
 			}

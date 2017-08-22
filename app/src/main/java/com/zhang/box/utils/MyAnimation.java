@@ -14,10 +14,10 @@ public class MyAnimation extends Animation {
 	public void initialize(int width, int height, int parentWidth,
 			int parentHeight) {
 		super.initialize(width, height, parentWidth, parentHeight);
-		// »ñÈ¡ÖĞĞÄµã×ø±ê
+		// è·å–ä¸­å¿ƒç‚¹åæ ‡
 		centerX = width / 2;
 		centerY = height / 2;
-		// ¶¯»­Ö´ĞĞÊ±¼ä ×ÔĞĞ¶¨Òå
+		// åŠ¨ç”»æ‰§è¡Œæ—¶é—´ è‡ªè¡Œå®šä¹‰
 		setDuration(1400);
 		setInterpolator(new DecelerateInterpolator());
 	}
@@ -26,11 +26,11 @@ public class MyAnimation extends Animation {
 	protected void applyTransformation(float interpolatedTime, Transformation t) {
 		final Matrix matrix = t.getMatrix();
 		camera.save();
-		// ÖĞĞÄÊÇÈÆYÖáĞı×ª ÕâÀï¿ÉÒÔ×ÔĞĞÉèÖÃXÖá YÖá ZÖá
+		// ä¸­å¿ƒæ˜¯ç»•Yè½´æ—‹è½¬ è¿™é‡Œå¯ä»¥è‡ªè¡Œè®¾ç½®Xè½´ Yè½´ Zè½´
 		camera.rotateY(360 * interpolatedTime);
-		// °ÑÎÒÃÇµÄÉãÏñÍ·¼ÓÔÚ±ä»»¾ØÕóÉÏ
+		// æŠŠæˆ‘ä»¬çš„æ‘„åƒå¤´åŠ åœ¨å˜æ¢çŸ©é˜µä¸Š
 		camera.getMatrix(matrix);
-		// ÉèÖÃ·­×ªÖĞĞÄµã
+		// è®¾ç½®ç¿»è½¬ä¸­å¿ƒç‚¹
 		matrix.preTranslate(-centerX, -centerY);
 		matrix.postTranslate(centerX, centerY);
 		camera.restore();

@@ -15,7 +15,7 @@ import com.zhang.box.utils.MulDataUtils;
 import com.zhang.box.utils.ViewHolder;
 
 /**
- * ╦Ы╬щилф╥╪ш╦Яотй╬ ╤тс╕╣дс╕сц
+ * Ф═╧Ф█╝Е∙├Е⌠│Д╩╥Ф═╪Ф≤╬Г╓╨ Е╞╧Е╨■Г └Е╨■Г■╗
  * 
  * @author wang
  * 
@@ -92,7 +92,7 @@ public class MyDesProAppAdapter extends CommonAdapter {
 					UserInfo.searchApp.get(position).applogo,
 					desproappitem_iv_logo_one);
 
-			// ╪стьндвж
+			// Е┼═Х╫╫Ф√┤Е╜≈
 			desproappitem_tv_name_one
 					.setText(UserInfo.searchApp.get(position).appname);
 
@@ -120,7 +120,7 @@ public class MyDesProAppAdapter extends CommonAdapter {
 					UserInfo.searchApp.get(position + 1).applogo,
 					desproappitem_iv_logo_two);
 
-			// ╪стьндвж
+			// Е┼═Х╫╫Ф√┤Е╜≈
 			desproappitem_tv_name_two.setText(UserInfo.searchApp
 					.get(position + 1).appname);
 			String str = (UserInfo.searchApp.get(position + 1).appprice) / 100
@@ -146,7 +146,7 @@ public class MyDesProAppAdapter extends CommonAdapter {
 					UserInfo.searchApp.get(position + 2).applogo,
 					desproappitem_iv_logo_three);
 
-			// ╪стьндвж
+			// Е┼═Х╫╫Ф√┤Е╜≈
 			desproappitem_tv_name_three.setText(UserInfo.searchApp
 					.get(position + 2).appname);
 			String str = (UserInfo.searchApp.get(position + 2).appprice) / 100

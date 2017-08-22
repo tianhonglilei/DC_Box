@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * ´°¿Ú·ç¸ñÍ¨ÓÃÀà
+ * çª—å£é£æ ¼é€šç”¨ç±»
  * 
  * @author wang
  */
@@ -19,10 +19,10 @@ public class StyleUtil {
 
 	private static View view;
 
-	/** ´øÓĞ±êÌâÀ¸µÄ */
+	/** å¸¦æœ‰æ ‡é¢˜æ çš„ */
 	public static void customStyle(final Activity activity, int contentViewId,
 			String title) {
-		// Èç¹ûÓĞ¸¸Activity£¬Èç£ºÊÇTABÖĞµÄÒ»Ò³£¬ÔòÖ±½ÓÉèÖÃContentView
+		// å¦‚æœæœ‰çˆ¶Activityï¼Œå¦‚ï¼šæ˜¯TABä¸­çš„ä¸€é¡µï¼Œåˆ™ç›´æ¥è®¾ç½®ContentView
 		if (activity.getParent() != null) {
 			activity.setContentView(contentViewId);
 			return;

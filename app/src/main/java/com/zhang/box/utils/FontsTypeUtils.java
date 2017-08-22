@@ -5,17 +5,17 @@ import android.content.Context;
 import android.graphics.Typeface;
 
 /**
- * ĞŞ¸Ä×ÖÌåÑùÊ½
+ * ä¿®æ”¹å­—ä½“æ ·å¼
  * 
  * @author wang
  * 
- *         note: ĞèÒªµ½ÏµÍ³Ä¿Â¼ÔÚ£ºC:\Windows\Fonts£©Ñ¡ÔñÒ»·İ×ÖÌåÎÄ¼ş¸´ÖÆµ½ ÏîÄ¿µÄassets£¨×Ê²úÎÄ¼şÄ¿Â¼ÏÂ£©
+ *         note: éœ€è¦åˆ°ç³»ç»Ÿç›®å½•åœ¨ï¼šC:\Windows\Fontsï¼‰é€‰æ‹©ä¸€ä»½å­—ä½“æ–‡ä»¶å¤åˆ¶åˆ° é¡¹ç›®çš„assetsï¼ˆèµ„äº§æ–‡ä»¶ç›®å½•ä¸‹ï¼‰
  */
 
 public class FontsTypeUtils {
 
 	public FontsTypeUtils() {
-		throw new UnsupportedOperationException("FontsTypeUtilsĞŞ¸Ä×ÖÌåÑùÊ½²»ÄÜÊµÀı»¯");
+		throw new UnsupportedOperationException("FontsTypeUtilsä¿®æ”¹å­—ä½“æ ·å¼ä¸èƒ½å®ä¾‹åŒ–");
 	}
 
 	private static final Hashtable<String, Typeface> cache = new Hashtable<String, Typeface>();

@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/HuoDaoAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/HuoDaoAdapter2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/MyDesProAppAdapter.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/proAdapter2.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/proAdapter3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/MyDesProAppAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/proAdapter2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/adapter/proAdapter3.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/AppItem.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/ConfigInfo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/zzq/bean/ProInstance.java" charset="GBK" />
@@ -28,16 +28,33 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/WebViewCeshiActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/catchexecpton/LogCollectorUtility.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/constants/Constants.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/GoodsOutBrocastReceiver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/GoodsOutBrocastReceiver.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/LoadingService.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/MachineBrocastReceiver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/services/MachineBrocastReceiver.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ActivitySkipUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/AnimationUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/BackTime.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/CommonAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/DeviceUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/FileUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/FontsTypeUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ImageLoaderUtils.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ViewHolder.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/KImageCallback.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/LineEditText.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/LogToFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/MulDataUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/MyAnimation.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/OnclickToMuch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/SpUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/SpeechUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/StyleUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/ViewHolder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/box/utils/fontUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/Common.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/HttpGetAndPostNet.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/HttpUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/zhang/easymoney/net/ImageLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libserial_port.so" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

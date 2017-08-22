@@ -24,7 +24,7 @@ import android.util.Log;
 
 
 
-//下载网络图标并读取本地图
+//涓嬭浇缃戠粶鍥炬爣骞惰鍙栨湰鍦板浘
 public class ImageLoader extends Thread {
 	private static ImageLoader m_object = new ImageLoader();
 	private Map<String, SoftReference<Drawable>> imageCache = new HashMap<String, SoftReference<Drawable>>();
@@ -42,7 +42,7 @@ public class ImageLoader extends Thread {
 	}
 
 	/**
-	 * 清除全部数据
+	 * 娓呴櫎鍏ㄩ儴鏁版嵁
 	 */
 	public void RemoveAll() {
 		imageCache.clear();
@@ -52,7 +52,7 @@ public class ImageLoader extends Thread {
 		Drawable image = null;
 		// final String path = fileBean.getFilePath();
 		// final String fileEnds = fileBean.getFileEnds();
-		if (imageCache.containsKey(packageName))// 从列表中获取数据
+		if (imageCache.containsKey(packageName))// 浠庡垪琛ㄤ腑鑾峰彇鏁版嵁
 		{
 			SoftReference<Drawable> softReference = imageCache.get(packageName);
 			if (softReference != null) {
@@ -91,7 +91,7 @@ public class ImageLoader extends Thread {
 	public Drawable loadNetDrawable(final String url,
 			final ImageCallback callback) {
 		Drawable image = null;
-		if (imageCache.containsKey(url))// 从列表中获取数据
+		if (imageCache.containsKey(url))// 浠庡垪琛ㄤ腑鑾峰彇鏁版嵁
 		{
 			SoftReference<Drawable> softReference = imageCache.get(url);
 			if (softReference != null) {
@@ -221,17 +221,17 @@ public class ImageLoader extends Thread {
 		}
 	}
 
-	Bitmap drawableToBitmap(Drawable drawable) // drawable 转换?bitmap  /mnt/sdcard/easy/img/android1.jpg
+	Bitmap drawableToBitmap(Drawable drawable) // drawable 杞崲?bitmap  /mnt/sdcard/easy/img/android1.jpg
 	{
-		int width = drawable.getIntrinsicWidth(); // ?drawable 的长?
+		int width = drawable.getIntrinsicWidth(); // ?drawable 鐨勯暱?
 		int height = drawable.getIntrinsicHeight();
 		Bitmap.Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
-				: Bitmap.Config.RGB_565; // ?drawable 的颜色格?
-		Bitmap bitmap = Bitmap.createBitmap(width, height, config); // 建立对应
+				: Bitmap.Config.RGB_565; // ?drawable 鐨勯鑹叉牸?
+		Bitmap bitmap = Bitmap.createBitmap(width, height, config); // 寤虹珛瀵瑰簲
 		// bitmap
-		Canvas canvas = new Canvas(bitmap); // 建立对应 bitmap 的画?
+		Canvas canvas = new Canvas(bitmap); // 寤虹珛瀵瑰簲 bitmap 鐨勭敾?
 		drawable.setBounds(0, 0, width, height);
-		drawable.draw(canvas); // ?drawable 内容画到画布?
+		drawable.draw(canvas); // ?drawable 鍐呭鐢诲埌鐢诲竷?
 		return bitmap;
 	}
 
@@ -244,7 +244,7 @@ public class ImageLoader extends Thread {
 		public void ok() {
 			Message msg = new Message();
 			msg.what = 0;
-			if (imageCache.containsKey(path))// 从列表中获取数据
+			if (imageCache.containsKey(path))// 浠庡垪琛ㄤ腑鑾峰彇鏁版嵁
 			{
 				SoftReference<Drawable> softReference = imageCache.get(path);
 				if (softReference != null) {
