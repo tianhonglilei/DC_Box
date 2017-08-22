@@ -1,22 +1,22 @@
 package com.example.zzq.bean;
 
 /**
- * ÉÌÆ·ÊµÌåÀà
+ * å•†å“å®ä½“ç±»
  * 
  * @author wang
  * 
  */
 public class ConfigInfo {
-	private int proid;// ÉÌÆ·id
-	private int hid; // »õµÀ
-	private int hgid; // »õ¹ñ
-	private int max;// ²¹²Ö×î´óÊıÁ¿
-	private int mfinish;//ÂôÁË¶àÉÙÉÌÆ·ÊıÁ¿
-	private String logo;// ÉÌÆ·Í¼±ê
-	private String name;// ÉÌÆ·Ãû³Æ
-	private String haveNum; // Ö»²¹ÁË¶àÉÙ»õ
+	private int proid;// å•†å“id
+	private int hid; // è´§é“
+	private int hgid; // è´§æŸœ
+	private int max;// è¡¥ä»“æœ€å¤§æ•°é‡
+	private int mfinish;//å–äº†å¤šå°‘å•†å“æ•°é‡
+	private String logo;// å•†å“å›¾æ ‡
+	private String name;// å•†å“åç§°
+	private String haveNum; // åªè¡¥äº†å¤šå°‘è´§
 
-	/** ËÄ¸ö²ÎÊıµÄ¹¹Ôì ÉÌÆ·id ,»õµÀ ,ÉÌÆ·ÊıÁ¿, ÉÌÆ·Í¼±ê ,ÉÌÆ·Ãû³Æ */
+	/** å››ä¸ªå‚æ•°çš„æ„é€  å•†å“id ,è´§é“ ,å•†å“æ•°é‡, å•†å“å›¾æ ‡ ,å•†å“åç§° */
 	public ConfigInfo(int proid, int hid, int hgid, int max, int mfinish,String logo,
 			String name, String havaNum) {
 		super();
@@ -30,19 +30,19 @@ public class ConfigInfo {
 		this.haveNum = havaNum;
 	}
 
-	/** ÎŞ²Î¹¹Ôì */
+	/** æ— å‚æ„é€  */
 	public ConfigInfo() {
 		super();
 	}
 
-	/** Á½¸ö²ÎÊıµÄ¹¹Ôì »õµÀ£¬ÉÌÆ·Í¼±ê */
+	/** ä¸¤ä¸ªå‚æ•°çš„æ„é€  è´§é“ï¼Œå•†å“å›¾æ ‡ */
 	public ConfigInfo(int hid, String logo) {
 		super();
 		this.hid = hid;
 		this.logo = logo;
 	}
 
-	/** Á½¸ö²ÎÊıµÄ¹¹Ôì »õµÀ£¬ÉÌÆ·Í¼±ê */
+	/** ä¸¤ä¸ªå‚æ•°çš„æ„é€  è´§é“ï¼Œå•†å“å›¾æ ‡ */
 	public ConfigInfo(int hid, int hgid, String logo) {
 		super();
 		this.hid = hid;

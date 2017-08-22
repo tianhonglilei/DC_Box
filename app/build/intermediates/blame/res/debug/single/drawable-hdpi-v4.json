@@ -16,12 +16,12 @@
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\dianchaung_title.jpg"
     },
     {
-        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\category_0_normal.png",
-        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\category_0_normal.png"
-    },
-    {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\config_ceshi_press.png",
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\config_ceshi_press.png"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\category_0_normal.png",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\category_0_normal.png"
     },
     {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\degree_hot_exc.png",
@@ -32,12 +32,12 @@
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\payment_wechat_selected.png"
     },
     {
-        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\des_money_bg.png",
-        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\des_money_bg.png"
-    },
-    {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\itemproductbg.png",
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\itemproductbg.png"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\des_money_bg.png",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\des_money_bg.png"
     },
     {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\config_ceshi_normal.png",
@@ -48,12 +48,12 @@
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\back.png"
     },
     {
-        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\iv_download.png",
-        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\iv_download.png"
-    },
-    {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gallary_more_pro_press.png",
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\gallary_more_pro_press.png"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\iv_download.png",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\iv_download.png"
     },
     {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\des_worn_down.png",
@@ -116,12 +116,12 @@
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\gallary_more_pro_normal.png"
     },
     {
-        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\show_pro.png",
-        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\show_pro.png"
-    },
-    {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gallary_bom.png",
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\gallary_bom.png"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\show_pro.png",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\show_pro.png"
     },
     {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\degree_nor.png",
@@ -400,12 +400,12 @@
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\gallary_tui.png"
     },
     {
-        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\des_back_circle.png",
-        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\des_back_circle.png"
-    },
-    {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gallary_more_app_press.png",
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\gallary_more_app_press.png"
+    },
+    {
+        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\des_back_circle.png",
+        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\drawable-hdpi\\des_back_circle.png"
     },
     {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\des_pro_name.png",

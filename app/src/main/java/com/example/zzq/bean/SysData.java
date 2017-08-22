@@ -18,14 +18,14 @@ import com.zhang.box.LoadingActivity;
 
 /**
  * 
- * @author Administrator »ñÈ¡ÏµÍ³Êı¾İ
+ * @author Administrator è·å–ç³»ç»Ÿæ•°æ®
  * 
  */
 
 public class SysData {
 
 	public class activity {
-		// id =0 ¶¥²¿Í¼Æ¬ 1 ÎÒÒª¿ªÍØ
+		// id =0 é¡¶éƒ¨å›¾ç‰‡ 1 æˆ‘è¦å¼€æ‹“
 	}
 
 	public static String imei = null;

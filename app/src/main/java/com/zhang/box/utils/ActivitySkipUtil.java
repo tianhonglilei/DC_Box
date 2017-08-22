@@ -8,18 +8,18 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-/** Ìø×ªÒ³Ãæ¹¤¾ßÀà */
+/** è·³è½¬é¡µé¢å·¥å…·ç±» */
 public class ActivitySkipUtil {
 	
 	public ActivitySkipUtil() {
-		throw new UnsupportedOperationException("ActivitySkipUtil²»ÄÜÊµÀı»¯");
+		throw new UnsupportedOperationException("ActivitySkipUtilä¸èƒ½å®ä¾‹åŒ–");
 	}
 
 	/**
-	 * ¹¦ÄÜÃèÊö:ÔÚActivityÀïÁ½¸öActivityÖ®¼äµÄÌø×ª(²»Ğ¯´øÈÎºÎÊı¾İ)
+	 * åŠŸèƒ½æè¿°:åœ¨Activityé‡Œä¸¤ä¸ªActivityä¹‹é—´çš„è·³è½¬(ä¸æºå¸¦ä»»ä½•æ•°æ®)
 	 * 
 	 * @param activity
-	 *            ·¢ÆğÌø×ªµÄActivityÊµÀı
+	 *            å‘èµ·è·³è½¬çš„Activityå®ä¾‹
 	 */
 	public static void skipAnotherActivity(Activity activity,
 			Class<? extends Activity> cls, Boolean isFinish) {
@@ -33,10 +33,10 @@ public class ActivitySkipUtil {
 	
 
 	/**
-	 * ¹¦ÄÜÃèÊö:ÔÚÊÊÅäÆ÷ÀïÁ½¸öActivityÖ®¼äµÄµÄÌø×ª(²»Ğ¯´øÈÎºÎÊı¾İ)
+	 * åŠŸèƒ½æè¿°:åœ¨é€‚é…å™¨é‡Œä¸¤ä¸ªActivityä¹‹é—´çš„çš„è·³è½¬(ä¸æºå¸¦ä»»ä½•æ•°æ®)
 	 * 
 	 * @param context
-	 *            ·¢ÆğÌø×ªµÄActivityÊµÀı
+	 *            å‘èµ·è·³è½¬çš„Activityå®ä¾‹
 	 */
 
 	public static void skipAnotherActivity(Context context,
@@ -51,14 +51,14 @@ public class ActivitySkipUtil {
 	
 	
 	/**
-	 * ¹¦ÄÜÃèÊö£º´øÊı¾İµÄActivityÖ®¼äµÄÌø×ª
+	 * åŠŸèƒ½æè¿°ï¼šå¸¦æ•°æ®çš„Activityä¹‹é—´çš„è·³è½¬
 	 * 
 	 * @param activity
-	 *            ·¢ÆğÌø×ªµÄActivityÊµÀı
+	 *            å‘èµ·è·³è½¬çš„Activityå®ä¾‹
 	 * @param cls
-	 *            Ä¿±êActivityÊµÀı
+	 *            ç›®æ ‡Activityå®ä¾‹
 	 * @param hashMap
-	 *            Ğ¯´ø²ÎÊıµÄ¼¯ºÏ
+	 *            æºå¸¦å‚æ•°çš„é›†åˆ
 	 */
 	public static void skipAnotherActivity(Activity activity,
 			Class<? extends Activity> cls,
@@ -92,14 +92,14 @@ public class ActivitySkipUtil {
 	}
 
 	/**
-	 * ¹¦ÄÜÃèÊö£º´øÊı¾İµÄActivityÖ®¼äµÄÌø×ª
+	 * åŠŸèƒ½æè¿°ï¼šå¸¦æ•°æ®çš„Activityä¹‹é—´çš„è·³è½¬
 	 * 
 	 * @param context
-	 *            ·¢ÆğÌø×ªµÄActivityÊµÀı
+	 *            å‘èµ·è·³è½¬çš„Activityå®ä¾‹
 	 * @param cls
-	 *            Ä¿±êActivityÊµÀı
+	 *            ç›®æ ‡Activityå®ä¾‹
 	 * @param hashMap
-	 *            Ğ¯´ø²ÎÊıµÄ¼¯ºÏ
+	 *            æºå¸¦å‚æ•°çš„é›†åˆ
 	 */
 	public static void skipAnotherActivity(Context context,
 			Class<? extends Activity> cls,HashMap<String, ? extends Object> hashMap) {

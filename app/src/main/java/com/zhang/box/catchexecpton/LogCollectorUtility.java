@@ -56,7 +56,7 @@ public class LogCollectorUtility {
 	
 	
     /**
-	 * »ñÈ¡³ÌĞòÍâ²¿(sd)µÄÄ¿Â¼
+	 * è·å–ç¨‹åºå¤–éƒ¨(sd)çš„ç›®å½•
 	 * 
 	 * @param context
 	 * @return
@@ -86,8 +86,8 @@ public class LogCollectorUtility {
 			boolean b5 = context.checkCallingOrSelfPermission("android.permission.ACCESS_WIFI_STATE") == 0;
 			
 			if(!b1 || !b2 || !b3 || !b4 || !b5){
-				Log.d(TAG, "Ã»ÓĞÌí¼ÓÈ¨ÏŞ");
-				Toast.makeText(context.getApplicationContext(), "Ã»ÓĞÌí¼ÓÈ¨ÏŞ", Toast.LENGTH_SHORT).show();
+				Log.d(TAG, "æ²¡æœ‰æ·»åŠ æƒé™");
+				Toast.makeText(context.getApplicationContext(), "æ²¡æœ‰æ·»åŠ æƒé™", Toast.LENGTH_SHORT).show();
 			}
 			return b1 && b2 && b3 && b4 && b5;
 		}

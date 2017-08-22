@@ -39,11 +39,11 @@ import android.os.Message;
 import android.widget.ProgressBar;
 
 /**
- * ¶¨Ê±ÏòºóÌ¨ÇëÇóĞÅÏ¢µÄºóÌ¨·şÎñ
+ * å®šæ—¶å‘åå°è¯·æ±‚ä¿¡æ¯çš„åå°æœåŠ¡
  */
 public class LoadingService extends Service {
-	public static final int SUCCESS = 100;// ³É¹¦
-	private static final long CHECK_PERIOD_TWO = 1000 * 60 * 3;// 30·ÖÖÓ¼à²âÒ»´Î
+	public static final int SUCCESS = 100;// æˆåŠŸ
+	private static final long CHECK_PERIOD_TWO = 1000 * 60 * 3;// 30åˆ†é’Ÿç›‘æµ‹ä¸€æ¬¡
 	private Timer mTimer;
 	private BooksDB mBooksDB;
 	private List<String> proList = new ArrayList<String>();
@@ -69,7 +69,7 @@ public class LoadingService extends Service {
 	}
 
 	/**
-	 * Æô¶¯¶¨Ê±Æ÷½øĞĞ¶¨Ê±¼ì²éÊı¾İ
+	 * å¯åŠ¨å®šæ—¶å™¨è¿›è¡Œå®šæ—¶æ£€æŸ¥æ•°æ®
 	 */
 	@Override
 	public void onCreate() {
@@ -86,7 +86,7 @@ public class LoadingService extends Service {
 	}
 
 	/**
-	 * ·şÎñÏú»ÙÊ±È¡Ïû¶¨Ê±Æ÷
+	 * æœåŠ¡é”€æ¯æ—¶å–æ¶ˆå®šæ—¶å™¨
 	 */
 	@Override
 	public void onDestroy() {
@@ -99,7 +99,7 @@ public class LoadingService extends Service {
 		public void run() {
 
 			// mLogoImage = NetImageLoader.GetObject(context);
-			/** »ñÈ¡µ±Ç°»úÆ÷µÄ°æ±¾ºÅ */
+			/** è·å–å½“å‰æœºå™¨çš„ç‰ˆæœ¬å· */
 			PackageInfo pinfo;
 			try {
 				pinfo = getPackageManager().getPackageInfo("com.zhang.box",
@@ -109,23 +109,23 @@ public class LoadingService extends Service {
 				e.printStackTrace();
 			}
 
-			// // ÅĞ¶ÏÊÇ·ñÔÚÔËĞĞ
+			// // åˆ¤æ–­æ˜¯å¦åœ¨è¿è¡Œ
 			if (!DeviceUtils.isAppRunning(getApplicationContext(),
 					"com.zhang.box")) {
-				// ÔİÊ±²»¿ª·Å
+				// æš‚æ—¶ä¸å¼€æ”¾
 				DeviceUtils.startAPP("com.zhang.box", getApplicationContext());
 			}
 			upData(0);
-			// Calendar cal = Calendar.getInstance();// µ±Ç°ÈÕÆÚ
-			// int hour = cal.get(Calendar.HOUR_OF_DAY);// »ñÈ¡Ğ¡Ê±
-			// int minute = cal.get(Calendar.MINUTE);// »ñÈ¡·ÖÖÓ
-			// int minuteOfDay = hour * 60 + minute;// ´Ó0:00·Ö¿ªÊÇµ½Ä¿Ç°ÎªÖ¹µÄ·ÖÖÓÊı
+			// Calendar cal = Calendar.getInstance();// å½“å‰æ—¥æœŸ
+			// int hour = cal.get(Calendar.HOUR_OF_DAY);// è·å–å°æ—¶
+			// int minute = cal.get(Calendar.MINUTE);// è·å–åˆ†é’Ÿ
+			// int minuteOfDay = hour * 60 + minute;// ä»0:00åˆ†å¼€æ˜¯åˆ°ç›®å‰ä¸ºæ­¢çš„åˆ†é’Ÿæ•°
 			// final int start = 3 * 60;
 			// final int end = 3 * 60 + 3;
 			// if (minuteOfDay >= start && minuteOfDay <= end) { //
-			// Áè³¿3µãµ½Áè³¿3µã31·ÖÖÓ
-			// // ×Ô¶¯ÖØÆô
-			// // TODO WH ÖØĞÂÆô¶¯³ÌĞò
+			// å‡Œæ™¨3ç‚¹åˆ°å‡Œæ™¨3ç‚¹31åˆ†é’Ÿ
+			// // è‡ªåŠ¨é‡å¯
+			// // TODO WH é‡æ–°å¯åŠ¨ç¨‹åº
 			// restartApplication();
 			// }
 
@@ -138,7 +138,7 @@ public class LoadingService extends Service {
 		mNetTask.execute();
 	}
 
-	/** ¹Ø»úÖØĞÂÆô¶¯»úÆ÷ */
+	/** å…³æœºé‡æ–°å¯åŠ¨æœºå™¨ */
 	public void reBootMachine() {
 		Intent intent2 = new Intent(Intent.ACTION_REBOOT);
 		intent2.putExtra("nowait", 1);
@@ -175,7 +175,7 @@ public class LoadingService extends Service {
 			nameValuePairs
 					.add(new BasicNameValuePair("click", UserInfo.upname));
 			nameValuePairs.add(new BasicNameValuePair("ver", versionCode));
-			// ¸ù¾İ»úÆ÷ÄÚÈİÊÇ·ñµÚÒ»´Î 1È«²¿ÏÂ·¢ 0¸üĞÂ
+			// æ ¹æ®æœºå™¨å†…å®¹æ˜¯å¦ç¬¬ä¸€æ¬¡ 1å…¨éƒ¨ä¸‹å‘ 0æ›´æ–°
 			String path = Environment.getExternalStorageDirectory().toString()
 					+ "/boxcontent/";
 			File destDir = new File(path);
@@ -185,7 +185,7 @@ public class LoadingService extends Service {
 			} else {
 				nameValuePairs.add(new BasicNameValuePair("updata", 1 + ""));
 			}
-			/** ¼ì²âÊÇ·ñ¿ªÃÅ */
+			/** æ£€æµ‹æ˜¯å¦å¼€é—¨ */
 			boolean isOpen = MainHandler.isDoorOpen();
 			if (isOpen) {
 				nameValuePairs.add(new BasicNameValuePair("door", 1 + ""));
@@ -193,7 +193,7 @@ public class LoadingService extends Service {
 				nameValuePairs.add(new BasicNameValuePair("door", 0 + ""));
 			}
 
-			/** ¼ì²â»úÆ÷ËùÓĞµÄ»õµÀºÍ»õµÀµÄ×´Ì¬ */
+			/** æ£€æµ‹æœºå™¨æ‰€æœ‰çš„è´§é“å’Œè´§é“çš„çŠ¶æ€ */
 			String str = new String();
 			for (int i = 1; i < 22; i++) {
 				String huodaoInfo = MainHandler.getGoodsInfo(11, i);
@@ -271,7 +271,7 @@ public class LoadingService extends Service {
 						proList.add(tempJson.getString("logo"));
 						proList.add(tempJson.getString("big"));
 						proList.add(tempJson.getString("logogray"));
-						update = 1;// ¸üĞÂ
+						update = 1;// æ›´æ–°
 					}
 
 					JSONArray jsonObjadv = new JSONObject(result)
@@ -346,7 +346,7 @@ public class LoadingService extends Service {
 						update = 1;
 					}
 
-					// ÓªÑø proid bai hundrend xiang
+					// è¥å…» proid bai hundrend xiang
 					JSONArray jsonObjinfo = new JSONObject(result)
 							.getJSONArray("productinfo");// .getJSONObject("nResult");
 					for (int i = 0; i < jsonObjinfo.length(); i++) {
@@ -368,7 +368,7 @@ public class LoadingService extends Service {
 						update = 1;
 
 					}
-					// °æ±¾°²×° context int serverVersion =
+					// ç‰ˆæœ¬å®‰è£… context int serverVersion =
 					// Integer.parseInt(mVersion_code);
 					JSONArray jsonObjdown = new JSONObject(result)
 							.getJSONArray("down");
@@ -382,7 +382,7 @@ public class LoadingService extends Service {
 						String downurl = info.downApkUrl = tempJson
 								.getString("apk");
 
-						// Èç¹û·şÎñÆ÷µÄ°æ±¾´óÓÚ»úÆ÷ÏÖÓĞµÄ°æ±¾Ôò×Ô¶¯¸üĞÂ
+						// å¦‚æœæœåŠ¡å™¨çš„ç‰ˆæœ¬å¤§äºæœºå™¨ç°æœ‰çš„ç‰ˆæœ¬åˆ™è‡ªåŠ¨æ›´æ–°
 						if (serverVersion > getVersionCode()) {
 							SetPressdialog(downurl);
 						}
@@ -404,12 +404,12 @@ public class LoadingService extends Service {
 	}
 
 	private int getVersionCode() {
-		// 1,°ü¹ÜÀíÕß¶ÔÏópackageManager
+		// 1,åŒ…ç®¡ç†è€…å¯¹è±¡packageManager
 		PackageManager pm = getPackageManager();
-		// 2,´Ó°üµÄ¹ÜÀíÕß¶ÔÏóÖĞ,»ñÈ¡Ö¸¶¨°üÃûµÄ»ù±¾ĞÅÏ¢(°æ±¾Ãû³Æ,°æ±¾ºÅ),´«0´ú±í»ñÈ¡»ù±¾ĞÅÏ¢
+		// 2,ä»åŒ…çš„ç®¡ç†è€…å¯¹è±¡ä¸­,è·å–æŒ‡å®šåŒ…åçš„åŸºæœ¬ä¿¡æ¯(ç‰ˆæœ¬åç§°,ç‰ˆæœ¬å·),ä¼ 0ä»£è¡¨è·å–åŸºæœ¬ä¿¡æ¯
 		try {
 			PackageInfo packageInfo = pm.getPackageInfo(getPackageName(), 0);
-			// 3,»ñÈ¡°æ±¾Ãû³Æ
+			// 3,è·å–ç‰ˆæœ¬åç§°
 			return packageInfo.versionCode;
 
 		} catch (Exception e) {
@@ -420,7 +420,7 @@ public class LoadingService extends Service {
 
 	public void SetPressdialog(String downurl) {
 		// AlertDialog.Builder builder = new Builder(context);
-		// builder.setTitle("ÕıÔÚ¸üĞÂÖĞ...");
+		// builder.setTitle("æ­£åœ¨æ›´æ–°ä¸­...");
 		// View view = LayoutInflater.from(context).inflate(
 		// R.layout.dialog_progress, null);
 		// mProgressBar = (ProgressBar) view.findViewById(R.id.id_progress);
@@ -457,7 +457,7 @@ public class LoadingService extends Service {
 		});
 	}
 
-	/** ÏÂÔØÍê³Éºó·¢ËÍµÄĞÅÏ¢ */
+	/** ä¸‹è½½å®Œæˆåå‘é€çš„ä¿¡æ¯ */
 	protected void upDataFinish(int i) {
 		mFinishNetTask = new FinishNetTask();
 		mFinishNetTask.execute();
@@ -490,13 +490,13 @@ public class LoadingService extends Service {
 			if (result == null) {
 
 			} else {
-				ToastTools.showShort(getApplicationContext(), "¸üĞÂÍê³É!");
+				ToastTools.showShort(getApplicationContext(), "æ›´æ–°å®Œæˆ!");
 				restartApplication();
 			}
 		}
 	}
 
-	/** ÖØĞÂÆô¶¯³ÌĞò */
+	/** é‡æ–°å¯åŠ¨ç¨‹åº */
 	public void restartApplication() {
 		final Intent intent = getPackageManager().getLaunchIntentForPackage(
 				getPackageName());
@@ -517,7 +517,7 @@ public class LoadingService extends Service {
 
 	public void read() {
 
-		// TODO Çå³ıµã»÷ÉÌÆ·ºÍÓ¦ÓÃ³ÌĞòÃû×ÖÊı¾İ¿â
+		// TODO æ¸…é™¤ç‚¹å‡»å•†å“å’Œåº”ç”¨ç¨‹åºåå­—æ•°æ®åº“
 		// UserInfo.uploadName.clear();
 
 		UserInfo.isLoad = 0;
@@ -528,7 +528,7 @@ public class LoadingService extends Service {
 		mBooksDB.ReadProMain();
 
 		UserInfo.proAlllist.clear();
-		mBooksDB.ReadProAll(); // ÉÌÆ·ËùÓĞ
+		mBooksDB.ReadProAll(); // å•†å“æ‰€æœ‰
 		if (UserInfo.proDrinklist.size() > 0) {
 			UserInfo.proDrinklist.clear();
 		}
@@ -542,10 +542,10 @@ public class LoadingService extends Service {
 		UserInfo.advVideo.clear();
 		mBooksDB.ReadAdvVideo();
 
-		// mBooksDB.ReadUpload(); // ¶ÁÈ¡ËùÓĞµã»÷Ó¦ÓÃºÍÉÌÆ·µÄÃû×Ö
+		// mBooksDB.ReadUpload(); // è¯»å–æ‰€æœ‰ç‚¹å‡»åº”ç”¨å’Œå•†å“çš„åå­—
 
 		UserInfo.appMainshowOne.clear();
-		mBooksDB.ReadAppByMainshowOne();// Ó¦ÓÃ3ÕÅÍ¼
+		mBooksDB.ReadAppByMainshowOne();// åº”ç”¨3å¼ å›¾
 
 		UserInfo.jpAllshow.clear();
 		mBooksDB.ReadAppJingPing();
@@ -555,7 +555,7 @@ public class LoadingService extends Service {
 		mBooksDB.ReadAllApp();
 	}
 
-	/** ¼ÓÔØÊı¾İ */
+	/** åŠ è½½æ•°æ® */
 	public void downpro(int andex) {
 
 		if (andex >= proList.size()) {
@@ -580,7 +580,7 @@ public class LoadingService extends Service {
 		}
 	}
 
-	/** ²»´æÔÚ×ß ÉÏÃæµÄ·½·¨ */
+	/** ä¸å­˜åœ¨èµ° ä¸Šé¢çš„æ–¹æ³• */
 	public Boolean Getphontnames(String url) {
 
 		int pos = url.lastIndexOf("/");

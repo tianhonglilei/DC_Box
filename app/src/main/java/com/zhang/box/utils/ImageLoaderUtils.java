@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by wh on 17/4/17.
  * 
- * 加载本地图片资源进行优化
+ * 鍔犺浇鏈湴鍥剧墖璧勬簮杩涜浼樺寲
  */
 public class ImageLoaderUtils {
 
@@ -121,7 +121,7 @@ public class ImageLoaderUtils {
 	}
 
 	/**
-	 * 释放内存
+	 * 閲婃斁鍐呭瓨
 	 * 
 	 * @param imageView
 	 */

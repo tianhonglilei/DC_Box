@@ -4,7 +4,7 @@ package com.zhang.box.constants;
  * 
  * @author wang
  * 
- *         ½Ó¿Ú
+ *         æ¥å£
  * 
  */
 public class Constants {
@@ -12,101 +12,101 @@ public class Constants {
 	public static String NEW_NOTICE_ACTION = "com.zhang.box.action.NEW_NOTICE_ACTION";
 
 	
-	/****************************  »ù´¡Íø¶Î  ***************************************/
+	/****************************  åŸºç¡€ç½‘æ®µ  ***************************************/
 	
-	/** »ù±¾ÍøÖ· */
+	/** åŸºæœ¬ç½‘å€ */
 	public static String basesUrl = "60.205.218.33";
 	
 	
-	/** ÀîºèÁÒ »ù±¾½Ó¿Ú */
+	/** æé¸¿çƒˆ åŸºæœ¬æ¥å£ */
 	public static String baseUrlLHL = "60.205.218.33";
 
-	/** ÕÅÕñÇ¿ »ù±¾½Ó¿Ú */
+	/** å¼ æŒ¯å¼º åŸºæœ¬æ¥å£ */
 //	public static String baseUrlZZQ = "101.200.84.234";
 	
 	
-	/****************************  ³ÌĞòÊ¹ÓÃµÄ³£ÓÃ½Ó¿Ú  ******************************/
+	/****************************  ç¨‹åºä½¿ç”¨çš„å¸¸ç”¨æ¥å£  ******************************/
 	
-	/** LoadingActivity ºÍ LoadingService ³ÌĞòµÚÒ»´Î½øÈë´Ó·şÎñÆ÷»ñÈ¡ËùÓĞµÄÊı¾İ */
+	/** LoadingActivity å’Œ LoadingService ç¨‹åºç¬¬ä¸€æ¬¡è¿›å…¥ä»æœåŠ¡å™¨è·å–æ‰€æœ‰çš„æ•°æ® */
 	public static String LoadActivityUrlLHL = "http://"+ basesUrl+ "/boxapp/?c=heart&m=box_heart";
 	
 	
-	/** LoadingService ³ÌĞò¸üĞÂÏÂÔØÍê³ÉºóµÄÏò·şÎñÆ÷·¢ËÍÒ»¸öÍ¨Öª */
+	/** LoadingService ç¨‹åºæ›´æ–°ä¸‹è½½å®Œæˆåçš„å‘æœåŠ¡å™¨å‘é€ä¸€ä¸ªé€šçŸ¥ */
 	public static String LoadingServiceUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_updatefinish";
 	
 	
-	/** ConfigActivity ÏÂÔØ×îĞÂ°ü */
+	/** ConfigActivity ä¸‹è½½æœ€æ–°åŒ… */
 	public static String ConfigActivityUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=updateapk";
 	
-	/** ProActivity and huodaoActivity ÉÌÆ·²¹»õ»ñÈ¡ÉÌÆ·ĞÅÏ¢½Ó¿Ú */
+	/** ProActivity and huodaoActivity å•†å“è¡¥è´§è·å–å•†å“ä¿¡æ¯æ¥å£ */
 	public static String ProActivityUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=machinehuodao";
 	
-	/** proAdapter2 ²¹ÁË¶àÉÙÉÌÆ·ÊıÁ¿ÉÏ´«½Ó¿Ú */
+	/** proAdapter2 è¡¥äº†å¤šå°‘å•†å“æ•°é‡ä¸Šä¼ æ¥å£ */
 	public static String proAdapter2UrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=updatehuodao";
 	
 	
-	/*************************  µã´´¶şÎ¬Âë£¬Ö§¸¶£¬Ö§¸¶³É¹¦×´Ì¬   *************************/
+	/*************************  ç‚¹åˆ›äºŒç»´ç ï¼Œæ”¯ä»˜ï¼Œæ”¯ä»˜æˆåŠŸçŠ¶æ€   *************************/
 	
-	/** DesProActivityÖ®µã´´¶şÎ¬ÂëÀîºèÁÒ½Ó¿Ú */
+	/** DesProActivityä¹‹ç‚¹åˆ›äºŒç»´ç æé¸¿çƒˆæ¥å£ */
 	public static String dainchaungQRUrlLHL = "http://quyingyoung.dc-box.com/?c=welcome&m=zhifu_app&tradeno=";
 	
-	/** DesProActivityÖ®µã´´¶şÎ¬ÂëÕÅÕñÇ¿½Ó¿Ú */
+	/** DesProActivityä¹‹ç‚¹åˆ›äºŒç»´ç å¼ æŒ¯å¼ºæ¥å£ */
 	public static String dainchaungQRUrlZZQ = "http://quyingyoung.dc-box.com/?c=welcome&m=zhifu_app&tradeno=";
 	
-	/** DesProActivityÖ®µã´´Ö§¸¶ÀîºèÁÒ½Ó¿Ú */
+	/** DesProActivityä¹‹ç‚¹åˆ›æ”¯ä»˜æé¸¿çƒˆæ¥å£ */
 	public static String dainchaungPayUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_apphuodaostatus";
 	
-	/** DesProActivityÖ®µã´´Ö§¸¶ÕÅÕñÇ¿½Ó¿Ú */
+	/** DesProActivityä¹‹ç‚¹åˆ›æ”¯ä»˜å¼ æŒ¯å¼ºæ¥å£ */
 	public static String dainchaungPayUrlZZQ = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_apphuodaostatus";
 	
-	/** DesProActivityÖ®µã´´Ö§¸¶³É¹¦ºó  ÀîºèÁÒ  ½Ó¿Ú */
+	/** DesProActivityä¹‹ç‚¹åˆ›æ”¯ä»˜æˆåŠŸå  æé¸¿çƒˆ  æ¥å£ */
 	public static String dainchaungStatusUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_appchuhuosuccess";
 	
-	/** DesProActivityÖ®µã´´Ö§¸¶³É¹¦ºó  ÕÅÕñÇ¿   ½Ó¿Ú */
+	/** DesProActivityä¹‹ç‚¹åˆ›æ”¯ä»˜æˆåŠŸå  å¼ æŒ¯å¼º   æ¥å£ */
 	public static String dainchaungStatusUrlZZQ = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_appchuhuosuccess";
 	
 	
-	/*************************  Î¢ĞÅ¶şÎ¬Âë£¬Ö§¸¶£¬Ö§¸¶³É¹¦×´Ì¬   *************************/
+	/*************************  å¾®ä¿¡äºŒç»´ç ï¼Œæ”¯ä»˜ï¼Œæ”¯ä»˜æˆåŠŸçŠ¶æ€   *************************/
 	
-	/** DesProActivityÖ®Î¢ĞÅ¶şÎ¬ÂëÀîºèÁÒ½Ó¿Ú */
+	/** DesProActivityä¹‹å¾®ä¿¡äºŒç»´ç æé¸¿çƒˆæ¥å£ */
 	public static String weixinQRUrlLHL = "http://"+basesUrl+"/weixin/example/native.php";
 	
 	
 	//TODO WHWH
-	/** DesProActivityÖ®Î¢ĞÅ¶şÎ¬ÂëÕÅÕñÇ¿½Ó¿Ú */
+	/** DesProActivityä¹‹å¾®ä¿¡äºŒç»´ç å¼ æŒ¯å¼ºæ¥å£ */
 	public static String weixinQRUrlZZQ = "http://www.dc-box.com/weixin/example/native.php";
 	
-	/** DesProActivityÖ®Î¢ĞÅÖ§¸¶ÀîºèÁÒ½Ó¿Ú */
+	/** DesProActivityä¹‹å¾®ä¿¡æ”¯ä»˜æé¸¿çƒˆæ¥å£ */
 	public static String weixinPayUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_weixinuodao";
 	
-	/** DesProActivityÖ®Î¢ĞÅÖ§¸¶ÕÅÕñÇ¿½Ó¿Ú */
+	/** DesProActivityä¹‹å¾®ä¿¡æ”¯ä»˜å¼ æŒ¯å¼ºæ¥å£ */
 	public static String weixinPayUrlZZQ = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_weixinuodao";
 	
-	/** DesProActivityÖ®Î¢ĞÅÖ§¸¶³É¹¦ºó  ÀîºèÁÒ  ½Ó¿Ú */
+	/** DesProActivityä¹‹å¾®ä¿¡æ”¯ä»˜æˆåŠŸå  æé¸¿çƒˆ  æ¥å£ */
 	public static String weixinStatusUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_weixinhuodaostatus";
 	
-	/** DesProActivityÖ®Î¢ĞÅÖ§¸¶³É¹¦ºó  ÕÅÕñÇ¿   ½Ó¿Ú */
+	/** DesProActivityä¹‹å¾®ä¿¡æ”¯ä»˜æˆåŠŸå  å¼ æŒ¯å¼º   æ¥å£ */
 	public static String weixinStatusUrlZZQ = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_weixinhuodaostatus";
 	
 	
-	/************************  Ö§¸¶±¦¶şÎ¬Âë£¬Ö§¸¶£¬Ö§¸¶³É¹¦×´Ì¬   ********************/
-	/** DesProActivityÖ®Ö§¸¶±¦¶şÎ¬ÂëÀîºèÁÒ½Ó¿Ú */
+	/************************  æ”¯ä»˜å®äºŒç»´ç ï¼Œæ”¯ä»˜ï¼Œæ”¯ä»˜æˆåŠŸçŠ¶æ€   ********************/
+	/** DesProActivityä¹‹æ”¯ä»˜å®äºŒç»´ç æé¸¿çƒˆæ¥å£ */
 	public static String zhifubaoQRUrlLHL = "http://"+basesUrl+"/f2f/f2fpay/qrpay_test.php";
 	
-	/** DesProActivityÖ®Ö§¸¶±¦¶şÎ¬ÂëÕÅÕñÇ¿½Ó¿Ú */
+	/** DesProActivityä¹‹æ”¯ä»˜å®äºŒç»´ç å¼ æŒ¯å¼ºæ¥å£ */
 	public static String zhifubaoQRUrlZZQ = "http://"+basesUrl+"/f2f/f2fpay/qrpay_test.php";
 	
-	/** DesProActivityÖ®Ö§¸¶±¦Ö§¸¶ÀîºèÁÒ½Ó¿Ú */
+	/** DesProActivityä¹‹æ”¯ä»˜å®æ”¯ä»˜æé¸¿çƒˆæ¥å£ */
 	public static String zhifubaoPayUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_zhifubaohuodao";
 	
-	/** DesProActivityÖ®Ö§¸¶±¦Ö§¸¶ÕÅÕñÇ¿½Ó¿Ú */
+	/** DesProActivityä¹‹æ”¯ä»˜å®æ”¯ä»˜å¼ æŒ¯å¼ºæ¥å£ */
 	public static String zhifubaoPayUrlZZQ = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_zhifubaohuodao";
 	
-	/** DesProActivityÖ®Ö§¸¶±¦Ö§¸¶³É¹¦ºó  ÀîºèÁÒ  ½Ó¿Ú */
+	/** DesProActivityä¹‹æ”¯ä»˜å®æ”¯ä»˜æˆåŠŸå  æé¸¿çƒˆ  æ¥å£ */
 	public static String zhifubaoStatusUrlLHL = "http://"+basesUrl+"/boxapp/?c=welcome&m=box_zhifubaohuodaostatus";
 	
 	//TODO WHWH
-	/** DesProActivityÖ®Ö§¸¶±¦Ö§¸¶³É¹¦ºó  ÕÅÕñÇ¿  ½Ó¿Ú */
+	/** DesProActivityä¹‹æ”¯ä»˜å®æ”¯ä»˜æˆåŠŸå  å¼ æŒ¯å¼º  æ¥å£ */
 	public static String zhifubaoStatusUrlZZQ = "http://quyingyoung.dc-box.com/?c=welcome&m=box_zhifubaohuodaostatus";
 
 }

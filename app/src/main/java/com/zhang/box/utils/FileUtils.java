@@ -15,33 +15,33 @@ import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
 
-/** ÎÄ¼ş¹ÜÀí */
+/** æ–‡ä»¶ç®¡ç† */
 public class FileUtils {
 
 	public static final String SDCARD = StringUtils.getSDPath();
 
-	/** ÔÚSD¿¨ÉÏ´´½¨ÎÄ¼ş */
+	/** åœ¨SDå¡ä¸Šåˆ›å»ºæ–‡ä»¶ */
 	public static File creatSDFile(String fileName) throws IOException {
 		File file = new File(SDCARD + fileName);
 		file.createNewFile();
 		return file;
 	}
 
-	/** ÔÚSD¿¨ÉÏ´´½¨Ä¿Â¼ */
+	/** åœ¨SDå¡ä¸Šåˆ›å»ºç›®å½• */
 	public static File creatSDDir(String dirName) {
 		File dir = new File(SDCARD + dirName);
 		dir.mkdir();
 		return dir;
 	}
 
-	/** ÅĞ¶ÏSD¿¨ÉÏµÄÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ */
+	/** åˆ¤æ–­SDå¡ä¸Šçš„æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨ */
 	public static boolean isFileExist(String fileName) {
 		File file = new File(SDCARD + fileName);
 		return file.exists();
 	}
 
 	/**
-	 * ÒÔ×îÊ¡ÄÚ´æµÄ·½Ê½¶ÁÈ¡±¾µØ×ÊÔ´µÄÍ¼Æ¬(ËõĞ¡Ô­À´µÄ¶ş·ÖÖ®Ò»)
+	 * ä»¥æœ€çœå†…å­˜çš„æ–¹å¼è¯»å–æœ¬åœ°èµ„æºçš„å›¾ç‰‡(ç¼©å°åŸæ¥çš„äºŒåˆ†ä¹‹ä¸€)
 	 * 
 	 * @param context
 	 * @param resId
@@ -52,14 +52,14 @@ public class FileUtils {
 		opt.inPreferredConfig = Bitmap.Config.RGB_565;
 		opt.inPurgeable = true;
 		opt.inInputShareable = true;
-		opt.inSampleSize = 2;// ËõĞ¡Ô­À´µÄ1/2
-		// »ñÈ¡×ÊÔ´Í¼Æ¬
+		opt.inSampleSize = 2;// ç¼©å°åŸæ¥çš„1/2
+		// è·å–èµ„æºå›¾ç‰‡
 		InputStream is = context.getResources().openRawResource(resId);
 		return BitmapFactory.decodeStream(is, null, opt);
 	}
 
 	/**
-	 * ÒÔ×îÊ¡ÄÚ´æµÄ·½Ê½¶ÁÈ¡±¾µØ×ÊÔ´µÄÍ¼Æ¬
+	 * ä»¥æœ€çœå†…å­˜çš„æ–¹å¼è¯»å–æœ¬åœ°èµ„æºçš„å›¾ç‰‡
 	 * 
 	 * @param context
 	 * @param resId
@@ -70,13 +70,13 @@ public class FileUtils {
 		opt.inPreferredConfig = Bitmap.Config.RGB_565;
 		opt.inPurgeable = true;
 		opt.inInputShareable = true;
-		// opt.inSampleSize = 2;// ËõĞ¡Ô­À´µÄ1/2
-		// »ñÈ¡×ÊÔ´Í¼Æ¬
+		// opt.inSampleSize = 2;// ç¼©å°åŸæ¥çš„1/2
+		// è·å–èµ„æºå›¾ç‰‡
 		InputStream is = context.getResources().openRawResource(resId);
 		return BitmapFactory.decodeStream(is, null, opt);
 	}
 
-	/** ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ */
+	/** åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨ */
 	public static Boolean exist(String path) {
 		File file = new File(path);
 		Boolean exist = false;
@@ -90,18 +90,18 @@ public class FileUtils {
 	}
 
 	/**
-	 * ´´½¨ÎÄ¼ş
+	 * åˆ›å»ºæ–‡ä»¶
 	 * 
 	 * @param path
-	 *            ÎÄ¼şÂ·¾¶
+	 *            æ–‡ä»¶è·¯å¾„
 	 * @param filename
-	 *            ÎÄ¼şÃû
+	 *            æ–‡ä»¶å
 	 * @return
 	 */
 	public static boolean createFile(String path, String filename) {
 		File file = new File(path);
 		Boolean createFlg = false;
-		// °´ÕÕÖ¸¶¨µÄÂ·¾¶´´½¨ÎÄ¼ş¼Ğ
+		// æŒ‰ç…§æŒ‡å®šçš„è·¯å¾„åˆ›å»ºæ–‡ä»¶å¤¹
 		if (!file.exists()) {
 			file.mkdirs();
 		}
@@ -109,7 +109,7 @@ public class FileUtils {
 		file = new File(local_file);
 		if (!file.exists()) {
 			try {
-				// ´´½¨ĞÂÎÄ¼ş
+				// åˆ›å»ºæ–°æ–‡ä»¶
 				createFlg = file.createNewFile();
 			} catch (Exception e) {
 			}
@@ -117,13 +117,13 @@ public class FileUtils {
 		return createFlg;
 	}
 
-	/** SD¿¨ÊÇ·ñ×¼±¸¾ÍĞ÷¡¡ */
+	/** SDå¡æ˜¯å¦å‡†å¤‡å°±ç»ªã€€ */
 	public static boolean isSDCardPresent() {
 		return Environment.getExternalStorageState().equals(
 				Environment.MEDIA_MOUNTED);
 	}
 
-	/** SDcardÊÇ·ñ¿ÉĞ´ */
+	/** SDcardæ˜¯å¦å¯å†™ */
 	public static boolean isSdCardWrittenable() {
 		if (android.os.Environment.getExternalStorageState().equals(
 				android.os.Environment.MEDIA_MOUNTED)) {
@@ -132,20 +132,20 @@ public class FileUtils {
 		return false;
 	}
 
-	/** ¡¡É¾³ıÖ¸¶¨Â·¾¶ÎÄ¼ş¡¡ */
+	/** ã€€åˆ é™¤æŒ‡å®šè·¯å¾„æ–‡ä»¶ã€€ */
 	public static void deleteFile(String path) {
 		File file = new File(path);
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 		if (file.exists()) {
-			// ÅĞ¶ÏÊÇ·ñÊÇÎÄ¼ş
+			// åˆ¤æ–­æ˜¯å¦æ˜¯æ–‡ä»¶
 			if (file.isFile()) {
-				// É¾³ı
+				// åˆ é™¤
 				file.delete();
 			}
 		}
 	}
 
-	/** ×ÊÔ´ÇåÀí */
+	/** èµ„æºæ¸…ç† */
 	public static void cache(String path, byte[] data) throws IOException {
 		OutputStream os = null;
 		try {
@@ -160,7 +160,7 @@ public class FileUtils {
 		}
 	}
 
-	/** Çå³ıÎÄ¼ş¼Ğ ÒÔ¼°ÎÄ¼ş¼ĞÄÚµÄËùÓĞµÄÎÄ¼ş */
+	/** æ¸…é™¤æ–‡ä»¶å¤¹ ä»¥åŠæ–‡ä»¶å¤¹å†…çš„æ‰€æœ‰çš„æ–‡ä»¶ */
 	public static void delete(File file) {
 		if (file.isFile()) {
 			file.delete();
@@ -181,7 +181,7 @@ public class FileUtils {
 		}
 	}
 
-	/** ½«eclipseÀïassets×ÊÔ´Ä¿Â¼iniÎÄ¼ş¸´ÖÆµ½Ö¸¶¨Ä¿Â¼ÏÂ */
+	/** å°†eclipseé‡Œassetsèµ„æºç›®å½•iniæ–‡ä»¶å¤åˆ¶åˆ°æŒ‡å®šç›®å½•ä¸‹ */
 	public static void assetsDataToSD(Context context, String fileName) {
 		InputStream myInput;
 		try {
@@ -203,7 +203,7 @@ public class FileUtils {
 		}
 	}
 
-	/** ½«×ÊÔ´Ä¿Â¼ÏÂµÄÍ¼Æ¬±£´æµ½SDcardÄÚ Ö÷ÒªÄ¿µÄ ·ÖÏí¹¦ÄÜÍ¼±ê */
+	/** å°†èµ„æºç›®å½•ä¸‹çš„å›¾ç‰‡ä¿å­˜åˆ°SDcardå†… ä¸»è¦ç›®çš„ åˆ†äº«åŠŸèƒ½å›¾æ ‡ */
 	public static void saveBitmap(Bitmap bitmap, String picture_path_name) {
 
 		File file = new File(picture_path_name);
@@ -222,16 +222,16 @@ public class FileUtils {
 		}
 	}
 
-	/** ½«×Ö·û´®Ğ´ÈëÖ¸¶¨Â·¾¶ÖĞµÄÎÄ±¾ÖĞÈ¥ */
+	/** å°†å­—ç¬¦ä¸²å†™å…¥æŒ‡å®šè·¯å¾„ä¸­çš„æ–‡æœ¬ä¸­å» */
 	public static void writeFile(String str) {
 		String filePath = null;
 		boolean hasSDCard = Environment.getExternalStorageState().equals(
 				Environment.MEDIA_MOUNTED);
-		if (hasSDCard) { // SD¿¨¸ùÄ¿Â¼µÄhello.text
+		if (hasSDCard) { // SDå¡æ ¹ç›®å½•çš„hello.text
 			filePath = Environment.getExternalStorageDirectory().toString()
 					+ File.separator + "jiqibianma.txt";
 		} else
-			// ÏµÍ³ÏÂÔØ»º´æ¸ùÄ¿Â¼µÄhello.text
+			// ç³»ç»Ÿä¸‹è½½ç¼“å­˜æ ¹ç›®å½•çš„hello.text
 			filePath = Environment.getDownloadCacheDirectory().toString()
 					+ File.separator + "jiqibianma.txt";
 
@@ -251,20 +251,20 @@ public class FileUtils {
 	}
 
 	/**
-	 * ¶ÁÈ¡ÎÄ±¾ÎÄ¼şÖĞµÄÄÚÈİ
+	 * è¯»å–æ–‡æœ¬æ–‡ä»¶ä¸­çš„å†…å®¹
 	 * 
 	 * @param strFilePath
-	 *            Â·¾¶
+	 *            è·¯å¾„
 	 * @return
 	 */
 	public static String ReadTxtFile(String strFilePath, Context context) {
 		String path = strFilePath;
-		String content = ""; // ÎÄ¼şÄÚÈİ×Ö·û´®
-		// ´ò¿ªÎÄ¼ş
+		String content = ""; // æ–‡ä»¶å†…å®¹å­—ç¬¦ä¸²
+		// æ‰“å¼€æ–‡ä»¶
 		File file = new File(path);
-		// Èç¹ûpathÊÇ´«µİ¹ıÀ´µÄ²ÎÊı£¬¿ÉÒÔ×öÒ»¸ö·ÇÄ¿Â¼µÄÅĞ¶Ï
+		// å¦‚æœpathæ˜¯ä¼ é€’è¿‡æ¥çš„å‚æ•°ï¼Œå¯ä»¥åšä¸€ä¸ªéç›®å½•çš„åˆ¤æ–­
 		if (file.isDirectory()) {
-			ToastTools.showShort(context, "¸ÃÂ·¾¶²»´æÔÚÏà¹ØÄÚÈİ,Çëµ½ÅäÖÃ³ÌĞò½øĞĞÅäÖÃ!");
+			ToastTools.showShort(context, "è¯¥è·¯å¾„ä¸å­˜åœ¨ç›¸å…³å†…å®¹,è¯·åˆ°é…ç½®ç¨‹åºè¿›è¡Œé…ç½®!");
 		} else {
 			try {
 				InputStream instream = new FileInputStream(file);
@@ -273,7 +273,7 @@ public class FileUtils {
 							instream);
 					BufferedReader buffreader = new BufferedReader(inputreader);
 					String line;
-					// ·ÖĞĞ¶ÁÈ¡
+					// åˆ†è¡Œè¯»å–
 					while ((line = buffreader.readLine()) != null) {
 						content += line + "\n";
 					}

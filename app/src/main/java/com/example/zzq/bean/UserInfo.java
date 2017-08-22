@@ -7,22 +7,22 @@ import java.util.List;
 public class UserInfo implements Serializable {
 
 	/**
-	 * ÊµÌåÀà
+	 * å®ä½“ç±»
 	 */
 	private static final long serialVersionUID = 1L;
 
 	public static String CESHI_id = "ceshiid";
 
-	// ÉÏ´«
+	// ä¸Šä¼ 
 	public static final String UPSTATUS = "status";
 	public static int upstatus;
 	public static String upname = "";
 
-	// ÏÂÔØ °æ±¾¸üĞÂ
+	// ä¸‹è½½ ç‰ˆæœ¬æ›´æ–°
 	public static int downVersionCode;
 	public static String downApkUrl;
 
-	// ¹ã¸æ
+	// å¹¿å‘Š
 	public static String ADV_id = "advid";
 	public static String ADV_status = "advstatus";
 	public static String ADV_img = "advimg";
@@ -35,7 +35,7 @@ public class UserInfo implements Serializable {
 	public String advimg;
 
 	public static String hdID = "1";
-	// ÉÌÆ·
+	// å•†å“
 	public static final String PRO_ID = "id";
 
 	public static final String PRO_LOGO = "logo";
@@ -52,14 +52,14 @@ public class UserInfo implements Serializable {
 	public static final String PRO_HUNDREND = "hundrend";
 	public static final String PRO_XIANG = "xiang";
 
-	// ÓªÑø proid bai  hundrend xiang
+	// è¥å…» proid bai  hundrend xiang
 	public int proid;
 	public String bai;
 	public String hundrend;
 	public String xiang;
 	public int protype;
 	public int id;
-	public String logo; // ÓÃ»§id
+	public String logo; // ç”¨æˆ·id
 	public String name;
 	public String des;
 	public String logogray;
@@ -87,7 +87,7 @@ public class UserInfo implements Serializable {
 	public static final String APPTYPE = "type";
 	public static final String BUYAPP = "buyapp";
 	public int appid;
-	public String applogo; // ÓÃ»§id
+	public String applogo; // ç”¨æˆ·id
 	public String appname;
 	public int appprice;
 	public String duan;
@@ -107,7 +107,7 @@ public class UserInfo implements Serializable {
 	// appid,applogo,appname,appprice,duan,mainshow,apkurl,mainimg,shijian,sys,appstatus,apptype
 
 	/**
-	 * jp ±í apkurl,big,duan,id,logo,name,price,status,sys,type
+	 * jp è¡¨ apkurl,big,duan,id,logo,name,price,status,sys,type
 	 */
 	public static final String JPLOGO = "logo";
 	public static final String JPNAME = "name";
@@ -120,7 +120,7 @@ public class UserInfo implements Serializable {
 	public static final String JPTYPE = "type";
 	public static final String JPBIG = "big";
 	public int jpid;
-	public String jplogo; // ÓÃ»§id
+	public String jplogo; // ç”¨æˆ·id
 	public String jpname;
 	public int jpprice;
 	public String jpduan;
@@ -130,14 +130,14 @@ public class UserInfo implements Serializable {
 	public String jptype;
 	public String jpbig;
 
-	// Ö÷Ò³ÃæÉÌÆ·
+	// ä¸»é¡µé¢å•†å“
 	public static String sucessTitle;
 	public static String sucessLogo;
 	public static String desType;
 
 	public static int fromActivity;
 
-	// ËùÓĞÓ¦ÓÃÉÌÆ·µÄ
+	// æ‰€æœ‰åº”ç”¨å•†å“çš„
 	public static int desAppId;
 
 	public static int isLoad = 0;

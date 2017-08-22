@@ -5,11 +5,11 @@ import java.util.List;
 
 public class ProInstance {
 	public List<UserInfo> proInfosList = new ArrayList<UserInfo>();
-	/* µ¥ÀıÊµÀı¶ÔÏó */
+	/* å•ä¾‹å®ä¾‹å¯¹è±¡ */
 	private static ProInstance instance = null;
 
 	/**
-	 * Ë½ÓĞ»¯µÄ¹¹Ôì·½·¨£¬±£Ö¤Íâ²¿µÄÀà²»ÄÜÍ¨¹ı¹¹ÔìÆ÷À´ÊµÀı»¯¡£
+	 * ç§æœ‰åŒ–çš„æ„é€ æ–¹æ³•ï¼Œä¿è¯å¤–éƒ¨çš„ç±»ä¸èƒ½é€šè¿‡æ„é€ å™¨æ¥å®ä¾‹åŒ–ã€‚
 	 */
 	private ProInstance() {
 
