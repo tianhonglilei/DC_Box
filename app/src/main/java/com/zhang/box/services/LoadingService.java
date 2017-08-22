@@ -36,6 +36,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.util.Log;
 import android.widget.ProgressBar;
 
 /**
@@ -172,8 +173,7 @@ public class LoadingService extends Service {
 					10);
 			nameValuePairs.add(new BasicNameValuePair("app", SysData.appName));
 			nameValuePairs.add(new BasicNameValuePair("imei", SysData.imei));
-			nameValuePairs
-					.add(new BasicNameValuePair("click", UserInfo.upname));
+			nameValuePairs.add(new BasicNameValuePair("click", UserInfo.upname));
 			nameValuePairs.add(new BasicNameValuePair("ver", versionCode));
 			// 根据机器内容是否第一次 1全部下发 0更新
 			String path = Environment.getExternalStorageDirectory().toString()
@@ -382,6 +382,7 @@ public class LoadingService extends Service {
 						String downurl = info.downApkUrl = tempJson
 								.getString("apk");
 
+						Log.e("Li-VersionCode",serverVersion+"");
 						// 如果服务器的版本大于机器现有的版本则自动更新
 						if (serverVersion > getVersionCode()) {
 							SetPressdialog(downurl);

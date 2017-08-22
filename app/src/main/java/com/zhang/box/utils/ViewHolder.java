@@ -39,7 +39,7 @@ public class ViewHolder {
 			viewHolder = new ViewHolder(context, parent, layoutId, position);
 			return viewHolder;
 		}else{
-			viewHolder.mPosition = position;
+//			viewHolder.mPosition = position;
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		return viewHolder;
