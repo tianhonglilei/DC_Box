@@ -14,6 +14,7 @@ import com.avm.serialport_142.MainHandler;
 import com.example.zzq.bean.SysData;
 import com.example.zzq.bean.UserInfo;
 import com.zhang.box.DesProActivity;
+import com.zhang.box.DesProAppActivity;
 import com.zhang.box.R;
 import com.zhang.box.utils.CommonAdapter;
 import com.zhang.box.utils.MulDataUtils;
@@ -161,8 +162,10 @@ public class GridViewAdapter extends CommonAdapter {
 								UserInfo info = UserInfo.proMainlist
 										.get(position);
 
-								Intent intent = new Intent(context,
-										DesProActivity.class);
+								//测试应用下载
+//								Intent intent = new Intent(context,
+//										DesProActivity.class);
+								Intent intent = new Intent(context,DesProAppActivity.class);
 								Bundle bundle = new Bundle();
 								bundle.putInt("flag", 11);
 								bundle.putSerializable("proInfos",
