@@ -472,7 +472,7 @@ public class DesProActivity extends Activity {
 					+ desInfos.prohuogui;
 			String title = desInfos.name;
 			String upprice = Float.toString((float) desInfos.price / 100);
-			// String upprice = "0.01";
+//			 String upprice = "0.01";
 			String url = Constants.dainchaungQRUrlLHL+ tradeno + "&title=" + title + "&price=" + upprice;
 			Log.e("whwh", "des--点创二维码地址--->" + url);
 			createQRImage(url);
@@ -504,9 +504,8 @@ public class DesProActivity extends Activity {
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(
 					10);
 			mchTradeNo = StringUtils.getRandonInt(20);
-			String weixinprice = Float
-					.toString((float) desInfos.weixinprice / 100);
-			//String price = "0.01";
+//			String weixinprice = Float.toString((float) desInfos.weixinprice / 100);
+			String weixinprice = "0.01";
 			nameValuePairs.add(new BasicNameValuePair("tradeAmt", weixinprice));
 			nameValuePairs.add(new BasicNameValuePair("body", desInfos.des)); // desTitle
 			nameValuePairs
@@ -586,8 +585,8 @@ public class DesProActivity extends Activity {
 					+ SysData.imei + "," + desInfos.hdid + ","
 					+ desInfos.prohuogui;
 			nameValuePairs.add(new BasicNameValuePair("tradeno", uptradeno));
-			 String zhiprice = ((float) desInfos.zhifubaoprice / 100) + "";
-//			String zhiprice = 0.01 + "";
+//			 String zhiprice = ((float) desInfos.zhifubaoprice / 100) + "";
+			String zhiprice = 0.01 + "";
 			nameValuePairs.add(new BasicNameValuePair("price", zhiprice));
 			nameValuePairs.add(new BasicNameValuePair("title", desInfos.des));
 			nameValuePairs.add(new BasicNameValuePair("des", desInfos.des));
@@ -633,7 +632,7 @@ public class DesProActivity extends Activity {
 	/** 扫描二维码后进行支付 */
 	protected void upZhifu(int i) {
 
-		clearTask();
+//		clearTask();
 		ZhifuNetTask = new ZhifuNetTask();
 		ZhifuNetTask.execute();
 	}
@@ -937,5 +936,11 @@ public class DesProActivity extends Activity {
 				mWeiXinQRNetTask.cancel(true);
 			}
 		}
+	}
+
+	@Override
+	public void finish() {
+		super.finish();
+		clearTask();
 	}
 }

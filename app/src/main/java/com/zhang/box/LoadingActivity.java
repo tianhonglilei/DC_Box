@@ -133,7 +133,7 @@ public class LoadingActivity extends Activity {
 
 		tv_version = (TextView) findViewById(R.id.tv_version);
 		tv_version.setText("版本号: " + versionCode);
-		// SysData.imei = MainHandler.getMachNo();// 获取机器号
+		 SysData.imei = MainHandler.getMachNo();// 获取机器号
 		// SysData.imei = "93002566";// 获取机器号
 		/** 启动服务 */
 		SysData.loadmain = this;
@@ -154,7 +154,7 @@ public class LoadingActivity extends Activity {
 							ConfigActivity.class, true);
 				} else {
 					LogCollector.upload(true);
-//					SysData.imei = MainHandler.getMachNo();// 获取机器号
+					SysData.imei = MainHandler.getMachNo();// 获取机器号
 
 					HttpParameters params = new HttpParameters();
 					params.add("imei", MainHandler.getMachNo());

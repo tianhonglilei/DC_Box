@@ -110,11 +110,15 @@ public class MyApplication extends Application {
 				+ "config.ini");
 		//激活码
 		code = SpUtil.getString(getApplicationContext(), "code", null);
+        //8.22李磊变更
 		if (TextUtils.isEmpty(code)) {
+			Log.e("Check","UpdateCode");
 			upDataCode(0);
-		} else {
-			initConfigInfo();
+//			initConfigInfo();
+		} else { 
+//			initConfigInfo();
 		}
+        initConfigInfo();
 	}
 
 	/** 配置机器信息 */
@@ -185,7 +189,6 @@ public class MyApplication extends Application {
 		Log.e("wh", "application---激活码"
 						+ SpUtil.getString(getApplicationContext(), "code",
 								null));
-
 		// 判断是否在运行
 		if (!DeviceUtils.isAppRunning(getApplicationContext(), "com.zhang.box")) {
 			// 暂时不开放
@@ -209,7 +212,7 @@ public class MyApplication extends Application {
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 			url = "http://"+ Constants.baseUrlLHL+"/boxapp/?c=welcome&m=box_activecode";
 //			String json = HttpUtil.RequestGetData(url, nameValuePairs);
-			String json = "{'code':400000000807}";
+			String json = "{'code':400000000808}";
 			Log.i(LogTag+"_url",url+"");
 			Log.i(LogTag+"_json",json+"");
 			return json;
