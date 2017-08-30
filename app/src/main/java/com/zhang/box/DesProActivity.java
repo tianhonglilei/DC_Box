@@ -4,6 +4,9 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
@@ -31,10 +34,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextPaint;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -55,6 +60,8 @@ import android.widget.Toast;
  * 
  */
 public class DesProActivity extends Activity {
+
+	private static final String LogTag = "DesProActivity";
 
 	private ImageView iv_des_worn_down;
 	private Bitmap iv_des_worn_down_bitmap;
@@ -97,9 +104,9 @@ public class DesProActivity extends Activity {
 	private int typIndex;// 1点创 2微信 3支付宝
 	private WeiXinQRNetTask mWeiXinQRNetTask; // 微信二维码请求
 	private String mchTradeNo;
-	private String WeiXinUrl;
+	private String wxQRUrl;
 	private ZiFuBaoNetTask mzhifubaoNetTask;
-	private String ZhiFuBaoUrl;
+	private String aliQRUrl;
 	private ZhifuNetTask ZhifuNetTask;
 	private zhifubaohuodaostatusNetTask zhifubaohuodaostatus;
 	private ImageView iv_zhuanpan;
@@ -109,6 +116,14 @@ public class DesProActivity extends Activity {
 	private static final int MSG_ONE = 1;// 货道小于10
 	private static final int MSG_TWO = 2;// 货道大于等于10
 	private UserInfo desInfos;
+	//二维码地址
+	private String qrCodeWX,qrCodeAli;
+	//支付结果
+	private TimerTask taskPay;
+	//二维码
+	private TimerTask taskWXCode,taskAliCode;
+	private TextView des_aliTxt,des_wxTxt;
+
 
 	private Handler mHandlerNo = new Handler() {
 
@@ -143,6 +158,8 @@ public class DesProActivity extends Activity {
 		InitView();// 初始化布局
 		InitData();// 初始化数据
 		initListener();// 初始化监听事件
+		des_wxTxt.setAlpha(1.0f);
+		des_aliTxt.setAlpha(0.5f);
 	}
 
 	// 注册一个广播
@@ -174,6 +191,8 @@ public class DesProActivity extends Activity {
 			}
 		});
 
+
+
 		//TODO WHWH点击微信按钮生成的二维码
 		des_ib_weichat.setOnClickListener(new OnClickListener() {
 			@Override
@@ -188,9 +207,19 @@ public class DesProActivity extends Activity {
 				des_ib_dianchuang.setSelected(false);
 				des_ib_weichat.setSelected(true);
 				des_ib_alipay.setSelected(false);
-				updataWeiChatPayQR(2);// 微信支付生成的二维码
+				des_wxTxt.setAlpha(1.0f);
+				des_aliTxt.setAlpha(0.5f);
+//				updataWeiChatPayQR(2);// 微信支付生成的二维码
+				if(wxQRUrl==null||wxQRUrl.equals("")){
+					timeforWxCode();
+				}else{
+					createQRImage(wxQRUrl);
+					showQRCode();
+				}
 			}
 		});
+
+
 
 		// 点击支付宝按钮生成的二维码
 		des_ib_alipay.setOnClickListener(new OnClickListener() {
@@ -206,7 +235,16 @@ public class DesProActivity extends Activity {
 				des_ib_dianchuang.setSelected(false);
 				des_ib_weichat.setSelected(false);
 				des_ib_alipay.setSelected(true);
-				upDataZhiFuBaoQR(3);// 支付宝支付
+				des_wxTxt.setAlpha(0.5f);
+				des_aliTxt.setAlpha(1.0f);
+
+//				upDataZhiFuBaoQR(3);// 支付宝支付
+				if(aliQRUrl==null||aliQRUrl.equals("")){
+					timeforAliCode();
+				}else{
+					createQRImage(aliQRUrl);
+					showQRCode();
+				}
 			}
 		});
 
@@ -217,6 +255,21 @@ public class DesProActivity extends Activity {
 				finish();
 			}
 		});
+	}
+
+	/**
+	 * 展示二维码
+	 */
+	private void showQRCode(){
+		iv_codes_loading.setVisibility(View.INVISIBLE);
+		iv_codes_qr.setVisibility(View.VISIBLE);
+	}
+	/**
+	 * 加载二维码
+	 */
+	private void loadQRCode(){
+		iv_codes_loading.setVisibility(View.VISIBLE);
+		iv_codes_qr.setVisibility(View.INVISIBLE);
 	}
 
 	/** 初始化数据 */
@@ -266,8 +319,26 @@ public class DesProActivity extends Activity {
 
 		// 点创支付生成的 二维码
 		// updataDianChuangPayQR(0);// 点创支付生成的二维码
-		updataWeiChatPayQR(2);// 微信支付生成的二维码
+//		updataWeiChatPayQR(2);// 微信支付生成的二维码
+		//获取微信和支付宝二维码地址
+		initQRCode();
 	}
+
+	//获取微信和支付宝二维码地址
+	private void initQRCode() {
+		timeforWxCode();
+	}
+	private void timeforWxCode(){
+//		clearTask();
+		//微信二维码
+		updataWeiChatPayQR(2);
+	}
+	private void timeforAliCode(){
+//		clearTask();
+		//支付宝二维码
+		upDataZhiFuBaoQR(3);
+	}
+
 
 	/** 初始化布局控件 */
 	private void InitView() {
@@ -294,7 +365,10 @@ public class DesProActivity extends Activity {
 		des_tv_tanshuihuahewu_3 = (TextView) findViewById(R.id.des_tv_tanshuihuahewu_3);
 
 		ib_des_pro_name = (Button) findViewById(R.id.ib_des_pro_name);// 商品名称
-																		// 动画效果
+
+		des_aliTxt = (TextView) findViewById(R.id.des_des_zhifubao);
+		des_wxTxt = (TextView) findViewById(R.id.des_des_weixin);
+		// 动画效果
 		ScaleAnimation sa = new ScaleAnimation(0, 1, 0, 1,
 				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
 				0.5f);
@@ -399,11 +473,14 @@ public class DesProActivity extends Activity {
 	protected void onPause() {
 		super.onPause();
 		clearTask();
+		cancleTime();
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+		cancleTime();
+		clearTask();
 
 		if (myReceiver != null) {
 			unregisterReceiver(myReceiver);
@@ -480,14 +557,15 @@ public class DesProActivity extends Activity {
 			iv_codes_loading.setVisibility(View.INVISIBLE);
 			typIndex = 1;
 			// 支付
-			upZhifu(1);
+//			upZhifu(1);
 		}
 	};
 
 	// TODO 生成的微信二维码
 	protected void updataWeiChatPayQR(int i) {
-		iv_codes_qr.setVisibility(View.INVISIBLE);
-		iv_codes_loading.setVisibility(View.VISIBLE);
+//		iv_codes_qr.setVisibility(View.INVISIBLE);
+//		iv_codes_loading.setVisibility(View.VISIBLE);
+		loadQRCode();
 		clearTask();
 		mWeiXinQRNetTask = new WeiXinQRNetTask();
 		mWeiXinQRNetTask.execute();
@@ -539,12 +617,11 @@ public class DesProActivity extends Activity {
 					JSONObject jsonObject = new JSONObject(result);
 					int resultCode = jsonObject.getInt("error");
 					if (resultCode == 0) {
-						WeiXinUrl = jsonObject.getString("url");
-						createQRImage(WeiXinUrl);
+						wxQRUrl = jsonObject.getString("url");
+						createQRImage(wxQRUrl);
 						weixintradeno = jsonObject.getString("tradeno");
 						Log.e("whwhwh", "weixintradeno====" + weixintradeno);
-						iv_codes_qr.setVisibility(View.VISIBLE);
-						iv_codes_loading.setVisibility(View.INVISIBLE);
+						showQRCode();
 						Log.e("wh", "微信的二维码生成了。。。。。");
 						typIndex = 2;
 						upZhifu(typIndex);
@@ -563,8 +640,9 @@ public class DesProActivity extends Activity {
 	/** 支付宝二维码生成 */
 	// TODO 支付宝二维码生成
 	protected void upDataZhiFuBaoQR(int i) {
-		iv_codes_qr.setVisibility(View.INVISIBLE);
-		iv_codes_loading.setVisibility(View.VISIBLE);
+//		iv_codes_qr.setVisibility(View.INVISIBLE);
+//		iv_codes_loading.setVisibility(View.VISIBLE);
+		loadQRCode();
 		clearTask();
 		mzhifubaoNetTask = new ZiFuBaoNetTask();
 		mzhifubaoNetTask.execute();
@@ -578,6 +656,7 @@ public class DesProActivity extends Activity {
 		}
 
 		protected String doInBackground(Object... params) {
+
 			String url = "";
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(4);
 
@@ -592,6 +671,7 @@ public class DesProActivity extends Activity {
 			nameValuePairs.add(new BasicNameValuePair("des", desInfos.des));
 			url = Constants.zhifubaoQRUrlLHL;
 			String json = HttpUtil.RequestGetData(url, nameValuePairs);
+			Log.e("param", nameValuePairs.toString());
 			Log.e("whwhwh", "支付宝二维码生成结果:" + json);
 			return json;
 		}
@@ -610,13 +690,15 @@ public class DesProActivity extends Activity {
 					JSONObject jsonObject = new JSONObject(result);
 					int resultCode = jsonObject.getInt("err");
 					if (resultCode == 0) {
-						ZhiFuBaoUrl = jsonObject.getString("url");
-						createQRImage(ZhiFuBaoUrl);
+						aliQRUrl = jsonObject.getString("url");
+						createQRImage(aliQRUrl);
 						iv_codes_qr.setVisibility(View.VISIBLE);
 						iv_codes_loading.setVisibility(View.INVISIBLE);
 						Log.e("wh", "支付宝的二维码生成了。。。。。");
+						showQRCode();
 						typIndex = 3;
-						upZhifu(typIndex);
+//						upZhifu(typIndex);
+						Log.e(""+LogTag,"wxcode:"+wxQRUrl+"--alicode:"+aliQRUrl);
 					} else {
 						Toast.makeText(DesProActivity.this, "支付宝二维码出现异常!",
 								Toast.LENGTH_SHORT).show();
@@ -629,12 +711,20 @@ public class DesProActivity extends Activity {
 		}
 	}
 
+	private Timer timerPay;
 	/** 扫描二维码后进行支付 */
 	protected void upZhifu(int i) {
 
+		taskPay = new TimerTask() {
+			@Override
+			public void run() {
+				ZhifuNetTask = new ZhifuNetTask();
+				ZhifuNetTask.execute();
+			}
+		};
 //		clearTask();
-		ZhifuNetTask = new ZhifuNetTask();
-		ZhifuNetTask.execute();
+		timerPay = new Timer();
+		timerPay.schedule(taskPay,500);
 	}
 
 	class ZhifuNetTask extends AsyncTask<Object, Integer, String> {
@@ -689,7 +779,8 @@ public class DesProActivity extends Activity {
 		@Override
 		protected void onPostExecute(String result) {
 			if (result == null) {
-
+				clearTask();
+				upZhifu(typIndex);
 			} else {
 				try {
 					JSONObject jsonObject = new JSONObject(result);
@@ -709,8 +800,8 @@ public class DesProActivity extends Activity {
 						if (zhifubaohuodaostatus != null) {
 							zhifubaohuodaostatus.cancel(true);
 						}
+//						timerPay.cancel();
 						zhifubaohuodaostatus(typIndex);
-
 					} else if (resultCode != 0) {
 						if (!uptradeno.isEmpty()) {
 							upZhifu(typIndex);
@@ -839,7 +930,7 @@ public class DesProActivity extends Activity {
 								desInfos.hdid, resultMfinish);
 
 					} else {
-						zhifubaohuodaostatus(typIndex);
+//						zhifubaohuodaostatus(typIndex);
 					}
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -897,7 +988,6 @@ public class DesProActivity extends Activity {
 				Log.e("whwhwh", num + "正在发送出货通知!");
 				// 注册广播
 				registerBoradcastReceiver(mContext);
-
 			} else {
 				Log.e("whwhwh", num + "发送出货通知失败!");
 			}
@@ -909,6 +999,13 @@ public class DesProActivity extends Activity {
 			} else {
 				Log.e("whwhwh", num + "发送出货通知失败!");
 			}
+		}
+	}
+
+	private void cancleTime(){
+		if(timerPay!=null){
+			timerPay.cancel();
+			timerPay = null;
 		}
 	}
 
@@ -942,5 +1039,10 @@ public class DesProActivity extends Activity {
 	public void finish() {
 		super.finish();
 		clearTask();
+		cancleTime();
 	}
+
+
+
+
 }

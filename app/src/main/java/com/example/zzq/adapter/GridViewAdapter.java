@@ -163,9 +163,9 @@ public class GridViewAdapter extends CommonAdapter {
 										.get(position);
 
 								//测试应用下载
-//								Intent intent = new Intent(context,
-//										DesProActivity.class);
-								Intent intent = new Intent(context,DesProAppActivity.class);
+								Intent intent = new Intent(context,
+										DesProActivity.class);
+//								Intent intent = new Intent(context,DesProAppActivity.class);
 								Bundle bundle = new Bundle();
 								bundle.putInt("flag", 11);
 								bundle.putSerializable("proInfos",

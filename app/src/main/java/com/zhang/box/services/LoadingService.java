@@ -48,7 +48,7 @@ import android.widget.ProgressBar;
 public class LoadingService extends Service {
     private static final String LogTag = "LoadingService";
     public static final int SUCCESS = 100;// 成功
-    private static final long CHECK_PERIOD_TWO = 1000 * 60 * 300;// 30分钟监测一次
+    private static final long CHECK_PERIOD_TWO = 1000 * 60 * 3;// 30分钟监测一次
 //    private static final long CHECK_PERIOD_TWO = 60000;
     private Timer mTimer;
     private BooksDB mBooksDB;
@@ -390,12 +390,13 @@ public class LoadingService extends Service {
                                 .parseInt(tempJson.getString("ver"));
                         String downurl = info.downApkUrl = tempJson
                                 .getString("apk");
-
-                        Log.e("Li-VersionCode", serverVersion + "-" + tempJson);
+//                      Log.e("Li-VersionCode", serverVersion + "-" + tempJson);
+                        int nowVersion = getVersionCode();
                         // 如果服务器的版本大于机器现有的版本则自动更新
-                        if (serverVersion > getVersionCode()) {
+                        if (serverVersion > nowVersion) {
                             SetPressdialog(downurl);
                         }
+                        Log.e("Li-VersionCode","now:"+nowVersion+";server:"+ serverVersion + "-" + tempJson);
                     }
 
                     // UserInfo.jpAllshow.clear();

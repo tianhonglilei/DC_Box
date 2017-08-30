@@ -7,6 +7,7 @@ import com.zhang.box.ImageCallback;
 import com.zhang.box.ImageLoader;
 import com.zhang.box.R;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,7 @@ public class GallaryAdItemAdapter extends BaseAdapter {
 	ImageLoader mLogoImage;
 	private List<UserInfo> mDatas;
 	int index;
+	private Resources resources;
 
 	public GallaryAdItemAdapter(Context context, List<UserInfo> mDatas) {
 
@@ -29,6 +31,7 @@ public class GallaryAdItemAdapter extends BaseAdapter {
 
 		inflater = LayoutInflater.from(mContext);
 		mLogoImage = ImageLoader.GetObject(context);
+		resources = context.getResources();
 	}
 
 	@Override
@@ -70,7 +73,7 @@ public class GallaryAdItemAdapter extends BaseAdapter {
 			draw = mLogoImage.loadNetDrawable(picUrl, new KImageCallback(
 					viewholder.micon));
 			if (draw != null) {
-				viewholder.micon.setBackgroundDrawable(draw);
+				viewholder.micon.setBackground(draw);
 			}
 		}
 
@@ -91,8 +94,7 @@ public class GallaryAdItemAdapter extends BaseAdapter {
 
 		@Override
 		public void imageLoaded(Drawable imageDrawable, String imageUrl) {
-			logImage.setBackgroundDrawable(imageDrawable);
-
+			logImage.setBackground(imageDrawable);
 		}
 	}
 }

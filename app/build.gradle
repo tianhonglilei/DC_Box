@@ -50,8 +50,7 @@ android {
         }
     }
 //    android{compileOptions.encoding="GBK"}
-    productFlavors {
-    }
+
 }
 
 dependencies {

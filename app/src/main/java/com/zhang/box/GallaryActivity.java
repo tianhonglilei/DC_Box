@@ -518,6 +518,8 @@ public class GallaryActivity extends Activity {
 		startAutoScroll();
 	}
 
+	private Uri videoUri;
+
 	public void SetVideo(final int andex) {
 		if (mTimer != null) {
 			mTimer.cancel();
@@ -553,7 +555,12 @@ public class GallaryActivity extends Activity {
 		String filename = url.substring(pos + 1);
 		String xxx = Environment.getExternalStorageDirectory().toString()
 				+ "/boxcontent/" + filename;
-		final Uri videoUri = Uri.parse(xxx);
+//		if(andex == 0){
+//			//测试北大短片
+//			videoUri = Uri.parse("android.resource://" + getPackageName() + "/"+ R.raw.forever);
+//		}else {
+			videoUri = Uri.parse(xxx);
+//		}
 		if (vvIntroduction != null) {
 			vvIntroduction.post(new Runnable() {
 

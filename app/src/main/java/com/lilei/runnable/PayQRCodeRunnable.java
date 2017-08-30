@@ -24,14 +24,15 @@ public class PayQRCodeRunnable implements Runnable {
     private String mchTradeNo;
     private UserInfo desInfos;
     private String url;
+    private String typeId;
 
     @Override
     public void run() {
+
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(
                 10);
         mchTradeNo = StringUtils.getRandonInt(20);
-        String weixinprice = Float
-                .toString((float) desInfos.weixinprice / 100);
+        String weixinprice = Float.toString((float) desInfos.weixinprice / 100);
         //String price = "0.01";
         nameValuePairs.add(new BasicNameValuePair("tradeAmt", weixinprice));
         nameValuePairs.add(new BasicNameValuePair("body", desInfos.des)); // desTitle

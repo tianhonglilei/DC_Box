@@ -165,7 +165,7 @@ public class LoadingActivity extends Activity {
 							LoadingService.class));
 				}
 			}
-		}, 21000);
+		}, 11000);
 	}
 
 	/** 资源释放 */
