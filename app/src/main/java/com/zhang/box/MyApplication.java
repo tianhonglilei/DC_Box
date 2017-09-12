@@ -212,7 +212,8 @@ public class MyApplication extends Application {
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 			url = "http://"+ Constants.baseUrlLHL+"/boxapp/?c=welcome&m=box_activecode";
 //			String json = HttpUtil.RequestGetData(url, nameValuePairs);
-			String json = "{'code':400000000808}";
+			String json = "{'code':400000000887" +
+					"}";
 			Log.i(LogTag+"_url",url+"");
 			Log.i(LogTag+"_json",json+"");
 			return json;

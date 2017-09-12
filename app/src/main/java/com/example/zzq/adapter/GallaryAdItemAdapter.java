@@ -6,6 +6,8 @@ import com.example.zzq.bean.UserInfo;
 import com.zhang.box.ImageCallback;
 import com.zhang.box.ImageLoader;
 import com.zhang.box.R;
+import com.zhang.box.utils.ViewHolder;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -49,10 +51,11 @@ public class GallaryAdItemAdapter extends BaseAdapter {
 		return position;
 	}
 
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		ViewHolder viewholder = null;
+		ViewHolder viewholder;
 		if (convertView == null) {
 			viewholder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.gallary_ad_item, null);
@@ -68,7 +71,13 @@ public class GallaryAdItemAdapter extends BaseAdapter {
 		Drawable draw = null;
 		int advDatas = UserInfo.advVideo.size();
 		if (advDatas > 0) {
-
+			//测试北大宣传片
+//			if(position%2 == 0) {
+//				draw = resources.getDrawable(R.drawable.banner_forever_bu);
+//			}
+//			if(position%2 != 0){
+//				draw = resources.getDrawable(R.drawable.banner_huagong);
+//			}
 			String picUrl = UserInfo.advVideo.get(position % advDatas).advimg;
 			draw = mLogoImage.loadNetDrawable(picUrl, new KImageCallback(
 					viewholder.micon));

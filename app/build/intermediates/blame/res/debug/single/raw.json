@@ -4,10 +4,6 @@
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\s1.wav"
     },
     {
-        "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\forever.mp4",
-        "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\forever.mp4"
-    },
-    {
         "merged": "E:\\Android-DC-Box\\DC-Box\\app\\build\\intermediates\\res\\merged\\debug\\raw\\s0.wav",
         "source": "E:\\Android-DC-Box\\DC-Box\\app\\src\\main\\res\\raw\\s0.wav"
     },

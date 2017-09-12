@@ -46,7 +46,14 @@
         </receiver>
         <receiver android:name="com.zhang.box.services.GoodsOutBrocastReceiver" >
         </receiver>
+        <receiver android:name=".services.AutoStartAppReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
 
+        </receiver>
         <activity
             android:name="com.zhang.box.GallaryActivity"
             android:label="@string/app_name"
@@ -159,7 +166,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
 
 </manifest>

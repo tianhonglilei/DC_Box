@@ -31,21 +31,23 @@ public class GridViewAdapter extends CommonAdapter {
 	private ImageView degreeFlag;
 	private TextView tv_gallary_price;
 	private String resultInfo;
+	private List<UserInfo> mDatas;
 
 	@SuppressWarnings("unchecked")
 	public GridViewAdapter(Context context, List<UserInfo> mDatas) {
 		super(context, mDatas);
 		this.context = context;
+		this.mDatas = mDatas;
 	}
 
 	@Override
 	public int getCount() {
 
-		if (UserInfo.proMainlist.size() == 0)
+		if (mDatas.size() == 0)
 
 			return 0;
 		else
-			return UserInfo.proMainlist.size() + 1;
+			return mDatas.size();
 	}
 
 	@Override
@@ -58,14 +60,14 @@ public class GridViewAdapter extends CommonAdapter {
 		degreeFlag = viewHolder.getView(R.id.iv_flag);
 		tv_gallary_price = viewHolder.getView(R.id.tv_gallary_price);
 
-		if (UserInfo.proMainlist.size() > 0) {
+		if (mDatas.size() > 0) {
 			if (position >= 9) {
 				micon.setVisibility(View.INVISIBLE);
 				btn.setVisibility(View.INVISIBLE);
 				tv_gallary_price.setVisibility(View.INVISIBLE);
 			} else {
 
-				UserInfo userinfo = UserInfo.proMainlist.get(position);
+				UserInfo userinfo = mDatas.get(position);
 				float price = (float) userinfo.price;
 				tv_gallary_price.setText("¥" + price / 100 + "0");
 
@@ -159,7 +161,7 @@ public class GridViewAdapter extends CommonAdapter {
 								// MusicService.class));
 								// 传递Data对象
 								UserInfo.fromActivity = 1;
-								UserInfo info = UserInfo.proMainlist
+								UserInfo info = mDatas
 										.get(position);
 
 								//测试应用下载

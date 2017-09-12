@@ -46,8 +46,8 @@ public class BackTime {
 			public void onTick(long time) {
 				// 第一次调用会有1-10ms的误差，因此需要+15ms，防止第一个数不显示，第二个数显示2s
 				textView.setText(((time + 15) / 1000) + "s");
-				Log.d("BackTime", "time = " + (time) + " text = "
-						+ ((time + 15) / 1000));
+//				Log.d("BackTime", "time = " + (time) + " text = "
+//						+ ((time + 15) / 1000));
 				listener.center(time);
 
 			}
@@ -143,9 +143,10 @@ public class BackTime {
 	 * 计时结束的回调接口
 	 */
 	public interface OnFinishListener {
-		public void finish();
+		void finish();
 
 		void center(long time);
 	}
+
 
 }

@@ -31,6 +31,7 @@ import com.zhang.box.utils.StringUtils;
 import com.zhang.box.utils.ToastTools;
 import com.zhang.easymoney.net.HttpUtil;
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
@@ -123,6 +124,7 @@ public class DesProActivity extends Activity {
 	//二维码
 	private TimerTask taskWXCode,taskAliCode;
 	private TextView des_aliTxt,des_wxTxt;
+	private boolean isPaySuccess,isOutGoods;
 
 
 	private Handler mHandlerNo = new Handler() {
@@ -160,6 +162,8 @@ public class DesProActivity extends Activity {
 		initListener();// 初始化监听事件
 		des_wxTxt.setAlpha(1.0f);
 		des_aliTxt.setAlpha(0.5f);
+		isOutGoods  = false;
+		isPaySuccess = false;
 	}
 
 	// 注册一个广播
@@ -168,6 +172,7 @@ public class DesProActivity extends Activity {
 		IntentFilter filter = new IntentFilter();
 		filter.addAction("com.avm.serialport.OUT_GOODS");
 		registerReceiver(myReceiver, filter);
+
 	}
 
 	/** 初始化监听事件 */
@@ -460,10 +465,24 @@ public class DesProActivity extends Activity {
 			@Override
 			public void finish() {
 				((Activity) mContext).finish();
+//				cancleTime();
 			}
 
 			@Override
 			public void center(long time) {
+				Log.e(LogTag+"pay+out:","pay:"+isPaySuccess+",out:"+isOutGoods);
+				if(typIndex != 0){
+					if(wxQRUrl != null && !wxQRUrl.equals("")){
+						if(isPaySuccess == false && isOutGoods == false){
+							upZhifu(typIndex);
+
+						}else if(isPaySuccess == true && isOutGoods == false){
+//							upZhifu(typIndex);
+						}
+					}
+				}else{
+
+				}
 			}
 		});
 		bt_main.start();
@@ -472,15 +491,17 @@ public class DesProActivity extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-		clearTask();
-		cancleTime();
+//		clearTask();
+//		cancleTime();
+
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		cancleTime();
-		clearTask();
+//		cancleTime();
+//		clearTask();
+//		bt_main = null;
 
 		if (myReceiver != null) {
 			unregisterReceiver(myReceiver);
@@ -534,7 +555,7 @@ public class DesProActivity extends Activity {
 	private void updataDianChuangPayQR(int i) {
 		iv_codes_qr.setVisibility(View.INVISIBLE);
 		iv_codes_loading.setVisibility(View.VISIBLE);
-		clearTask();
+//		clearTask();
 		Message msg = mHandler_dianchuangQR.obtainMessage(0, 0, 0);
 		mHandler_dianchuangQR.sendMessage(msg);
 	}
@@ -566,7 +587,7 @@ public class DesProActivity extends Activity {
 //		iv_codes_qr.setVisibility(View.INVISIBLE);
 //		iv_codes_loading.setVisibility(View.VISIBLE);
 		loadQRCode();
-		clearTask();
+//		clearTask();
 		mWeiXinQRNetTask = new WeiXinQRNetTask();
 		mWeiXinQRNetTask.execute();
 	}
@@ -582,8 +603,8 @@ public class DesProActivity extends Activity {
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(
 					10);
 			mchTradeNo = StringUtils.getRandonInt(20);
-//			String weixinprice = Float.toString((float) desInfos.weixinprice / 100);
-			String weixinprice = "0.01";
+			String weixinprice = Float.toString((float) desInfos.weixinprice / 100);
+//			String weixinprice = "0.01";
 			nameValuePairs.add(new BasicNameValuePair("tradeAmt", weixinprice));
 			nameValuePairs.add(new BasicNameValuePair("body", desInfos.des)); // desTitle
 			nameValuePairs
@@ -643,7 +664,7 @@ public class DesProActivity extends Activity {
 //		iv_codes_qr.setVisibility(View.INVISIBLE);
 //		iv_codes_loading.setVisibility(View.VISIBLE);
 		loadQRCode();
-		clearTask();
+//		clearTask();
 		mzhifubaoNetTask = new ZiFuBaoNetTask();
 		mzhifubaoNetTask.execute();
 	}
@@ -664,8 +685,8 @@ public class DesProActivity extends Activity {
 					+ SysData.imei + "," + desInfos.hdid + ","
 					+ desInfos.prohuogui;
 			nameValuePairs.add(new BasicNameValuePair("tradeno", uptradeno));
-//			 String zhiprice = ((float) desInfos.zhifubaoprice / 100) + "";
-			String zhiprice = 0.01 + "";
+			 String zhiprice = ((float) desInfos.zhifubaoprice / 100) + "";
+//			String zhiprice = 0.01 + "";
 			nameValuePairs.add(new BasicNameValuePair("price", zhiprice));
 			nameValuePairs.add(new BasicNameValuePair("title", desInfos.des));
 			nameValuePairs.add(new BasicNameValuePair("des", desInfos.des));
@@ -715,16 +736,16 @@ public class DesProActivity extends Activity {
 	/** 扫描二维码后进行支付 */
 	protected void upZhifu(int i) {
 
-		taskPay = new TimerTask() {
-			@Override
-			public void run() {
+//		taskPay = new TimerTask() {
+//			@Override
+//			public void run() {
 				ZhifuNetTask = new ZhifuNetTask();
 				ZhifuNetTask.execute();
-			}
-		};
-//		clearTask();
+//			}
+//		};
+////		clearTask();
 		timerPay = new Timer();
-		timerPay.schedule(taskPay,500);
+//		timerPay.schedule(taskPay,1000);
 	}
 
 	class ZhifuNetTask extends AsyncTask<Object, Integer, String> {
@@ -778,14 +799,15 @@ public class DesProActivity extends Activity {
 
 		@Override
 		protected void onPostExecute(String result) {
-			if (result == null) {
-				clearTask();
-				upZhifu(typIndex);
+			if (result == null&&isPaySuccess == true) {
+//				clearTask();
+//				upZhifu(typIndex);
+				cancleTime();
 			} else {
 				try {
 					JSONObject jsonObject = new JSONObject(result);
 					int resultCode = jsonObject.getInt("error");
-					if (resultCode == 0) {
+					if (resultCode == 0 && isOutGoods == false) {
 						if (desInfos.hdid < 10) {
 							UserInfo.sucessTitle = desInfos.name;
 							UserInfo.sucessLogo = desInfos.logo;
@@ -800,11 +822,12 @@ public class DesProActivity extends Activity {
 						if (zhifubaohuodaostatus != null) {
 							zhifubaohuodaostatus.cancel(true);
 						}
-//						timerPay.cancel();
+						isPaySuccess = true;
 						zhifubaohuodaostatus(typIndex);
+
 					} else if (resultCode != 0) {
 						if (!uptradeno.isEmpty()) {
-							upZhifu(typIndex);
+//							upZhifu(typIndex);
 						}
 					}
 				} catch (JSONException e) {
@@ -902,7 +925,7 @@ public class DesProActivity extends Activity {
 
 		@Override
 		protected void onPostExecute(String result) {
-			if (result == null) {
+			if (result == null && isOutGoods == true) {
 
 			} else {
 				try {
@@ -988,6 +1011,7 @@ public class DesProActivity extends Activity {
 				Log.e("whwhwh", num + "正在发送出货通知!");
 				// 注册广播
 				registerBoradcastReceiver(mContext);
+				isOutGoods = true;
 			} else {
 				Log.e("whwhwh", num + "发送出货通知失败!");
 			}
@@ -1038,8 +1062,9 @@ public class DesProActivity extends Activity {
 	@Override
 	public void finish() {
 		super.finish();
-		clearTask();
-		cancleTime();
+//		clearTask();
+//		cancleTime();
+//		bt_main.concel();
 	}
 
 
