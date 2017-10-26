@@ -148,7 +148,6 @@ public class LoadingActivity extends Activity {
             @Override
             public void run() {
                 ToastTools.showShort(mContext, "数据配置成功!");
-
                 boolean isFirstOpen = SpUtil.getBoolean(
                         getApplicationContext(), IS_APP_FIRST_OPEN, true);
                 if (isFirstOpen) {
@@ -304,6 +303,7 @@ public class LoadingActivity extends Activity {
                 String huodaoInfo = MainHandler.getGoodsInfo(11, i);
                 String subHuodaoInfo = huodaoInfo.substring(0, 1);
                 str += (i + "|" + subHuodaoInfo + "|");
+
             }
 
             nameValuePairs.add(new BasicNameValuePair("mhd", str));

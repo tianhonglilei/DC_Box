@@ -17,9 +17,12 @@ public class AutoStartAppReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")){
-            Intent i = new Intent(context, LoadingActivity.class);
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(i);
+            Intent iSe = new Intent(context, LoadingService.class);
+            context.startService(iSe);
+            Intent iA = new Intent(context, LoadingActivity.class);
+//            iA.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(iA);
+
         }
 
 

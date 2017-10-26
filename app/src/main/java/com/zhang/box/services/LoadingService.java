@@ -396,7 +396,7 @@ public class LoadingService extends Service {
                         if (serverVersion > nowVersion) {
                             SetPressdialog(downurl);
                         }
-                        Log.e("Li-VersionCode","now:"+nowVersion+";server:"+ serverVersion + "-" + tempJson);
+                        Log.e("Li-VersionCode","now:"+nowVersion+";server:"+ serverVersion + "-" + downurl);
                     }
 
                     // UserInfo.jpAllshow.clear();

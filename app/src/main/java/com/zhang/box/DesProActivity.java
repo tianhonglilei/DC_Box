@@ -478,6 +478,9 @@ public class DesProActivity extends Activity {
 
 						}else if(isPaySuccess == true && isOutGoods == false){
 //							upZhifu(typIndex);
+						}else if (isPaySuccess == true && isOutGoods == true){
+							if (bt_main!=null)
+							bt_main.concel();
 						}
 					}
 				}else{
@@ -807,22 +810,24 @@ public class DesProActivity extends Activity {
 				try {
 					JSONObject jsonObject = new JSONObject(result);
 					int resultCode = jsonObject.getInt("error");
-					if (resultCode == 0 && isOutGoods == false) {
+					if (resultCode == 0 && isOutGoods == false && isPaySuccess == false) {
+						isPaySuccess = true;
 						if (desInfos.hdid < 10) {
 							UserInfo.sucessTitle = desInfos.name;
 							UserInfo.sucessLogo = desInfos.logo;
 							mHandlerNo.obtainMessage(MSG_ONE).sendToTarget();
 
 						} else {
-							mHandlerNo.obtainMessage(MSG_TWO).sendToTarget();
+
 							UserInfo.sucessTitle = desInfos.name;
 							UserInfo.sucessLogo = desInfos.logo;
+							mHandlerNo.obtainMessage(MSG_TWO).sendToTarget();
 						}
 
 						if (zhifubaohuodaostatus != null) {
 							zhifubaohuodaostatus.cancel(true);
 						}
-						isPaySuccess = true;
+
 						zhifubaohuodaostatus(typIndex);
 
 					} else if (resultCode != 0) {
@@ -1018,12 +1023,14 @@ public class DesProActivity extends Activity {
 		} else {
 			if (MainHandler.noticeAvmOutGoods(nums + "50", numcode + "")) {
 				Log.e("whwhwh", num + "正在发送出货通知!");
+				isOutGoods = true;
 				ActivitySkipUtil.skipAnotherActivity(DesProActivity.this,
 						ProSucessActivity.class, true);
 			} else {
 				Log.e("whwhwh", num + "发送出货通知失败!");
 			}
 		}
+
 	}
 
 	private void cancleTime(){

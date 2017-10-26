@@ -25,6 +25,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.os.Handler;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -111,7 +112,7 @@ public class MyApplication extends Application {
 		//激活码
 		code = SpUtil.getString(getApplicationContext(), "code", null);
         //8.22李磊变更
-		if (TextUtils.isEmpty(code)) {
+		if (TextUtils.isEmpty(code)||code ==null) {
 			Log.e("Check","UpdateCode");
 			upDataCode(0);
 //			initConfigInfo();
@@ -140,8 +141,7 @@ public class MyApplication extends Application {
 			public void result(int res) {
 
 				if (res == CommService.ERROR_SYSTEM_SERVICE) {
-					ToastTools
-							.showLong(getApplicationContext(), "数据配置或者网络调用错误");
+					ToastTools.showLong(getApplicationContext(), "数据配置或者网络调用错误");
 				} else if (res == CommService.ERROR_SYSTEM_TIME) {
 					ToastTools.showLong(getApplicationContext(), "系统时间不正确");
 				} else if (res == CommService.ERROR_CODE_NO_EXIST) {
@@ -157,6 +157,7 @@ public class MyApplication extends Application {
 					Log.e(LogTag+"", "MyAppliction--->imei===" + SysData.imei);
 				} else if (res == CommService.ERROR_OTHER) {
 					ToastTools.showLong(getApplicationContext(), "其他错误");
+//					this.connect(getInstance(), code, 1);
 				} else if (res == CommServiceThread.ERROR_IO_PROBLEM) {
 					ToastTools.showLong(getApplicationContext(), "串口打开IO出错");
 				} else if (res == CommServiceThread.ERROR_PERMISSION_REJECT) {
@@ -184,11 +185,8 @@ public class MyApplication extends Application {
 				}
 			}
 
-		}.connect(this,
-				SpUtil.getString(getApplicationContext(), "code", null), 1);
-		Log.e("wh", "application---激活码"
-						+ SpUtil.getString(getApplicationContext(), "code",
-								null));
+		}.connect(this.getApplicationContext(), code, 1);
+		Log.e("wh", "application---激活码" + code);
 		// 判断是否在运行
 		if (!DeviceUtils.isAppRunning(getApplicationContext(), "com.zhang.box")) {
 			// 暂时不开放
@@ -212,7 +210,7 @@ public class MyApplication extends Application {
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 			url = "http://"+ Constants.baseUrlLHL+"/boxapp/?c=welcome&m=box_activecode";
 //			String json = HttpUtil.RequestGetData(url, nameValuePairs);
-			String json = "{'code':400000000887" +
+			String json = "{'code':400000000896" +
 					"}";
 			Log.i(LogTag+"_url",url+"");
 			Log.i(LogTag+"_json",json+"");
